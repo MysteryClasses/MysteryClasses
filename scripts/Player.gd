@@ -21,12 +21,12 @@ func _physics_process(delta):
 	velocity = direction.normalized() * speed
 	move_and_slide()
 	
+	# Jump function
 	if Input.is_action_just_pressed("ui_accept"):
 		jump()
-
-
+		
 func jump():
 	print("Player jumps!")
-	position.y -= jump_height   # move visually up
-	await get_tree().create_timer(0.1).timeout   # wait 0.1 seconds
-	position.y += jump_height   # move back down
+	position.y -= jump_height  
+	await get_tree().create_timer(0.1).timeout   
+	position.y += jump_height   
