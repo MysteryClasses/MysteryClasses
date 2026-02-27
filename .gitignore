@@ -1,0 +1,51 @@
+# .gitignore for Godot project
+
+# Godot 4+ specific ignores
+.godot/
+.import/
+
+# Godot-specific ignores
+export.cfg
+export_presets.cfg
+.mono/
+data_*/
+
+# UID files
+*.tmp
+*.uid
+
+# System/OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Temporary folders
+tmp/
+temp/
