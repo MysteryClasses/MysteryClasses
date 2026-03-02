@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://oatv3bo60xv3"]
+
+[ext_resource type="Script" uid="uid://de8klfnl31le2" path="res://scripts/CalendarClue.gd" id="1_script"]
+
+[node name="Control" type="Control" unique_id=1362117202]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="." unique_id=178517059]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.85)
+
+[node name="Panel" type="Panel" parent="." unique_id=1678304148]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1261422234]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Calendar" type="Label" parent="Panel/VBoxContainer" unique_id=1824553845]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "CLASSROOM CALENDAR"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2106652199]
+layout_mode = 2
+
+[node name="HintLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1338360480]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "You see some months names"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1418893587]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Panel/VBoxContainer" unique_id=1147463683]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="January" type="Button" parent="Panel/VBoxContainer/GridContainer" unique_id=1484490917]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+disabled = true
+text = "January"
+
+[node name="March" type="Button" parent="Panel/VBoxContainer/GridContainer" unique_id=1669661245]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+disabled = true
+text = "March"
+
+[node name="July" type="Button" parent="Panel/VBoxContainer/GridContainer" unique_id=1892856012]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+disabled = true
+text = "July"
+
+[node name="September" type="Button" parent="Panel/VBoxContainer/GridContainer" unique_id=1427923251]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+disabled = true
+text = "September"
+
+[node name="November" type="Button" parent="Panel/VBoxContainer/GridContainer" unique_id=454635187]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+disabled = true
+text = "November"
+
+[node name="HSeparator3" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1476894889]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1303903645]
+layout_mode = 2
+alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1691661553]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+placeholder_text = "Guess the missing number"
+alignment = 1
+expand_to_text_length = true
+
+[node name="SubmitButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1569942316]
+layout_mode = 2
+text = "Submit"
+
+[node name="HSeparator4" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1785207130]
+layout_mode = 2
+
+[node name="FeedbackLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1759599977]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Panel/VBoxContainer" unique_id=1636978246]
+layout_mode = 2
+text = "Close"
