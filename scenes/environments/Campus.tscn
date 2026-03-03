@@ -1,22 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqjdxuql2y38k"]
+[gd_scene format=3 uid="uid://cqjdxuql2y38k"]
 
 [ext_resource type="PackedScene" path="res://scenes/entities/Player.tscn" id="2_player"]
-[ext_resource type="PackedScene" path="res://scenes/entities/ClueObject_knife.tscn" id="3_clue"]
+[ext_resource type="PackedScene" uid="uid://bvj8kfv2xqmje" path="res://scenes/entities/ClueObject_knife.tscn" id="3_clue"]
+[ext_resource type="PackedScene" uid="uid://cv6nwxugppydf" path="res://scenes/entities/ClueTextbook.tscn" id="3_kdby3"]
 
-[node name="Campus" type="Node2D"]
+[node name="Campus" type="Node2D" unique_id=1218151489]
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=134611230]
 offset_left = -500.0
 offset_top = -500.0
 offset_right = 1500.0
 offset_bottom = 1500.0
 color = Color(0.4, 0.6, 0.3, 1)
 
-[node name="Player" parent="." instance=ExtResource("2_player")]
+[node name="Player" parent="." unique_id=1472362224 instance=ExtResource("2_player")]
 position = Vector2(320, 320)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=199332052]
 zoom = Vector2(0.8, 0.8)
 
-[node name="Clue3Object" parent="." instance=ExtResource("3_clue")]
+[node name="Clue3Object" parent="." unique_id=1868197863 instance=ExtResource("3_clue")]
 position = Vector2(192, 160)
+
+[node name="Clue2Object" parent="." unique_id=866046392 instance=ExtResource("3_kdby3")]
