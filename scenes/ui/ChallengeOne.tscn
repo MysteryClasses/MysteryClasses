@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cp5wmde6m600d"]
+[gd_scene format=3 uid="uid://b2asnibbp1jst"]
 
-[ext_resource type="Script" uid="uid://c3kt1x7hhsarj" path="res://scripts/TextbookClue.gd" id="1_ooyf3"]
+[ext_resource type="Script" uid="uid://dwqufxm0fuyuu" path="res://scripts/ChallengeOne.gd" id="1_wr21w"]
 
 [node name="Control" type="Control" unique_id=1362117202]
 process_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ooyf3")
+script = ExtResource("1_wr21w")
 
 [node name="Background" type="ColorRect" parent="." unique_id=178517059]
 layout_mode = 1
@@ -47,19 +47,27 @@ offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ClueText" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=16351354]
+[node name="Challenge" type="Label" parent="Panel/VBoxContainer" unique_id=1824553845]
 layout_mode = 2
-text = "Up until 2005, Pluto was considered one of the nine planets of the solar system.
-In 2006, the IAU reclassified Pluto as a dwarf planet.
+theme_override_font_sizes/font_size = 24
+text = "CHALLENGE"
+horizontal_alignment = 1
 
-It used to be 9 planets. Now it's ..."
-fit_content = true
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2106652199]
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1303903645]
 layout_mode = 2
 alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1691661553]
+[node name="LineEdit1" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=897649575]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+placeholder_text = "Guess the missing number"
+alignment = 1
+expand_to_text_length = true
+
+[node name="LineEdit2" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1691661553]
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 placeholder_text = "Guess the missing number"
@@ -69,6 +77,9 @@ expand_to_text_length = true
 [node name="SubmitButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1569942316]
 layout_mode = 2
 text = "Submit"
+
+[node name="HSeparator4" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1785207130]
+layout_mode = 2
 
 [node name="FeedbackLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1759599977]
 layout_mode = 2

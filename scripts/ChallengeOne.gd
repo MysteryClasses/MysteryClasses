@@ -1,51 +1,58 @@
 extends Control
 
-# Nodes
-var input: LineEdit
+var input1: LineEdit
+var input2: LineEdit
 var feedback: Label
 var submit_button: Button
 var close_button: Button
-var clue_text: RichTextLabel
 
-const CORRECT_ANSWER := "8"  # Pluto clue
+const CORRECT_CODE := ["5", "8"]
 
 func _ready():
-	# Get nodes safely
-	input = get_node_or_null("Panel/VBoxContainer/HBoxContainer/LineEdit")
+	input1 = get_node_or_null("Panel/VBoxContainer/HBoxContainer/LineEdit1")
+	input2 = get_node_or_null("Panel/VBoxContainer/HBoxContainer/LineEdit2")
 	feedback = get_node_or_null("Panel/VBoxContainer/FeedbackLabel")
 	submit_button = get_node_or_null("Panel/VBoxContainer/HBoxContainer/SubmitButton")
 	close_button = get_node_or_null("Panel/VBoxContainer/CloseButton")
-	clue_text = get_node_or_null("Panel/VBoxContainer/RichTextLabel")
 
-	# Connect buttons
 	if submit_button:
 		submit_button.pressed.connect(_on_submit_pressed)
+
 	if close_button:
 		close_button.pressed.connect(_on_close_pressed)
 
+
 func _on_submit_pressed():
-	if not input or not feedback:
-		print("Error: Input or feedback not found")
+	if not input1 or not input2 or not feedback:
+		print("Error: Missing nodes")
 		return
 
-	var answer := input.text.strip_edges()
-	if answer == CORRECT_ANSWER:
-		feedback.text = "Correct! The textbook confirms there are 8 planets."
+	var ans1 := input1.text.strip_edges()
+	var ans2 := input2.text.strip_edges()
+
+	if [ans1, ans2] == CORRECT_CODE:
+		feedback.text = "Correct! The code was entered successfully!"
 		feedback.modulate = Color(0.2, 0.8, 0.2)
-		await get_tree().create_timer(1.5).timeout
-		_close_clue()
+
+		await get_tree().create_timer(2.0).timeout
+		close_ui()
 	else:
-		feedback.text = "That's not correct. Read the textbook carefully."
+		feedback.text = "Wrong! Look at the clues again."
 		feedback.modulate = Color(0.8, 0.2, 0.2)
-		input.text = ""
+
+		input1.text = ""
+		input2.text = ""
+
 
 func _on_close_pressed():
-	_close_clue()
+	close_ui()
 
-func _close_clue():
+
+func close_ui():
 	get_tree().paused = false
 	queue_free()
 
+
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
-		_close_clue()
+		close_ui()
