@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bg05614rc70ah"]
+
+[ext_resource type="PackedScene" uid="uid://bd5vyq0fsuiwe" path="res://scenes/entities/Door.tscn" id="1_ak2e8"]
+[ext_resource type="PackedScene" uid="uid://bwva3bbka12ag" path="res://scenes/entities/Player.tscn" id="2_oy518"]
+[ext_resource type="PackedScene" uid="uid://wlup0cg414yq" path="res://scenes/entities/Teleport.tscn" id="3_oy518"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60kri"]
+size = Vector2(590, 30)
+
+[node name="Classroom" type="Node2D" unique_id=43590407]
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=1429428147]
+
+[node name="Wall1" type="TileMapLayer" parent="." unique_id=931255994]
+
+[node name="Wall" type="ColorRect" parent="Wall1" unique_id=1451230262]
+z_index = 1
+offset_top = 540.0
+offset_right = 590.0
+offset_bottom = 570.0
+
+[node name="Body" type="StaticBody2D" parent="Wall1" unique_id=1050559200]
+
+[node name="Collision" type="CollisionShape2D" parent="Wall1/Body" unique_id=659663926]
+position = Vector2(292, 557)
+shape = SubResource("RectangleShape2D_60kri")
+
+[node name="Wall2" type="TileMapLayer" parent="." unique_id=1684122925]
+
+[node name="Wall" type="ColorRect" parent="Wall2" unique_id=1877649700]
+z_index = 1
+offset_left = 690.0
+offset_top = 540.0
+offset_right = 1280.0
+offset_bottom = 570.0
+
+[node name="Body" type="StaticBody2D" parent="Wall2" unique_id=1673745441]
+
+[node name="Collision" type="CollisionShape2D" parent="Wall2/Body" unique_id=837499742]
+position = Vector2(985, 557)
+shape = SubResource("RectangleShape2D_60kri")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1116199603]
+
+[node name="Hallway" type="ColorRect" parent="TileMapLayer2" unique_id=1634484095]
+z_index = 1
+offset_top = 570.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[node name="Floor" type="ColorRect" parent="TileMapLayer2" unique_id=251054526]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.20392157, 0.3254902, 0.4862745, 1)
+
+[node name="Door" parent="." unique_id=1700271649 instance=ExtResource("1_ak2e8")]
+z_index = 1
+position = Vector2(640, 555)
+
+[node name="Player" parent="." unique_id=1820359016 instance=ExtResource("2_oy518")]
+z_index = 1
+position = Vector2(641, 644)
+
+[node name="Teleport" parent="." unique_id=1010616404 instance=ExtResource("3_oy518")]
+z_index = 1
+position = Vector2(1258, 642)
+target_scene = "res://scenes/environments/Campus.tscn"

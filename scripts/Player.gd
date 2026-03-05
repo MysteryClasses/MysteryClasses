@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 var vertical_velocity: float = 0.0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = Vector2.ZERO
 	
 	if Input.is_action_pressed("ui_right"):
