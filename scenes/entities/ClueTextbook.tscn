@@ -1,63 +1,34 @@
-[gd_scene format=3 uid="uid://ds2g3b5y2lv73"]
+[gd_scene load_steps=4 format=3 uid="uid://ds2g3b5y2lv73"]
 
-[ext_resource type="Texture2D" uid="uid://0w56enxedykv" path="res://assets/textbook.png" id="2_17qvx"]
+[ext_resource type="Script" path="res://scripts/ClueTextbook.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/textbook.png" id="2_texture"]
 
-[sub_resource type="GDScript" id="GDScript_wagg8"]
-script/source = "extends StaticBody2D
-
-var player_in_range = false
-var ui_scene = preload(\"res://scenes/ui/TextbookClue.tscn\")
-
-func _ready():
-	$InteractionArea.body_entered.connect(_on_interaction_area_body_entered)
-	$InteractionArea.body_exited.connect(_on_interaction_area_body_exited)
-
-func _input(event):
-	if player_in_range and event.is_action_pressed(\"interact\"):
-		open_puzzle_ui()
-
-func _on_interaction_area_body_entered(body):
-	if body.name == \"Player\":
-		player_in_range = true
-		$InteractionLabel.visible = true
-
-func _on_interaction_area_body_exited(body):
-	if body.name == \"Player\":
-		player_in_range = false
-		$InteractionLabel.visible = false
-
-func open_puzzle_ui():
-	var ui_instance = ui_scene.instantiate()
-	get_tree().current_scene.add_child(ui_instance)
-	get_tree().paused = true
-"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_30krv"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paper"]
 size = Vector2(64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_la17u"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
 size = Vector2(96, 96)
 
-[node name="Clue2Object" type="StaticBody2D" unique_id=2042776088]
-script = SubResource("GDScript_wagg8")
+[node name="TextbookObject" type="StaticBody2D"]
+script = ExtResource("1_script")
 
-[node name="TileSprite" type="Sprite2D" parent="." unique_id=1679357875]
-texture = ExtResource("2_17qvx")
+[node name="TileSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_texture")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=781572312]
-shape = SubResource("RectangleShape2D_30krv")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_paper")
 
-[node name="InteractionArea" type="Area2D" parent="." unique_id=1237552158]
+[node name="InteractionArea" type="Area2D" parent="."]
 
-[node name="InteractionCollision" type="CollisionShape2D" parent="InteractionArea" unique_id=605508363]
-shape = SubResource("RectangleShape2D_la17u")
+[node name="InteractionCollision" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("RectangleShape2D_interaction")
 
-[node name="InteractionLabel" type="Label" parent="." unique_id=1593163026]
+[node name="InteractionLabel" type="Label" parent="."]
 visible = false
-modulate = Color(1, 1, 0, 1)
 offset_left = -48.0
 offset_top = -60.0
 offset_right = 48.0
 offset_bottom = -40.0
 text = "Press E to interact"
 horizontal_alignment = 1
+modulate = Color(1, 1, 0, 1)

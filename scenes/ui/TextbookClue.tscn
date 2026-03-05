@@ -1,70 +1,18 @@
 [gd_scene format=3 uid="uid://cp5wmde6m600d"]
 
-[sub_resource type="GDScript" id="GDScript_usru5"]
-script/source = "extends Control
+[ext_resource type="Script" path="res://scripts/TextbookClue.gd" id="1_script"]
 
-var input: LineEdit
-var feedback: Label
-var submit_button: Button
-var close_button: Button
-
-const CORRECT_CODE := \"8\"
-
-func _ready():
-	# Get nodes safely with error checking
-	input = get_node_or_null(\"Panel/VBoxContainer/HBoxContainer/LineEdit\")
-	feedback = get_node_or_null(\"Panel/VBoxContainer/FeedbackLabel\")
-	submit_button = get_node_or_null(\"Panel/VBoxContainer/HBoxContainer/SubmitButton\")
-	close_button = get_node_or_null(\"Panel/VBoxContainer/CloseButton\")
-	
-	# Add null checks to prevent errors
-	if submit_button:
-		submit_button.pressed.connect(_on_submit_pressed)
-	else:
-		print(\"Error: Submit button not found at Panel/VBoxContainer/HBoxContainer/SubmitButton\")
-		
-	if close_button:
-		close_button.pressed.connect(_on_close_pressed)
-	else:
-		print(\"Error: Close button not found at Panel/VBoxContainer/CloseButton\")
-
-func _on_submit_pressed():
-	if not input or not feedback:
-		print(\"Error: Input or feedback node not found!\")
-		return
-		
-	var ans := input.text.strip_edges()
-	if ans == CORRECT_CODE:
-		feedback.text = \" Correct!\"
-		feedback.modulate = Color(0.2, 0.8, 0.2, 1)
-		# Wait a moment then close
-		await get_tree().create_timer(2.0).timeout
-		close_ui()
-	else:
-		feedback.text = \"Wrong!\"
-		feedback.modulate = Color(0.8, 0.2, 0.2, 1)
-		input.text = \"\"
-
-func _on_close_pressed():
-	close_ui()
-
-func close_ui():
-	get_tree().paused = false
-	queue_free()
-
-func _input(event):
-	if event.is_action_pressed(\"ui_cancel\"):
-		close_ui()
-"
-
-[node name="Control" type="Control" unique_id=733223456]
+[node name="Control" type="Control" unique_id=1362117202]
+process_mode = 3
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = SubResource("GDScript_usru5")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
 
-[node name="Background" type="ColorRect" parent="." unique_id=1381955224]
+[node name="Background" type="ColorRect" parent="." unique_id=178517059]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -73,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.85)
 
-[node name="Panel" type="Panel" parent="." unique_id=941096132]
+[node name="Panel" type="Panel" parent="." unique_id=1678304148]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -87,57 +35,63 @@ offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=724385277]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1261422234]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 30.0
-offset_top = 30.0
+offset_top = 80.0
 offset_right = -30.0
 offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Challenge" type="Label" parent="Panel/VBoxContainer" unique_id=1093187135]
+[node name="Challenge" type="Label" parent="Panel/VBoxContainer" unique_id=1824553845]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 text = "TEXTBOOK CLUE"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2035419337]
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2106652199]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=159125683]
+[node name="ClueText" type="Label" parent="Panel/VBoxContainer" unique_id=2234567890]
 layout_mode = 2
-alignment = 1
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer" unique_id=793346721]
-layout_mode = 2
+theme_override_font_sizes/font_size = 16
 text = "Up until 2005, Pluto was considered one of the nine planets of the solar system.
 In 2006, the IAU reclassified Pluto as a dwarf planet.
 
 It used to be 9 planets. Now it's..."
+horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=327657298]
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2234567891]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1303903645]
+layout_mode = 2
+alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=897649575]
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 placeholder_text = "Guess the missing number"
 alignment = 1
 expand_to_text_length = true
 
-[node name="SubmitButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1953577345]
+[node name="SubmitButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1569942316]
 layout_mode = 2
 text = "Submit"
 
-[node name="HSeparator4" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1442561578]
+[node name="HSeparator4" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1785207130]
 layout_mode = 2
 
-[node name="FeedbackLabel" type="Label" parent="Panel/VBoxContainer" unique_id=942108160]
+[node name="FeedbackLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1759599977]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
 
-[node name="CloseButton" type="Button" parent="Panel/VBoxContainer" unique_id=732061733]
+[node name="CloseButton" type="Button" parent="Panel/VBoxContainer" unique_id=1636978246]
 layout_mode = 2
 text = "Close"

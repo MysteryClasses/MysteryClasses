@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" path="res://scenes/entities/Player.tscn" id="2_player"]
 [ext_resource type="PackedScene" uid="uid://bvj8kfv2xqmje" path="res://scenes/entities/ClueObject_knife.tscn" id="3_clue"]
-[ext_resource type="PackedScene" uid="uid://cv6nwxugppydf" path="res://scenes/entities/ClueTextbook.tscn" id="3_kdby3"]
+[ext_resource type="PackedScene" uid="uid://ds2g3b5y2lv73" path="res://scenes/entities/ClueTextbook.tscn" id="3_kdby3"]
+[ext_resource type="PackedScene" uid="uid://bhhj8kfv2xqmje" path="res://scenes/entities/DoorChallenge.tscn" id="4_door"]
 
 [node name="Campus" type="Node2D" unique_id=1218151489]
 
@@ -22,4 +23,8 @@ zoom = Vector2(0.8, 0.8)
 [node name="Clue3Object" parent="." unique_id=1868197863 instance=ExtResource("3_clue")]
 position = Vector2(192, 160)
 
-[node name="Clue2Object" parent="." unique_id=866046392 instance=ExtResource("3_kdby3")]
+[node name="TextbookObject" parent="." unique_id=888888888 instance=ExtResource("3_kdby3")]
+position = Vector2(400, 160)
+
+[node name="DoorObject" parent="." unique_id=999999999 instance=ExtResource("4_door")]
+position = Vector2(320, 100)

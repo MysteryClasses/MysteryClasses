@@ -50,27 +50,45 @@ grow_vertical = 2
 [node name="Challenge" type="Label" parent="Panel/VBoxContainer" unique_id=1824553845]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "CHALLENGE"
+text = "DOOR CHALLENGE"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2106652199]
+layout_mode = 2
+
+[node name="Instructions" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=2234567890]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Find the clues around campus to get the two numbers needed to unlock this door.
+
+Hint: Look for objects you can interact with!"
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2234567891]
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1303903645]
 layout_mode = 2
 alignment = 1
 
+[node name="Label1" type="Label" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1234567892]
+layout_mode = 2
+text = "Clue 1:"
+
 [node name="LineEdit1" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=897649575]
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
-placeholder_text = "Guess the missing number"
+placeholder_text = "Number"
 alignment = 1
 expand_to_text_length = true
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1234567893]
+layout_mode = 2
+text = "  Clue 2:"
 
 [node name="LineEdit2" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1691661553]
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
-placeholder_text = "Guess the missing number"
+placeholder_text = "Number"
 alignment = 1
 expand_to_text_length = true
 
