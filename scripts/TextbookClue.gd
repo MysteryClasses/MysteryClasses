@@ -5,7 +5,7 @@ var feedback: Label
 var submit_button: Button
 var close_button: Button
 
-const CORRECT_CODE := "5"
+const CORRECT_CODE := "8"
 
 func _ready():
 	# Get nodes safely with error checking
@@ -32,7 +32,7 @@ func _on_submit_pressed():
 		
 	var ans := input.text.strip_edges()
 	if ans == CORRECT_CODE:
-		feedback.text = " Correct! May (5) was the missing month!"
+		feedback.text = " Correct!"
 		feedback.modulate = Color(0.2, 0.8, 0.2, 1)
 		# Wait a moment then close
 		await get_tree().create_timer(2.0).timeout

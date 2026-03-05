@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 var player_in_range = false
-var ui_scene = preload("res://scenes/ui/CalendarClue.tscn")
+var ui_scene = preload("res://scenes/ui/TextbookClue.tscn")
 
 func _ready():
 	$InteractionArea.body_entered.connect(_on_interaction_area_body_entered)
