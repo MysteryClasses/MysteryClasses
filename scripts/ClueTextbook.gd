@@ -2,6 +2,7 @@ extends StaticBody2D
 
 var player_in_range = false
 var ui_scene = preload("res://scenes/ui/TextbookClue.tscn")
+var _ui_instance = null
 
 func _ready():
 	$InteractionArea.body_entered.connect(_on_interaction_area_body_entered)
@@ -22,6 +23,9 @@ func _on_interaction_area_body_exited(body):
 		$InteractionLabel.visible = false
 
 func open_puzzle_ui():
-	var ui_instance = ui_scene.instantiate()
-	get_tree().current_scene.add_child(ui_instance)
+	if is_instance_valid(_ui_instance):
+		return
+	_ui_instance = ui_scene.instantiate()
+	_ui_instance.tree_exiting.connect(func(): _ui_instance = null, CONNECT_ONE_SHOT)
+	get_tree().current_scene.add_child(_ui_instance)
 	get_tree().paused = true
