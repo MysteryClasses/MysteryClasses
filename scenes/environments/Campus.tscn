@@ -1,48 +1,36 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://cqjdxuql2y38k"]
 
-[ext_resource type="PackedScene" path="res://scenes/entities/Player.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/entities/Player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://bvj8kfv2xqmje" path="res://scenes/entities/ClueObject_knife.tscn" id="3_clue"]
+[ext_resource type="PackedScene" uid="uid://ds2g3b5y2lv73" path="res://scenes/entities/ClueTextbook.tscn" id="3_kdby3"]
+[ext_resource type="PackedScene" uid="uid://cthjnupkbpuxq" path="res://scenes/entities/DoorChallenge.tscn" id="4_door"]
+[ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/Teleport.tscn" id="5_dbyfq"]
 
-[node name="Campus" type="Node2D"]
+[node name="Campus" type="Node2D" unique_id=1218151489]
 
-[node name="Ground" type="ColorRect" parent="."]
-offset_right = 1280.0
-offset_bottom = 720.0
-color = Color(0.4, 0.7, 0.3, 1)
+[node name="Background" type="ColorRect" parent="." unique_id=134611230]
+offset_left = -500.0
+offset_top = -500.0
+offset_right = 1500.0
+offset_bottom = 1500.0
+color = Color(0.4, 0.6, 0.3, 1)
 
-[node name="Buildings" type="Node2D" parent="."]
+[node name="Player" parent="." unique_id=1472362224 instance=ExtResource("2_player")]
+z_index = 1
+position = Vector2(320, 320)
 
-[node name="MainBuilding" type="ColorRect" parent="Buildings"]
-offset_left = 300.0
-offset_top = 150.0
-offset_right = 980.0
-offset_bottom = 450.0
-color = Color(0.7, 0.6, 0.5, 1)
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=199332052]
+zoom = Vector2(0.8, 0.8)
 
-[node name="Entrance" type="ColorRect" parent="Buildings/MainBuilding"]
-offset_left = 300.0
-offset_top = 250.0
-offset_right = 380.0
-offset_bottom = 300.0
-color = Color(0.5, 0.4, 0.3, 1)
+[node name="Clue3Object" parent="." unique_id=1868197863 instance=ExtResource("3_clue")]
+position = Vector2(192, 160)
 
-[node name="Paths" type="Node2D" parent="."]
+[node name="TextbookObject" parent="." unique_id=888888888 instance=ExtResource("3_kdby3")]
+position = Vector2(400, 160)
 
-[node name="MainPath" type="ColorRect" parent="Paths"]
-offset_left = 100.0
-offset_top = 500.0
-offset_right = 1180.0
-offset_bottom = 530.0
-color = Color(0.5, 0.5, 0.5, 1)
+[node name="DoorObject" parent="." unique_id=999999999 instance=ExtResource("4_door")]
+position = Vector2(320, 100)
 
-[node name="EntrancePath" type="ColorRect" parent="Paths"]
-offset_left = 620.0
-offset_top = 450.0
-offset_right = 660.0
-offset_bottom = 500.0
-color = Color(0.5, 0.5, 0.5, 1)
-
-[node name="Player" parent="." instance=ExtResource("1")]
-position = Vector2(640, 550)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(1.2, 1.2)
+[node name="Teleport" parent="." unique_id=1010616404 instance=ExtResource("5_dbyfq")]
+position = Vector2(156, 321)
+target_scene = "res://scenes/environments/Classroom.tscn"

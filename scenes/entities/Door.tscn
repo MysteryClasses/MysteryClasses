@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://bd5vyq0fsuiwe"]
+
+[sub_resource type="GDScript" id="GDScript_hyjki"]
+script/source = "extends Node2D
+
+@export var open_time: float = 5.0
+
+@onready var door_rect: ColorRect = $DoorRect
+@onready var collision: CollisionShape2D = $Body/Collision
+@onready var area: Area2D = $InteractArea
+
+var _player_in_range: Node2D = null
+var _is_open: bool = false
+
+
+func _ready():
+	area.body_entered.connect(_on_body_entered)
+	area.body_exited.connect(_on_body_exited)
+
+
+func _unhandled_input(event):
+	if event.is_action_pressed(\"interact\"):
+		if _player_in_range == null or _is_open:
+			return
+		open_door()
+
+
+func open_door():
+	_is_open = true
+	
+	# Hide the door
+	door_rect.visible = false
+	
+	# Disable collision so player can pass
+	collision.disabled = true
+	
+	wait_and_close()
+
+
+func wait_and_close():
+	await get_tree().create_timer(open_time).timeout
+	
+	# Show door again
+	door_rect.visible = true
+	
+	# Enable collision
+	collision.disabled = false
+	
+	_is_open = false
+
+
+func _on_body_entered(body):
+	if body.is_in_group(\"player\"):
+		_player_in_range = body
+		print(\"Entered Door Area\")
+		
+	
+	
+
+
+func _on_body_exited(body):
+	if body == _player_in_range:
+		_player_in_range = null
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwqoy"]
+size = Vector2(100, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqvrh"]
+size = Vector2(110, 40)
+
+[node name="Door" type="Node2D" unique_id=1700271649]
+script = SubResource("GDScript_hyjki")
+
+[node name="DoorRect" type="ColorRect" parent="." unique_id=137814796]
+offset_left = -50.0
+offset_top = -15.0
+offset_right = 50.0
+offset_bottom = 15.0
+color = Color(0.43137255, 0.32941177, 0.2509804, 1)
+
+[node name="Body" type="StaticBody2D" parent="." unique_id=1256300229]
+
+[node name="Collision" type="CollisionShape2D" parent="Body" unique_id=598917915]
+shape = SubResource("RectangleShape2D_rwqoy")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1614817828]
+
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=287271256]
+shape = SubResource("RectangleShape2D_sqvrh")

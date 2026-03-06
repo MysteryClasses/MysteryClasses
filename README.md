@@ -4,7 +4,7 @@ A 2D mystery adventure game set in a university with different courses and class
 
 ## Team Members
 - **Hendrick** - Developer
-- **Zhelong** - Developer  
+- **Zelong** - Developer  
 - **Azra** - Developer
 - **Hossei** - Developer
 
