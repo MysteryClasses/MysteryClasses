@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bg05614rc70ah"]
 
 [ext_resource type="PackedScene" uid="uid://bd5vyq0fsuiwe" path="res://scenes/entities/Door.tscn" id="1_ak2e8"]
-[ext_resource type="PackedScene" path="res://scenes/entities/Player.tscn" id="2_oy518"]
+[ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/Player.tscn" id="2_oy518"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/Teleport.tscn" id="3_oy518"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60kri"]
@@ -65,4 +65,5 @@ position = Vector2(641, 644)
 [node name="Teleport" parent="." unique_id=1010616404 instance=ExtResource("3_oy518")]
 z_index = 1
 position = Vector2(1259, 642)
+scale = Vector2(0.6, 0.6)
 target_scene = "res://scenes/environments/Campus.tscn"

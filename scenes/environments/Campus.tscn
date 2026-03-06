@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cqjdxuql2y38k"]
 
-[ext_resource type="PackedScene" path="res://scenes/entities/Player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/Player.tscn" id="2_player"]
 [ext_resource type="PackedScene" uid="uid://bvj8kfv2xqmje" path="res://scenes/entities/ClueObject_knife.tscn" id="3_clue"]
 [ext_resource type="PackedScene" uid="uid://ds2g3b5y2lv73" path="res://scenes/entities/ClueTextbook.tscn" id="3_kdby3"]
 [ext_resource type="PackedScene" uid="uid://cthjnupkbpuxq" path="res://scenes/entities/DoorChallenge.tscn" id="4_door"]
@@ -24,13 +24,17 @@ zoom = Vector2(0.8, 0.8)
 
 [node name="Clue3Object" parent="." unique_id=1868197863 instance=ExtResource("3_clue")]
 position = Vector2(192, 160)
+scale = Vector2(0.5, 0.5)
 
 [node name="TextbookObject" parent="." unique_id=888888888 instance=ExtResource("3_kdby3")]
 position = Vector2(400, 160)
+scale = Vector2(0.3, 0.3)
 
 [node name="DoorObject" parent="." unique_id=999999999 instance=ExtResource("4_door")]
 position = Vector2(320, 100)
+scale = Vector2(0.7, 0.7)
 
 [node name="Teleport" parent="." unique_id=1010616404 instance=ExtResource("5_dbyfq")]
 position = Vector2(156, 321)
+scale = Vector2(0.6, 0.6)
 target_scene = "res://scenes/environments/Classroom.tscn"
