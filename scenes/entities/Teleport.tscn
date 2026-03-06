@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://sui8fpymdspn"]
+
+[ext_resource type="Script" uid="uid://hq23b0e0g33c" path="res://scripts/teleport.gd" id="1_luvtb"]
+[ext_resource type="Texture2D" uid="uid://ctoivlufwhr4c" path="res://assets/TeleportPortal.png" id="2_luvtb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_luvtb"]
+
+[node name="Teleport" type="Node2D" unique_id=1010616404]
+script = ExtResource("1_luvtb")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=2050163171]
+
+[node name="Collision" type="CollisionShape2D" parent="InteractArea" unique_id=159872890]
+z_index = 1
+shape = SubResource("CircleShape2D_luvtb")
+
+[node name="TeleportPortal" type="Sprite2D" parent="InteractArea" unique_id=1229413005]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_luvtb")
