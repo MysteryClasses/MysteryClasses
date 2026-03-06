@@ -12,12 +12,12 @@ func _input(event):
 		open_puzzle_ui()
 
 func _on_interaction_area_body_entered(body):
-	if body.name == "Player":
+	if body.is_in_group("player"):
 		player_in_range = true
 		$InteractionLabel.visible = true
 
 func _on_interaction_area_body_exited(body):
-	if body.name == "Player":
+	if body.is_in_group("player"):
 		player_in_range = false
 		$InteractionLabel.visible = false
 
