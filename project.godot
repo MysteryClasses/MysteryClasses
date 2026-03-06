@@ -29,13 +29,6 @@ window/stretch/mode="canvas_items"
 
 enabled=PackedStringArray()
 
-[godot_mcp]
-
-bind_mode=0
-custom_bind_ip=""
-port_override_enabled=false
-port_override=6550
-
 [input]
 
 move_left={
