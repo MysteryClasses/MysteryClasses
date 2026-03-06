@@ -20,6 +20,8 @@ func _ready():
 
 func _unhandled_input(event):
 	if event.is_action_pressed(\"interact\"):
+		if _player_in_range == null or _is_open:
+			return
 		open_door()
 
 
