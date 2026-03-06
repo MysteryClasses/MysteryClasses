@@ -2,6 +2,7 @@ extends StaticBody2D
 
 var player_in_range = false
 var ui_scene = preload("res://scenes/ui/CalendarClue.tscn")
+var ui_instance = null
 
 func _ready():
 	$InteractionArea.body_entered.connect(_on_interaction_area_body_entered)
@@ -22,6 +23,12 @@ func _on_interaction_area_body_exited(body):
 		$InteractionLabel.visible = false
 
 func open_puzzle_ui():
-	var ui_instance = ui_scene.instantiate()
+	if ui_instance != null:
+		return
+	ui_instance = ui_scene.instantiate()
+	ui_instance.tree_exited.connect(_on_ui_closed, CONNECT_ONE_SHOT)
 	get_tree().current_scene.add_child(ui_instance)
 	get_tree().paused = true
+
+func _on_ui_closed():
+	ui_instance = null
