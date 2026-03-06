@@ -23,9 +23,18 @@ func _on_interaction_area_body_exited(body):
 		$InteractionLabel.visible = false
 
 func open_puzzle_ui():
-	if is_instance_valid(_ui_instance):
+	if _ui_instance != null:
 		return
 	_ui_instance = ui_scene.instantiate()
-	_ui_instance.tree_exiting.connect(func(): _ui_instance = null, CONNECT_ONE_SHOT)
-	get_tree().current_scene.add_child(_ui_instance)
+	_ui_instance.tree_exited.connect(_on_ui_closed, CONNECT_ONE_SHOT)
+	
+	# CanvasLayer damit Pop-Up immer zentral relativ zu Bildschirm
+	var canvas_layer = CanvasLayer.new()
+	canvas_layer.add_child(_ui_instance)
+	get_tree().current_scene.add_child(canvas_layer)
 	get_tree().paused = true
+
+func _on_ui_closed():
+	if _ui_instance and _ui_instance.get_parent():
+		_ui_instance.get_parent().queue_free()
+	_ui_instance = null

@@ -27,8 +27,15 @@ func open_puzzle_ui():
 		return
 	ui_instance = ui_scene.instantiate()
 	ui_instance.tree_exited.connect(_on_ui_closed, CONNECT_ONE_SHOT)
-	get_tree().current_scene.add_child(ui_instance)
+	
+	var canvas_layer = CanvasLayer.new()
+	
+	# CanvasLayer damit Pop-Up immer zentral relativ zu Bildschirm
+	canvas_layer.add_child(ui_instance)
+	get_tree().current_scene.add_child(canvas_layer)
 	get_tree().paused = true
 
 func _on_ui_closed():
+	if ui_instance and ui_instance.get_parent():
+		ui_instance.get_parent().queue_free()
 	ui_instance = null
