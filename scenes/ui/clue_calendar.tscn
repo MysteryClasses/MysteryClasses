@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://oatv3bo60xv3"]
 
-[ext_resource type="Script" uid="uid://de8klfnl31le2" path="res://scripts/CalendarClue.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://bjxmcvwp8b4se" path="res://scripts/clue_calendar.gd" id="1_idxst"]
 
 [node name="Control" type="Control" unique_id=1362117202]
 process_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_script")
+script = ExtResource("1_idxst")
 
 [node name="Background" type="ColorRect" parent="." unique_id=178517059]
 layout_mode = 1

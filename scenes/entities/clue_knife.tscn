@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bvj8kfv2xqmje"]
+
+[ext_resource type="Script" uid="uid://brmqv5wv1pktk" path="res://scripts/clue_knife.gd" id="1_vwb03"]
+[ext_resource type="Texture2D" uid="uid://cbug2jv2u63xc" path="res://assets/knife.png" id="2_kjy44"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paper"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
+size = Vector2(96, 96)
+
+[node name="Clue3Object" type="StaticBody2D" unique_id=1775706234]
+script = ExtResource("1_vwb03")
+
+[node name="TileSprite" type="Sprite2D" parent="." unique_id=97224628]
+texture = ExtResource("2_kjy44")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=537324537]
+shape = SubResource("RectangleShape2D_paper")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=931989827]
+
+[node name="InteractionCollision" type="CollisionShape2D" parent="InteractionArea" unique_id=166482425]
+shape = SubResource("RectangleShape2D_interaction")
+
+[node name="InteractionLabel" type="Label" parent="." unique_id=2133172850]
+visible = false
+modulate = Color(1, 1, 0, 1)
+offset_left = -48.0
+offset_top = -60.0
+offset_right = 48.0
+offset_bottom = -40.0
+text = "Press E to interact"
+horizontal_alignment = 1

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ds2g3b5y2lv73"]
+
+[ext_resource type="Script" uid="uid://cwjtm1gpamjvi" path="res://scripts/clue_textbook.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://0w56enxedykv" path="res://assets/textbook.png" id="2_texture"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paper"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
+size = Vector2(96, 96)
+
+[node name="TextbookObject" type="StaticBody2D" unique_id=643607480]
+script = ExtResource("1_script")
+
+[node name="TileSprite" type="Sprite2D" parent="." unique_id=655084417]
+texture = ExtResource("2_texture")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=587832994]
+shape = SubResource("RectangleShape2D_paper")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1954460380]
+
+[node name="InteractionCollision" type="CollisionShape2D" parent="InteractionArea" unique_id=2019551259]
+shape = SubResource("RectangleShape2D_interaction")
+
+[node name="InteractionLabel" type="Label" parent="." unique_id=2012600865]
+visible = false
+modulate = Color(1, 1, 0, 1)
+offset_left = -48.0
+offset_top = -60.0
+offset_right = 48.0
+offset_bottom = -40.0
+text = "Press E to interact"
+horizontal_alignment = 1
