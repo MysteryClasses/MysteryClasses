@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctoivlufwhr4c"
-path="res://.godot/imported/TeleportPortal.png-cbb829db550ce95180f1cc9d167a6d99.ctex"
+uid="uid://cbug2jv2u63xc"
+path="res://.godot/imported/knife.png-fe86871d33c75ce9d4eb4f1452dfa3c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TeleportPortal.png"
-dest_files=["res://.godot/imported/TeleportPortal.png-cbb829db550ce95180f1cc9d167a6d99.ctex"]
+source_file="res://assets/knife.png"
+dest_files=["res://.godot/imported/knife.png-fe86871d33c75ce9d4eb4f1452dfa3c9.ctex"]
 
 [params]
 

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cp5wmde6m600d"]
 
-[ext_resource type="Script" path="res://scripts/TextbookClue.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://d4bm77q57ypxe" path="res://scripts/textbook_clue.gd" id="1_script"]
+
 
 [node name="Control" type="Control" unique_id=1362117202]
 process_mode = 3

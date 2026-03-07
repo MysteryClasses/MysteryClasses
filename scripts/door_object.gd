@@ -1,8 +1,8 @@
 extends StaticBody2D
 
 var player_in_range = false
-var ui_scene = preload("res://scenes/ui/CalendarClue.tscn")
-var ui_instance = null
+var ui_scene = preload("res://scenes/ui/challenge_one.tscn")
+var _active_ui = null
 
 func _ready():
 	$InteractionArea.body_entered.connect(_on_interaction_area_body_entered)
@@ -23,19 +23,21 @@ func _on_interaction_area_body_exited(body):
 		$InteractionLabel.visible = false
 
 func open_puzzle_ui():
-	if ui_instance != null:
+	if _active_ui != null:
 		return
-	ui_instance = ui_scene.instantiate()
+	var ui_instance = ui_scene.instantiate()
+	_active_ui = ui_instance
 	ui_instance.tree_exited.connect(_on_ui_closed, CONNECT_ONE_SHOT)
 	
-	var canvas_layer = CanvasLayer.new()
-	
 	# CanvasLayer damit Pop-Up immer zentral relativ zu Bildschirm
+	var canvas_layer = CanvasLayer.new()
 	canvas_layer.add_child(ui_instance)
 	get_tree().current_scene.add_child(canvas_layer)
+	
 	get_tree().paused = true
 
 func _on_ui_closed():
-	if ui_instance and ui_instance.get_parent():
-		ui_instance.get_parent().queue_free()
-	ui_instance = null
+	if _active_ui and _active_ui.get_parent():
+		# Den CanvasLayer entfernen
+		_active_ui.get_parent().queue_free()
+	_active_ui = null
