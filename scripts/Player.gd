@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 # Speichert letzte Blickrichtung für Idle Animation
 var last_direction: String = "down"
-
+	
 func _physics_process(delta):
 	# Richtungsvektor für gedrückte Tasten
 	var direction = Vector2.ZERO
