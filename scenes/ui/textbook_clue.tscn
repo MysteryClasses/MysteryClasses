@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cp5wmde6m600d"]
 
-[ext_resource type="Script" uid="uid://d4bm77q57ypxe" path="res://scripts/textbook_clue.gd" id="1_script"]
-
+[ext_resource type="Script" uid="uid://dra4akmmd1f0q" path="res://scripts/components/clue_ui_base.gd" id="1_q3dr1"]
 
 [node name="Control" type="Control" unique_id=1362117202]
 process_mode = 3
@@ -11,7 +10,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_script")
+script = ExtResource("1_q3dr1")
+correct_code = "8"
 
 [node name="Background" type="ColorRect" parent="." unique_id=178517059]
 layout_mode = 1
@@ -57,7 +57,7 @@ horizontal_alignment = 1
 [node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2106652199]
 layout_mode = 2
 
-[node name="ClueText" type="Label" parent="Panel/VBoxContainer" unique_id=2234567890]
+[node name="ClueText" type="Label" parent="Panel/VBoxContainer" unique_id=-2060399406]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "Up until 2005, Pluto was considered one of the nine planets of the solar system.
@@ -67,7 +67,7 @@ It used to be 9 planets. Now it's..."
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2234567891]
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer" unique_id=-2060399405]
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1303903645]
