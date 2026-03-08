@@ -21,7 +21,7 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 [autoload]
 
 MCPGameBridge="res://addons/godot_mcp/game_bridge/mcp_game_bridge.gd"
-GameManager="*uid://xo6u2usa0cog"
+GameManager="*res://scripts/autoload/game_manager.gd"
 
 [display]
 
