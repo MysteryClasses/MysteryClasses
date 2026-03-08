@@ -10,7 +10,7 @@ var solved_challenges: Array[String] = []
 func has_clue(clue_id: String) -> bool:
 	return clue_id in collected_clues
 
-# Adds clue to players clue list
+# Adds clue to player's clue list
 func collect_clue(clue_id: String) -> void:
 	if not has_clue(clue_id):
 		collected_clues.append(clue_id)
