@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://oatv3bo60xv3"]
 
-[ext_resource type="Script" uid="uid://bjxmcvwp8b4se" path="res://scripts/clue_calendar.gd" id="1_idxst"]
+[ext_resource type="Script" uid="uid://dra4akmmd1f0q" path="res://scripts/components/clue_ui_base.gd" id="1_idxst"]
 
 [node name="Control" type="Control" unique_id=1362117202]
 process_mode = 3
@@ -11,6 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_idxst")
+correct_code = "5"
+success_message = "Correct! May (5) was the missing month!"
 
 [node name="Background" type="ColorRect" parent="." unique_id=178517059]
 layout_mode = 1

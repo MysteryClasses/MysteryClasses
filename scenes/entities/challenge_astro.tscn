@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cthjnupkbpuxq"]
 
-[ext_resource type="Script" uid="uid://dupaq7xjhclkc" path="res://scripts/door_object.gd" id="1_fx61k"]
+[ext_resource type="Script" uid="uid://csnuybvsse1b8" path="res://scripts/components/interactable.gd" id="1_h1foa"]
+[ext_resource type="PackedScene" uid="uid://b2asnibbp1jst" path="res://scenes/ui/challenge_one.tscn" id="2_7dtil"]
 [ext_resource type="Texture2D" uid="uid://ck8h3kpfotmo7" path="res://assets/door.png" id="2_j3u7v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_paper"]
@@ -9,21 +10,22 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
 size = Vector2(96, 96)
 
-[node name="Door" type="StaticBody2D" unique_id=777777777]
-script = ExtResource("1_fx61k")
+[node name="ChallengeDoor" type="StaticBody2D" unique_id=777777777]
+script = ExtResource("1_h1foa")
+ui_scene = ExtResource("2_7dtil")
 
-[node name="TileSprite" type="Sprite2D" parent="." unique_id=1337442156]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1337442156]
 texture = ExtResource("2_j3u7v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1207598858]
 shape = SubResource("RectangleShape2D_paper")
 
-[node name="InteractionArea" type="Area2D" parent="." unique_id=770561484]
+[node name="InteractArea" type="Area2D" parent="." unique_id=770561484]
 
-[node name="InteractionCollision" type="CollisionShape2D" parent="InteractionArea" unique_id=1428238254]
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=1428238254]
 shape = SubResource("RectangleShape2D_interaction")
 
-[node name="InteractionLabel" type="Label" parent="." unique_id=1549760158]
+[node name="InteractLabel" type="Label" parent="." unique_id=1549760158]
 visible = false
 modulate = Color(1, 1, 0, 1)
 offset_left = -48.0

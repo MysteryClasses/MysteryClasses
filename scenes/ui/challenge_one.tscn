@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2asnibbp1jst"]
 
-[ext_resource type="Script" uid="uid://mbs1oj1br5nm" path="res://scripts/challenge_astro.gd" id="1_cd5ac"]
+[ext_resource type="Script" uid="uid://be6ficqxvuv5b" path="res://scripts/components/challenge_multi_input.gd" id="1_cd5ac"]
 
 [node name="Control" type="Control" unique_id=1362117202]
 process_mode = 3
@@ -11,6 +11,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cd5ac")
+correct_codes = Array[String](["5", "8"])
+success_message = "Correct! The code was entered successfully!"
+wrong_message = "Wrong! Look at the clues again."
 
 [node name="Background" type="ColorRect" parent="." unique_id=178517059]
 layout_mode = 1
