@@ -3,7 +3,7 @@ extends Node
 # Tracks which clues the player has found (by unique ID)
 var collected_clues: Array[String] = []
 
-# Tracks which challenges the player has solved (by unique ID))
+# Tracks which challenges the player has solved (by unique ID)
 var solved_challenges: Array[String] = []
 
 # For future: Checks if player has a certain clue
