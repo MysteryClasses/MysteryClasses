@@ -18,7 +18,7 @@ size = Vector2(10, 420)
 [sub_resource type="RectangleShape2D" id="wall_right_shape"]
 size = Vector2(10, 420)
 
-[node name="Campus" type="Node2D" unique_id=1218151489]
+[node name="AstroRoom" type="Node2D" unique_id=1218151489]
 
 [node name="Background" type="ColorRect" parent="." unique_id=134611230]
 offset_left = 18.0
@@ -34,15 +34,15 @@ position = Vector2(320, 320)
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=199332052]
 zoom = Vector2(0.8, 0.8)
 
-[node name="Clue3Object" parent="." unique_id=1868197863 instance=ExtResource("3_clue")]
+[node name="ClueKnife" parent="." unique_id=1868197863 instance=ExtResource("3_clue")]
 position = Vector2(41, 150)
 scale = Vector2(0.5, 0.5)
 
-[node name="TextbookObject" parent="." unique_id=888888888 instance=ExtResource("3_kdby3")]
+[node name="ClueTextbook" parent="." unique_id=888888888 instance=ExtResource("3_kdby3")]
 position = Vector2(38, 298)
 scale = Vector2(0.3, 0.3)
 
-[node name="DoorObject" parent="." unique_id=999999999 instance=ExtResource("4_door")]
+[node name="ChallengeAstro" parent="." unique_id=999999999 instance=ExtResource("4_door")]
 position = Vector2(291, -21.999992)
 scale = Vector2(0.7, 0.7)
 
