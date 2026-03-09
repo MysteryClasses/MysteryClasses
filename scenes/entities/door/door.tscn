@@ -52,10 +52,6 @@ func wait_and_close():
 func _on_body_entered(body):
 	if body.is_in_group(\"player\"):
 		_player_in_range = body
-		print(\"Entered Door Area\")
-		
-	
-	
 
 
 func _on_body_exited(body):
