@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://wlup0cg414yq"]
+[gd_scene format=3 uid="uid://sui8fpymdspn"]
 
 [ext_resource type="Script" uid="uid://dqo60dmeipw1m" path="res://scenes/entities/teleport/teleport.gd" id="1_pj82w"]
-[ext_resource type="Texture2D" uid="uid://ctoivlufwhr4c" path="res://assets/shared/toilet.png" id="2_pj82w"]
+[ext_resource type="Texture2D" uid="uid://ctoivlufwhr4c" path="res://assets/shared/toilet.png" id="2_hhfye"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_luvtb"]
 
@@ -16,4 +17,4 @@ shape = SubResource("CircleShape2D_luvtb")
 
 [node name="TeleportPortal" type="Sprite2D" parent="InteractArea" unique_id=1229413005]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_pj82w")
+texture = ExtResource("2_hhfye")

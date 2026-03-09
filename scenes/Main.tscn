@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://o6ls240w2cae"]
 
-[ext_resource type="PackedScene" uid="uid://cqjdxuql2y38k" path="res://scenes/environments/campus.tscn" id="1_campus"]
+[ext_resource type="PackedScene" uid="uid://cqjdxuql2y38k" path="res://scenes/rooms/astro_room/astro_room.tscn" id="1_campus"]
+
 
 [node name="Main" type="Node2D" unique_id=504464441]
 
