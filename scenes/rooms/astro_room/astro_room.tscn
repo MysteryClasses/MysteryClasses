@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cqjdxuql2y38k"]
 
-[ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player.tscn" id="2_player"]
-[ext_resource type="PackedScene" uid="uid://bvj8kfv2xqmje" path="res://scenes/entities/clue_knife.tscn" id="3_clue"]
-[ext_resource type="PackedScene" uid="uid://ds2g3b5y2lv73" path="res://scenes/entities/clue_textbook.tscn" id="3_kdby3"]
-[ext_resource type="PackedScene" uid="uid://cthjnupkbpuxq" path="res://scenes/entities/challenge_astro.tscn" id="4_door"]
-[ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport.tscn" id="5_dbyfq"]
+[ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://bvj8kfv2xqmje" path="res://scenes/rooms/astro_room/clue_knife.tscn" id="3_clue"]
+[ext_resource type="PackedScene" uid="uid://ds2g3b5y2lv73" path="res://scenes/rooms/astro_room/clue_textbook.tscn" id="3_kdby3"]
+[ext_resource type="PackedScene" uid="uid://cthjnupkbpuxq" path="res://scenes/rooms/astro_room/challenge_astro.tscn" id="4_door"]
+[ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="5_dbyfq"]
 
 [sub_resource type="RectangleShape2D" id="wall_top_shape"]
 size = Vector2(620, 10)
@@ -49,7 +49,7 @@ scale = Vector2(0.7, 0.7)
 [node name="Teleport" parent="." unique_id=1010616404 instance=ExtResource("5_dbyfq")]
 position = Vector2(37, -22)
 scale = Vector2(0.6, 0.6)
-target_scene = "res://scenes/environments/Classroom.tscn"
+target_scene = "res://scenes/rooms/hallway/hallway.tscn"
 
 [node name="WallTop" type="StaticBody2D" parent="." unique_id=299427781]
 position = Vector2(318, -51)

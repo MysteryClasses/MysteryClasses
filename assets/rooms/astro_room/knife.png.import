@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctoivlufwhr4c"
-path="res://.godot/imported/toilet.png-dbf19e4e7e472b76b1abdc220529df45.ctex"
+uid="uid://cbug2jv2u63xc"
+path="res://.godot/imported/knife.png-c2d55f73842be435c26fcf8570ac8b23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/toilet.png"
-dest_files=["res://.godot/imported/toilet.png-dbf19e4e7e472b76b1abdc220529df45.ctex"]
+source_file="res://assets/rooms/astro_room/knife.png"
+dest_files=["res://.godot/imported/knife.png-c2d55f73842be435c26fcf8570ac8b23.ctex"]
 
 [params]
 

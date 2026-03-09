@@ -15,8 +15,6 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_input_field = get_node_or_null("Panel/VBoxContainer/HBoxContainer/LineEdit")
 	_feedback = get_node_or_null("Panel/VBoxContainer/FeedbackLabel")
-	if not _input_field or not _feedback:
-		push_error("ClueUIBase: Missing required UI nodes. Expected LineEdit at 'Panel/VBoxContainer/HBoxContainer/LineEdit' and Label at 'Panel/VBoxContainer/FeedbackLabel'.")
 
 	# Checks for submit/close Buttons and connects to according func
 	var submit := get_node_or_null("Panel/VBoxContainer/HBoxContainer/SubmitButton")
