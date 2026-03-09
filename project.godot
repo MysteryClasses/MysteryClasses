@@ -20,7 +20,6 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]
 
-MCPGameBridge="res://addons/godot_mcp/game_bridge/mcp_game_bridge.gd"
 GameManager="*res://scripts/autoload/game_manager.gd"
 
 [display]
@@ -33,13 +32,6 @@ window/stretch/mode="canvas_items"
 [editor_plugins]
 
 enabled=PackedStringArray()
-
-[godot_mcp]
-
-bind_mode=0
-custom_bind_ip=""
-port_override_enabled=false
-port_override=6550
 
 [input]
 
