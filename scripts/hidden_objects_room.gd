@@ -83,33 +83,78 @@ func try_open_exit():
 		show_status_message("The exit door is locked. Solve the puzzle first.")
 		return false
 
-# Helper method to show status messages (can be easily replaced with UI later)
+# Helper method to show status messages with proper UI
 func show_status_message(text: String):
 	print("[Room Message] " + text)
-	# TODO: Replace with actual UI label when ready
-	# For now, also display a temporary label if needed
-	display_temp_message(text)
+	display_message_ui(text)
 
-# Temporary message display (you can enhance this with a proper UI later)
-func display_temp_message(text: String):
-	# This is a simple temporary solution - replace with proper UI
+# Create a proper UI message display
+func display_message_ui(text: String):
+	# Remove any existing message
+	var existing_ui = get_node_or_null("MessageUI")
+	if existing_ui:
+		existing_ui.queue_free()
+	
+	# Create main UI container
+	var ui_container = Control.new()
+	ui_container.name = "MessageUI"
+	ui_container.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	ui_container.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(ui_container)
+	
+	# Create background panel
+	var panel = Panel.new()
+	panel.position = Vector2(50, 50)
+	panel.size = Vector2(900, 120)
+	panel.modulate = Color(0.1, 0.1, 0.2, 0.9)  # Dark blue with transparency
+	ui_container.add_child(panel)
+	
+	# Add border effect
+	var border = Panel.new()
+	border.position = Vector2(45, 45)
+	border.size = Vector2(910, 130)
+	border.modulate = Color(0.8, 0.8, 0.9, 0.8)  # Light border
+	ui_container.add_child(border)
+	ui_container.move_child(border, 0)  # Move border behind main panel
+	
+	# Create message label
 	var label = Label.new()
 	label.text = text
-	label.position = Vector2(100, 50)
-	label.size = Vector2(800, 100)
-	label.add_theme_color_override("font_color", Color.WHITE)
-	add_child(label)
+	label.position = Vector2(70, 80)
+	label.size = Vector2(860, 80)
+	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	
-	# Remove the label after 3 seconds
+	# Style the label
+	if not label.get_theme_font("font"):
+		var font = ThemeDB.fallback_font
+		label.add_theme_font_override("font", font)
+	
+	label.add_theme_font_size_override("font_size", 18)
+	label.add_theme_color_override("font_color", Color.WHITE)
+	label.add_theme_color_override("font_shadow_color", Color.BLACK)
+	label.add_theme_constant_override("shadow_offset_x", 2)
+	label.add_theme_constant_override("shadow_offset_y", 2)
+	
+	ui_container.add_child(label)
+	
+	# Add a subtle animation
+	var tween = create_tween()
+	ui_container.modulate.a = 0.0
+	tween.tween_property(ui_container, "modulate:a", 1.0, 0.3)
+	
+	# Auto-remove after 4 seconds with fade out
 	var timer = Timer.new()
-	timer.wait_time = 3.0
+	timer.wait_time = 3.5
 	timer.one_shot = true
-	add_child(timer)
+	ui_container.add_child(timer)
+	
 	timer.timeout.connect(func(): 
-		if label and is_instance_valid(label):
-			label.queue_free()
-		if timer and is_instance_valid(timer):
-			timer.queue_free()
+		if ui_container and is_instance_valid(ui_container):
+			var fade_tween = create_tween()
+			fade_tween.tween_property(ui_container, "modulate:a", 0.0, 0.5)
+			fade_tween.tween_callback(ui_container.queue_free)
 	)
 	timer.start()
 
