@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cqjdxuql2y38k"]
 
+[ext_resource type="Texture2D" uid="uid://c5iabw6f5p1cd" path="res://assets/shared/classroom/chair.png" id="1_kchbg"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="2_player"]
+[ext_resource type="Texture2D" uid="uid://b1yak57icgp4s" path="res://assets/shared/classroom/board.png" id="2_v6ubr"]
+[ext_resource type="Texture2D" uid="uid://ddaxhpjli5bd7" path="res://assets/shared/classroom/table.png" id="3_c23eh"]
 [ext_resource type="PackedScene" uid="uid://bvj8kfv2xqmje" path="res://scenes/rooms/astro_room/clue_knife.tscn" id="3_clue"]
 [ext_resource type="PackedScene" uid="uid://ds2g3b5y2lv73" path="res://scenes/rooms/astro_room/clue_textbook.tscn" id="3_kdby3"]
 [ext_resource type="PackedScene" uid="uid://cthjnupkbpuxq" path="res://scenes/rooms/astro_room/challenge_astro.tscn" id="4_door"]
@@ -26,6 +29,96 @@ offset_top = -51.0
 offset_right = 618.0
 offset_bottom = 349.0
 color = Color(0.4, 0.6, 0.3, 1)
+
+[node name="Chair" type="Sprite2D" parent="." unique_id=2094755596]
+position = Vector2(142, 49.999992)
+scale = Vector2(0.56756663, 0.37904897)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair" type="Sprite2D" parent="Chair" unique_id=1262219316]
+position = Vector2(1.1838298, 231.8856)
+scale = Vector2(0.96058357, 0.9234082)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair" type="Sprite2D" parent="Chair/Chair" unique_id=1541783010]
+position = Vector2(1.1838298, 231.8856)
+scale = Vector2(0.96058357, 0.9234082)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair" type="Sprite2D" parent="Chair/Chair/Chair" unique_id=1701416308]
+position = Vector2(1.1838298, 231.8856)
+scale = Vector2(0.96058357, 0.9234082)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair3" type="Sprite2D" parent="Chair" unique_id=1110696938]
+position = Vector2(182.84967, -5.7797127)
+scale = Vector2(1.1219416, 0.9642985)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair" type="Sprite2D" parent="Chair/Chair3" unique_id=349525954]
+position = Vector2(1.1838298, 231.8856)
+scale = Vector2(0.96058357, 0.9234082)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair" type="Sprite2D" parent="Chair/Chair3/Chair" unique_id=73589860]
+position = Vector2(1.1838298, 231.8856)
+scale = Vector2(0.96058357, 0.9234082)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair" type="Sprite2D" parent="Chair/Chair3/Chair/Chair" unique_id=1509482807]
+position = Vector2(-2.139882, 247.59113)
+scale = Vector2(1.0634884, 1.0833154)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair2" type="Sprite2D" parent="." unique_id=46438686]
+position = Vector2(351, 48)
+scale = Vector2(0.56756663, 0.37904897)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair" type="Sprite2D" parent="Chair2" unique_id=1388736860]
+position = Vector2(1.1838298, 231.8856)
+scale = Vector2(0.96058357, 0.9234082)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair" type="Sprite2D" parent="Chair2/Chair" unique_id=913104474]
+position = Vector2(1.1838298, 231.8856)
+scale = Vector2(0.96058357, 0.9234082)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair" type="Sprite2D" parent="Chair2/Chair/Chair" unique_id=1417595789]
+position = Vector2(1.1838298, 231.8856)
+scale = Vector2(0.96058357, 0.9234082)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair3" type="Sprite2D" parent="Chair2" unique_id=1302139724]
+position = Vector2(182.84967, -5.7797127)
+scale = Vector2(1.1219416, 0.9642985)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair" type="Sprite2D" parent="Chair2/Chair3" unique_id=1952570336]
+position = Vector2(1.1838298, 231.8856)
+scale = Vector2(0.96058357, 0.9234082)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair" type="Sprite2D" parent="Chair2/Chair3/Chair" unique_id=614546843]
+position = Vector2(1.1838298, 231.8856)
+scale = Vector2(0.96058357, 0.9234082)
+texture = ExtResource("1_kchbg")
+
+[node name="Chair" type="Sprite2D" parent="Chair2/Chair3/Chair/Chair" unique_id=443496506]
+position = Vector2(-2.139882, 247.59113)
+scale = Vector2(1.0634884, 1.0833154)
+texture = ExtResource("1_kchbg")
+
+[node name="Board" type="Sprite2D" parent="." unique_id=1123161967]
+position = Vector2(601, 156.00002)
+scale = Vector2(1.2488472, 0.9217615)
+texture = ExtResource("2_v6ubr")
+
+[node name="Table" type="Sprite2D" parent="." unique_id=2057777647]
+position = Vector2(546, 149)
+scale = Vector2(0.23724926, 0.2187395)
+texture = ExtResource("3_c23eh")
 
 [node name="Player" parent="." unique_id=1472362224 instance=ExtResource("2_player")]
 z_index = 1
