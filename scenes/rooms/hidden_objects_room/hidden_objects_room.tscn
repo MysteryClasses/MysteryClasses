@@ -1,0 +1,256 @@
+[gd_scene format=3 uid="uid://k3o2qbycwjvr"]
+
+[ext_resource type="Texture2D" uid="uid://d01688je4sxl6" path="res://2dClassroomAssetPackByStyloo/WallFloorDoor second version tiling/strokespritesheet20121.png" id="1_o76ve"]
+[ext_resource type="Texture2D" uid="uid://ddf40bi352hy1" path="res://2dClassroomAssetPackByStyloo/Classroom 2 Props/Classroom Props First Spritesheet 1.png" id="2_vav6t"]
+[ext_resource type="Texture2D" uid="uid://dcwd1hrpuoi5o" path="res://2dClassroomAssetPackByStyloo/Chemistry lab/Chemistry Lab First Spritesheet 2.png" id="2_ywj5c"]
+[ext_resource type="Texture2D" uid="uid://wki1glw6tewi" path="res://2dClassroomAssetPackByStyloo/Art Room/Art Room Spritesheet 2.png" id="3_24c3q"]
+[ext_resource type="Texture2D" uid="uid://bgr1h4am2wudd" path="res://2dClassroomAssetPackByStyloo/Classroom 2 Props/Classroom Props Second Spritesheet 3.png" id="5_lf5aq"]
+[ext_resource type="Texture2D" uid="uid://b8rfqgied7ey2" path="res://2dClassroomAssetPackByStyloo/Art Room/Art Room Spritesheet 4.png" id="6_5s4t1"]
+[ext_resource type="Texture2D" uid="uid://cpqdeaf6tm5yo" path="res://2dClassroomAssetPackByStyloo/Art Room/Art Room Spritesheet 1.png" id="7_1yfi6"]
+[ext_resource type="Texture2D" uid="uid://41di0jtocm25" path="res://2dClassroomAssetPackByStyloo/Principal Office/Principal Office Second Spritesheet 2.png" id="8_mc1ai"]
+[ext_resource type="Texture2D" uid="uid://biwjoy37jvgky" path="res://2dClassroomAssetPackByStyloo/Cafeteria/Cafeteria Second Spritesheet 7.png" id="9_qexjc"]
+[ext_resource type="Texture2D" uid="uid://nvy8btjyqp0g" path="res://2dClassroomAssetPackByStyloo/Cafeteria/Cafeteria Second Spritesheet 8.png" id="10_pdv1x"]
+[ext_resource type="Script" uid="uid://dkig3dy82lu8q" path="res://scripts/hidden_objects_room.gd" id="11_script"]
+[ext_resource type="Script" uid="uid://7j1vorh1k73p" path="res://scripts/components/InteractableArea.gd" id="12_interact"]
+[ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="13_player"]
+[ext_resource type="Texture2D" uid="uid://dpnbv0m5re01t" path="res://2dClassroomAssetPackByStyloo/Classroom 2 Props/Classroom Props First Spritesheet 3.png" id="13_roqy4"]
+[ext_resource type="Texture2D" uid="uid://cvs81pb1f582e" path="res://2dClassroomAssetPackByStyloo/Classroom 2 Props/Classroom Props First Spritesheet 7.png" id="14_4sdpv"]
+[ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="14_teleport"]
+[ext_resource type="Texture2D" uid="uid://d4b628e7mugl0" path="res://2dClassroomAssetPackByStyloo/Cafeteria/Cafeteria Second Spritesheet 6.png" id="17_d1byq"]
+[ext_resource type="Texture2D" uid="uid://d0gfakc2t7i4d" path="res://2dClassroomAssetPackByStyloo/Computer Room/Computer Room Spritesheet 6.png" id="18_rhm8f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hcsy"]
+size = Vector2(552.98694, 142.07062)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cs3gg"]
+size = Vector2(181.15717, 144.42319)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8kchv"]
+size = Vector2(184.82233, 142.06998)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cj8y2"]
+size = Vector2(188.36758, 146.7894)
+
+[node name="Hidden_Objects_Room" type="Node2D" unique_id=482171565]
+script = ExtResource("11_script")
+
+[node name="Floor" type="Sprite2D" parent="." unique_id=1783371917]
+position = Vector2(659, 198.00003)
+scale = Vector2(3.4305556, 3.304348)
+texture = ExtResource("1_o76ve")
+region_enabled = true
+region_rect = Rect2(44.507996, 35.256004, 288, 184)
+region_filter_clip_enabled = true
+
+[node name="firelöscher" type="Sprite2D" parent="Floor" unique_id=142913550]
+position = Vector2(117.93447, -66.75083)
+scale = Vector2(0.055602618, 0.04928629)
+texture = ExtResource("2_ywj5c")
+region_enabled = true
+region_rect = Rect2(40, 267, 69, 224)
+
+[node name="hocker" type="Sprite2D" parent="Floor" unique_id=1190818243]
+position = Vector2(-105.52227, -52.923073)
+scale = Vector2(0.13418493, 0.11725335)
+texture = ExtResource("3_24c3q")
+region_enabled = true
+region_rect = Rect2(896, 840, 96, 168)
+
+[node name="denkmal" type="Sprite2D" parent="Floor/hocker" unique_id=376450782]
+position = Vector2(-1.9643307, -107.56411)
+scale = Vector2(0.6884239, 0.7676163)
+texture = ExtResource("3_24c3q")
+region_enabled = true
+region_rect = Rect2(840, -8, 168, 208)
+
+[node name="Board" type="Sprite2D" parent="Floor" unique_id=1150222542]
+position = Vector2(-5.8299627, -66.46153)
+scale = Vector2(0.08681067, 0.14345507)
+texture = ExtResource("2_vav6t")
+region_enabled = true
+region_rect = Rect2(0, 560, 648, 296)
+
+[node name="pencil" type="Sprite2D" parent="Floor/Board" unique_id=849810855]
+position = Vector2(250.49994, 102.000015)
+scale = Vector2(0.5468748, 1.1159419)
+texture = ExtResource("5_lf5aq")
+region_enabled = true
+region_rect = Rect2(160, 72, 112, 72)
+
+[node name="BoardInteraction" type="Area2D" parent="Floor/Board" unique_id=931364567]
+position = Vector2(-23.50499, 25.738342)
+script = ExtResource("12_interact")
+object_name = "Board"
+
+[node name="BoardCollision" type="CollisionShape2D" parent="Floor/Board/BoardInteraction" unique_id=726814219]
+position = Vector2(23.505096, 9.306186)
+shape = SubResource("RectangleShape2D_2hcsy")
+
+[node name="Desk2" type="Sprite2D" parent="Floor" unique_id=1174002416]
+position = Vector2(95.90284, 52.923073)
+scale = Vector2(0.1438722, 0.1514152)
+texture = ExtResource("2_vav6t")
+region_enabled = true
+region_rect = Rect2(696, 768, 328, 256)
+
+[node name="pinsels" type="Sprite2D" parent="Floor/Desk2" unique_id=1930082313]
+position = Vector2(-38.2381, -53.70456)
+scale = Vector2(0.731174, 0.7732108)
+texture = ExtResource("6_5s4t1")
+region_enabled = true
+region_rect = Rect2(888, 308, 40, 67)
+
+[node name="paintbrushes" type="Sprite2D" parent="Floor/Desk2" unique_id=858617418]
+position = Vector2(77.28735, -57.570618)
+scale = Vector2(0.731174, 0.7732108)
+texture = ExtResource("7_1yfi6")
+region_enabled = true
+region_rect = Rect2(963, 288, 35, 85)
+
+[node name="paint" type="Sprite2D" parent="Floor/Desk2" unique_id=52873380]
+position = Vector2(13.675232, -39.786774)
+scale = Vector2(0.731174, 0.7732108)
+texture = ExtResource("3_24c3q")
+region_enabled = true
+region_rect = Rect2(193, 600, 91, 57)
+
+[node name="Desk2Interaction" type="Area2D" parent="Floor/Desk2" unique_id=761075513]
+script = ExtResource("12_interact")
+object_name = "Desk2"
+
+[node name="Desk2Collision" type="CollisionShape2D" parent="Floor/Desk2/Desk2Interaction" unique_id=2904185]
+position = Vector2(14.182587, -8.128479)
+shape = SubResource("RectangleShape2D_cs3gg")
+
+[node name="Desk1" type="Sprite2D" parent="Floor" unique_id=1292478070]
+position = Vector2(45.473686, 52.615383)
+scale = Vector2(0.14240177, 0.1602209)
+texture = ExtResource("2_vav6t")
+region_enabled = true
+region_rect = Rect2(696, 768, 328, 256)
+
+[node name="book" type="Sprite2D" parent="Floor/Desk1" unique_id=2089814353]
+position = Vector2(24.818298, -42.94232)
+rotation = 0.0640425
+scale = Vector2(0.6464904, 0.79945064)
+skew = 0.0056797266
+texture = ExtResource("8_mc1ai")
+region_enabled = true
+region_rect = Rect2(26, 198, 118, 81)
+
+[node name="Desk1Interaction" type="Area2D" parent="Floor/Desk1" unique_id=1684693012]
+script = ExtResource("12_interact")
+object_name = "Desk1"
+
+[node name="Desk1Collision" type="CollisionShape2D" parent="Floor/Desk1/Desk1Interaction" unique_id=117134527]
+position = Vector2(14.329086, -7.6817017)
+shape = SubResource("RectangleShape2D_8kchv")
+
+[node name="Desk3" type="Sprite2D" parent="Floor" unique_id=1315484409]
+position = Vector2(-102.31579, 54.153835)
+scale = Vector2(0.14454637, 0.14958489)
+texture = ExtResource("2_vav6t")
+region_enabled = true
+region_rect = Rect2(696, 768, 328, 256)
+
+[node name="cupcake" type="Sprite2D" parent="Floor/Desk3" unique_id=609832344]
+position = Vector2(61.929276, -62.54413)
+scale = Vector2(1.0433606, 1.2418859)
+texture = ExtResource("9_qexjc")
+region_enabled = true
+region_rect = Rect2(39, 937, 38, 49)
+
+[node name="tomato" type="Sprite2D" parent="Floor/Desk3" unique_id=1337449195]
+position = Vector2(4.977188, -53.371216)
+scale = Vector2(0.6861694, 0.83390486)
+texture = ExtResource("10_pdv1x")
+region_enabled = true
+region_rect = Rect2(467, 939, 38, 36)
+
+[node name="Desk3Interaction" type="Area2D" parent="Floor/Desk3" unique_id=257035473]
+script = ExtResource("12_interact")
+object_name = "Desk3"
+
+[node name="Desk3Collision" type="CollisionShape2D" parent="Floor/Desk3/Desk3Interaction" unique_id=1821102459]
+position = Vector2(4.033325, 2.0569859)
+shape = SubResource("RectangleShape2D_cj8y2")
+
+[node name="Desk6" type="Sprite2D" parent="Floor" unique_id=1278291715]
+position = Vector2(96.485825, 7.3846154)
+scale = Vector2(0.14331996, 0.12798783)
+texture = ExtResource("13_roqy4")
+region_enabled = true
+region_rect = Rect2(787, 824, 150, 177)
+
+[node name="remote" type="Sprite2D" parent="Floor/Desk6" unique_id=1836923177]
+position = Vector2(-40.67798, -43.273346)
+scale = Vector2(0.52600765, 0.6794123)
+texture = ExtResource("18_rhm8f")
+region_enabled = true
+region_rect = Rect2(856, 406, 145, 92)
+
+[node name="Desk7" type="Sprite2D" parent="Floor" unique_id=805178703]
+position = Vector2(96.194336, -29.538465)
+scale = Vector2(0.13228753, 0.12717298)
+texture = ExtResource("13_roqy4")
+region_enabled = true
+region_rect = Rect2(787, 824, 150, 177)
+
+[node name="Desk8" type="Sprite2D" parent="Floor" unique_id=134451181]
+position = Vector2(-101.73279, -26.76923)
+scale = Vector2(0.13272189, 0.13369189)
+texture = ExtResource("14_4sdpv")
+region_enabled = true
+region_rect = Rect2(801, 823, 151, 177)
+
+[node name="usb" type="Sprite2D" parent="Floor/Desk8" unique_id=2051268432]
+position = Vector2(41.729797, -6.1035156e-05)
+scale = Vector2(0.58137536, 0.69045097)
+texture = ExtResource("18_rhm8f")
+region_enabled = true
+region_rect = Rect2(887, 553, 34, 25)
+
+[node name="Desk9" type="Sprite2D" parent="Floor" unique_id=1461660027]
+position = Vector2(-100.56681, 11.384611)
+scale = Vector2(0.14237405, 0.14107995)
+texture = ExtResource("14_4sdpv")
+region_enabled = true
+region_rect = Rect2(801, 823, 151, 177)
+
+[node name="Player" parent="." unique_id=1232856253 instance=ExtResource("13_player")]
+position = Vector2(650, 200)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=956492323]
+zoom = Vector2(1.5, 1.5)
+
+[node name="ExitDoor" parent="." unique_id=1840643489 instance=ExtResource("14_teleport")]
+position = Vector2(1016, 1)
+target_scene = "res://scenes/rooms/astro_room/astro_room.tscn"
+
+[node name="desk4" type="Sprite2D" parent="." unique_id=408047199]
+position = Vector2(468, 383)
+scale = Vector2(0.5106383, 0.49346405)
+texture = ExtResource("2_vav6t")
+region_enabled = true
+region_rect = Rect2(774, 830, 188, 153)
+
+[node name="salt" type="Sprite2D" parent="desk4" unique_id=1053974206]
+position = Vector2(56.791676, -62.821175)
+scale = Vector2(0.7519104, 0.5819747)
+texture = ExtResource("17_d1byq")
+region_enabled = true
+region_rect = Rect2(158, 684, 38, 79)
+
+[node name="Desk5" type="Sprite2D" parent="." unique_id=1231972351]
+position = Vector2(654, 385)
+scale = Vector2(0.5146282, 0.473039)
+texture = ExtResource("2_vav6t")
+region_enabled = true
+region_rect = Rect2(774, 830, 188, 153)
+
+[node name="chemistry_glass" type="Sprite2D" parent="Desk5" unique_id=864513662]
+position = Vector2(48.113647, -79.65729)
+scale = Vector2(0.62807846, 0.8078194)
+texture = ExtResource("2_ywj5c")
+region_enabled = true
+region_rect = Rect2(617, 752, 61, 95)
