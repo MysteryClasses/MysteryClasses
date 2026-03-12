@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://oatv3bo60xv3"]
 
 [ext_resource type="Script" uid="uid://dra4akmmd1f0q" path="res://scripts/components/clue_ui_base.gd" id="1_idxst"]
+[ext_resource type="Texture2D" uid="uid://c56mvemq3aaan" path="res://assets/rooms/astro_room/astro_calendar_clue.png" id="2_u07ru"]
 
 [node name="Control" type="Control" unique_id=1362117202]
 process_mode = 3
@@ -58,52 +59,12 @@ horizontal_alignment = 1
 [node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2106652199]
 layout_mode = 2
 
-[node name="HintLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1338360480]
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer" unique_id=991383642]
+custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
-theme_override_font_sizes/font_size = 14
-text = "You see some months names"
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1418893587]
-layout_mode = 2
-
-[node name="GridContainer" type="GridContainer" parent="Panel/VBoxContainer" unique_id=1147463683]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 10
-columns = 3
-
-[node name="January" type="Button" parent="Panel/VBoxContainer/GridContainer" unique_id=1484490917]
-custom_minimum_size = Vector2(120, 50)
-layout_mode = 2
-disabled = true
-text = "January"
-
-[node name="March" type="Button" parent="Panel/VBoxContainer/GridContainer" unique_id=1669661245]
-custom_minimum_size = Vector2(120, 50)
-layout_mode = 2
-disabled = true
-text = "March"
-
-[node name="July" type="Button" parent="Panel/VBoxContainer/GridContainer" unique_id=1892856012]
-custom_minimum_size = Vector2(120, 50)
-layout_mode = 2
-disabled = true
-text = "July"
-
-[node name="September" type="Button" parent="Panel/VBoxContainer/GridContainer" unique_id=1427923251]
-custom_minimum_size = Vector2(120, 50)
-layout_mode = 2
-disabled = true
-text = "September"
-
-[node name="November" type="Button" parent="Panel/VBoxContainer/GridContainer" unique_id=454635187]
-custom_minimum_size = Vector2(120, 50)
-layout_mode = 2
-disabled = true
-text = "November"
+texture = ExtResource("2_u07ru")
+expand_mode = 2
+stretch_mode = 5
 
 [node name="HSeparator3" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1476894889]
 layout_mode = 2

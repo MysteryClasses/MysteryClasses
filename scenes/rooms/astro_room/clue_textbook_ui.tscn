@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cp5wmde6m600d"]
 
 [ext_resource type="Script" uid="uid://dra4akmmd1f0q" path="res://scripts/components/clue_ui_base.gd" id="1_q3dr1"]
+[ext_resource type="Texture2D" uid="uid://cv28be3qns4xs" path="res://assets/rooms/astro_room/astro_textbook_clue.png" id="2_tbfu0"]
 
 [node name="Control" type="Control" unique_id=1362117202]
 process_mode = 3
@@ -60,12 +61,16 @@ layout_mode = 2
 [node name="ClueText" type="Label" parent="Panel/VBoxContainer" unique_id=-2060399406]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-text = "Up until 2005, Pluto was considered one of the nine planets of the solar system.
-In 2006, the IAU reclassified Pluto as a dwarf planet.
-
-It used to be 9 planets. Now it's..."
+text = "You opened the book. It's about astronomy. On the first page a piece of a note is glued to the book. A quote is written on it. But why... ?"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="ClueImage" type="TextureRect" parent="Panel/VBoxContainer" unique_id=255298031]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+texture = ExtResource("2_tbfu0")
+expand_mode = 3
+stretch_mode = 5
 
 [node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer" unique_id=-2060399405]
 layout_mode = 2
