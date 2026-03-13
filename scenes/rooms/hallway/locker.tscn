@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b7q6gkhh1mewa"]
+
+[ext_resource type="Texture2D" uid="uid://dmqf4xfkq72jr" path="res://assets/rooms/hallway/locker_front.png" id="1_pit1g"]
+[ext_resource type="Script" uid="uid://csnuybvsse1b8" path="res://scripts/components/interactable.gd" id="1_qbthv"]
+[ext_resource type="PackedScene" uid="uid://cvjq3golyw2mv" path="res://scenes/rooms/hallway/locker_ui.tscn" id="2_byf1g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wv1gg"]
+size = Vector2(20, 12.361328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pit1g"]
+size = Vector2(20, 16.794624)
+
+[node name="Locker" type="StaticBody2D" unique_id=1242192052]
+script = ExtResource("1_qbthv")
+ui_scene = ExtResource("2_byf1g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=892770103]
+texture = ExtResource("1_pit1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1506716934]
+position = Vector2(0, -49.04909)
+scale = Vector2(26.079994, 17.319998)
+shape = SubResource("RectangleShape2D_wv1gg")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1227341495]
+
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=2083551970]
+position = Vector2(0, 16.999996)
+scale = Vector2(28.84, 20.839998)
+shape = SubResource("RectangleShape2D_pit1g")
+
+[node name="InteractLabel" type="Label" parent="." unique_id=1745509938]
+custom_minimum_size = Vector2(0, 30)
+offset_left = 307.0
+offset_top = -127.0
+offset_right = 447.0
+offset_bottom = -104.0
+text = "Press E to interact"
