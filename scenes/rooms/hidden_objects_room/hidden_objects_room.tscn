@@ -1,24 +1,25 @@
 [gd_scene format=3 uid="uid://bv5bshxi0m580"]
 
 [ext_resource type="Texture2D" uid="uid://uyeb3pc12kmu" path="res://assets/rooms/hidden_objects_room/floor.png" id="1_floor"]
-[ext_resource type="Texture2D" uid="uid://w75vb7o5bno7" path="res://assets/rooms/hidden_objects_room/chemistry_glass.png" id="2_chemistry_glass"]
 [ext_resource type="Texture2D" uid="uid://bqqsfugrty1er" path="res://assets/rooms/hidden_objects_room/stool.png" id="3_stool"]
 [ext_resource type="Texture2D" uid="uid://b1wlr5cvf80dc" path="res://assets/rooms/hidden_objects_room/desk.png" id="4_desk"]
 [ext_resource type="Texture2D" uid="uid://bt1g6vpms5avk" path="res://assets/rooms/hidden_objects_room/computer_desk.png" id="5_computer_desk"]
 [ext_resource type="Texture2D" uid="uid://ccewbr5jcfamf" path="res://assets/rooms/hidden_objects_room/storage_desk.png" id="6_storage_desk"]
-[ext_resource type="Texture2D" uid="uid://c5i4d668wcsy3" path="res://assets/rooms/hidden_objects_room/salt_shaker.png" id="7_salt_shaker"]
-[ext_resource type="Texture2D" uid="uid://scyf6wixsc8h" path="res://assets/rooms/hidden_objects_room/remote.png" id="8_remote"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="9_player"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/board_clue.tscn" id="10_board_clue"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/study_clue.tscn" id="11_study_clue"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/art_clue.tscn" id="12_art_clue"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/snack_clue.tscn" id="13_snack_clue"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/exit_door.tscn" id="14_exit_door"]
-[ext_resource type="Texture2D" uid="uid://dmqmml5chkx8a" path="res://assets/rooms/hidden_objects_room/scissor.png" id="15_scissor"]
 [ext_resource type="Texture2D" uid="uid://b8tpb7mo017re" path="res://assets/rooms/hidden_objects_room/fire_extinguisher.png" id="16_fire_extinguisher"]
 [ext_resource type="Texture2D" uid="uid://dy5cj2utihfl5" path="res://assets/rooms/hidden_objects_room/statue.png" id="17_statue"]
-[ext_resource type="Texture2D" uid="uid://cstl25wc8n2g4" path="res://assets/rooms/hidden_objects_room/usb_drive.png" id="18_usb_drive"]
 [ext_resource type="Texture2D" uid="uid://k3rgdbpyutoo" path="res://assets/rooms/hidden_objects_room/front_desk.png" id="19_front_desk"]
+[ext_resource type="AudioStream" uid="uid://f1wdb7pk15m8" path="res://assets/musics/hidden_room.mp3" id="20_hqaxb"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/remote_object.tscn" id="21_remote_object"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/usb_drive_object.tscn" id="22_usb_drive_object"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/salt_shaker_object.tscn" id="23_salt_shaker_object"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/chemistry_glass_object.tscn" id="24_chemistry_glass_object"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/scissor_object.tscn" id="25_scissor_object"]
 
 [node name="HiddenObjectsRoom" type="Node2D" unique_id=405100079]
 
@@ -79,20 +80,16 @@ position = Vector2(996, 330)
 scale = Vector2(0.45612264, 0.41976)
 texture = ExtResource("5_computer_desk")
 
-[node name="Remote" type="Sprite2D" parent="ComputerDeskUpper" unique_id=147104155]
-position = Vector2(-32.885975, -28.58775)
-scale = Vector2(0.47418898, 0.64229417)
-texture = ExtResource("8_remote")
+[node name="RemoteObject" parent="." unique_id=147104155 instance=ExtResource("21_remote_object")]
+position = Vector2(978, 316)
 
 [node name="StorageDeskUpper" type="Sprite2D" parent="." unique_id=1029959078]
 position = Vector2(305.88083, 341.89996)
 scale = Vector2(0.4575017, 0.44121)
 texture = ExtResource("6_storage_desk")
 
-[node name="UsbDrive" type="Sprite2D" parent="." unique_id=1099350042]
+[node name="UsbDriveObject" parent="." unique_id=1099350042 instance=ExtResource("22_usb_drive_object")]
 position = Vector2(322.50674, 326.1209)
-scale = Vector2(0.49960357, 0.6303278)
-texture = ExtResource("18_usb_drive")
 
 [node name="StorageDeskLower" type="Sprite2D" parent="." unique_id=1193001831]
 position = Vector2(309.32846, 467.29996)
@@ -104,20 +101,16 @@ position = Vector2(471.00003, 563)
 scale = Vector2(0.3776404, 0.384005)
 texture = ExtResource("19_front_desk")
 
-[node name="SaltShaker" type="Sprite2D" parent="FrontDeskLeft" unique_id=261705340]
-position = Vector2(35.25267, -66.86927)
-scale = Vector2(0.7519, 0.582)
-texture = ExtResource("7_salt_shaker")
+[node name="SaltShakerObject" parent="." unique_id=261705340 instance=ExtResource("23_salt_shaker_object")]
+position = Vector2(471, 535)
 
 [node name="FrontDeskRight" type="Sprite2D" parent="." unique_id=1122971036]
 position = Vector2(650.0931, 563.4539)
 scale = Vector2(0.37333086, 0.36007947)
 texture = ExtResource("19_front_desk")
 
-[node name="ChemistryGlass" type="Sprite2D" parent="FrontDeskRight" unique_id=615606839]
-position = Vector2(48, -80)
-scale = Vector2(0.6281, 0.8078)
-texture = ExtResource("2_chemistry_glass")
+[node name="ChemistryGlassObject" parent="." unique_id=615606839 instance=ExtResource("24_chemistry_glass_object")]
+position = Vector2(655, 537)
 
 [node name="BoardClue" parent="." unique_id=1491925035 instance=ExtResource("10_board_clue")]
 position = Vector2(637, 167)
@@ -145,7 +138,10 @@ limit_top = 70
 limit_right = 1135
 limit_bottom = 736
 
-[node name="Scissor" type="Sprite2D" parent="." unique_id=253015236]
+[node name="ScissorObject" parent="." unique_id=253015236 instance=ExtResource("25_scissor_object")]
 position = Vector2(1000, 536)
-scale = Vector2(0.24482758, 0.52380955)
-texture = ExtResource("15_scissor")
+
+[node name="HiddenRoom" type="AudioStreamPlayer" parent="." unique_id=1739907598]
+process_mode = 3
+stream = ExtResource("20_hqaxb")
+autoplay = true

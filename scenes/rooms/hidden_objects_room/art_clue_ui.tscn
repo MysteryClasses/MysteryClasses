@@ -6,4 +6,4 @@
 title_text = "Art Clue"
 expected_step_index = 1
 success_message = "Correct. Creativity belongs in the second step."
-wrong_message = "Wrong order. Re-read the board and start from the study clue."
+wrong_message = "Wrong order. Re-read the board and start over."

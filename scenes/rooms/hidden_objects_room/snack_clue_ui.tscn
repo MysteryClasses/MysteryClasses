@@ -6,4 +6,4 @@
 title_text = "Snack Clue"
 expected_step_index = 2
 success_message = "Correct. Hunger comes last. The exit is now unlocked."
-wrong_message = "Wrong order. Hunger should be the final step."
+wrong_message = "Wrong order."
