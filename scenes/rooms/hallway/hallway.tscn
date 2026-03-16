@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="2_oy518"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="3_oy518"]
 [ext_resource type="PackedScene" uid="uid://b7q6gkhh1mewa" path="res://scenes/rooms/hallway/locker.tscn" id="4_atylr"]
+[ext_resource type="AudioStream" uid="uid://mk81o8dqiupq" path="res://assets/musics/horror_music.mp3" id="5_btcgh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60kri"]
 size = Vector2(590, 30)
@@ -73,3 +74,8 @@ target_scene = "res://scenes/rooms/astro_room/astro_room.tscn"
 z_index = 1
 position = Vector2(339, 581)
 scale = Vector2(0.2, 0.2)
+
+[node name="HorrorMusic" type="AudioStreamPlayer" parent="." unique_id=810347197]
+process_mode = 3
+stream = ExtResource("5_btcgh")
+autoplay = true
