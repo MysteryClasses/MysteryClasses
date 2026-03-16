@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/sequence_clue_ui.tscn" id="1_base"]
+
+[node name="SnackClueUI" instance=ExtResource("1_base")]
+title_text = "Snack Clue"
+expected_step_index = 2
+success_message = "Correct. Hunger comes last. The exit is now unlocked."
+wrong_message = "Wrong order. Hunger should be the final step."
