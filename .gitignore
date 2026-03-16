@@ -17,3 +17,6 @@ data_*/
 
 # MCP Addon
 addons/godot_mcp/
+
+# MAC stuff
+.DS_Store

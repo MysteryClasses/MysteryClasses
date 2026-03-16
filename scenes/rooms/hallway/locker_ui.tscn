@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://b2asnibbp1jst"]
+[gd_scene format=3 uid="uid://cvjq3golyw2mv"]
 
-[ext_resource type="Script" uid="uid://be6ficqxvuv5b" path="res://scripts/components/challenge_multi_input.gd" id="1_cd5ac"]
+[ext_resource type="Script" uid="uid://be6ficqxvuv5b" path="res://scripts/components/challenge_multi_input.gd" id="1_2p2u7"]
 
 [node name="Control" type="Control" unique_id=1362117202]
 process_mode = 3
@@ -10,10 +10,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_cd5ac")
-correct_codes = Array[String](["5", "8"])
-success_message = "Correct! The code was entered successfully!"
-wrong_message = "Wrong! Look at the clues again."
+script = ExtResource("1_2p2u7")
+correct_codes = Array[String](["1", "1", "1", "1"])
 
 [node name="Background" type="ColorRect" parent="." unique_id=178517059]
 layout_mode = 1
@@ -44,7 +42,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 30.0
-offset_top = 30.0
+offset_top = 80.0
 offset_right = -30.0
 offset_bottom = -30.0
 grow_horizontal = 2
@@ -52,18 +50,19 @@ grow_vertical = 2
 
 [node name="Challenge" type="Label" parent="Panel/VBoxContainer" unique_id=1824553845]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "DOOR CHALLENGE"
+theme_override_font_sizes/font_size = 20
+text = "TEXTBOOK CLUE"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2106652199]
 layout_mode = 2
 
-[node name="Instructions" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=-2060399406]
+[node name="ClueText" type="Label" parent="Panel/VBoxContainer" unique_id=-2060399406]
 layout_mode = 2
-text = "Find the clues around campus to get the two numbers needed to unlock this door.
-
-Hint: Look for objects you can interact with!"
+theme_override_font_sizes/font_size = 16
+text = "You see your friends locker but its locked. Its a lock with a number code. It's 4 numbers, each from 0 to 9."
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer" unique_id=-2060399405]
 layout_mode = 2
@@ -72,29 +71,33 @@ layout_mode = 2
 layout_mode = 2
 alignment = 1
 
-[node name="Label1" type="Label" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1234567892]
-layout_mode = 2
-text = "Clue 1:"
-
 [node name="LineEdit1" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=897649575]
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
-placeholder_text = "Number"
+size_flags_horizontal = 3
+placeholder_text = "Code 1"
 alignment = 1
 expand_to_text_length = true
 
-[node name="Label2" type="Label" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1234567893]
+[node name="LineEdit2" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=578220059]
 layout_mode = 2
-text = "  Clue 2:"
-
-[node name="LineEdit2" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1691661553]
-custom_minimum_size = Vector2(60, 0)
-layout_mode = 2
-placeholder_text = "Number"
+size_flags_horizontal = 3
+placeholder_text = "Code 2"
 alignment = 1
-expand_to_text_length = true
 
-[node name="SubmitButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1569942316]
+[node name="LineEdit3" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=928050702]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Code 3"
+alignment = 1
+
+[node name="LineEdit4" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1182301835]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Code 4"
+alignment = 1
+
+[node name="SubmitButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=648515642]
 layout_mode = 2
 text = "Submit"
 

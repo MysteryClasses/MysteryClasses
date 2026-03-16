@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bd5vyq0fsuiwe" path="res://scenes/entities/door/door.tscn" id="1_ak2e8"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="2_oy518"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="3_oy518"]
+[ext_resource type="PackedScene" uid="uid://b7q6gkhh1mewa" path="res://scenes/rooms/hallway/locker.tscn" id="4_atylr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60kri"]
 size = Vector2(590, 30)
@@ -67,3 +68,8 @@ z_index = 1
 position = Vector2(1259, 642)
 scale = Vector2(0.6, 0.6)
 target_scene = "res://scenes/rooms/astro_room/astro_room.tscn"
+
+[node name="Locker" parent="." unique_id=388848055 instance=ExtResource("4_atylr")]
+z_index = 1
+position = Vector2(339, 581)
+scale = Vector2(0.2, 0.2)
