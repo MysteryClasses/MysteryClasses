@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/astro_room.mp3-bf4a5d3a8b878e9abf961cf6d6896d
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/horror_music.mp3-e079f138a81d07a78237b567271c
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
