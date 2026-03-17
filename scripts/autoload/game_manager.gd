@@ -1,4 +1,5 @@
 extends Node
+class_name GameManager
 
 # Tracks which clues the player has found (by unique ID)
 var collected_clues: Array[String] = []
