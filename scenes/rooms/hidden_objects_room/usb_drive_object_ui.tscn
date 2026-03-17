@@ -1,0 +1,15 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
+
+[node name="UsbDriveObjectUI" instance=ExtResource("1_base")]
+ui_type = 2
+title_text = "USB Drive"
+fragment_id = "usb_drive"
+fragment_character = "I"
+expected_step_index = 0
+total_steps = 7
+fragment_success_message = "You slide out a hidden tile marked 'I'."
+fragment_repeat_message = "The USB drive is empty now. You already took its letter."
+fragment_wrong_message = "The 'I' tile is not the next piece of the word. The sequence resets."
+fragment_solved_message = "The USB drive already gave up its letter: I."

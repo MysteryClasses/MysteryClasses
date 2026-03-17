@@ -5,5 +5,6 @@
 [node name="BoardClueUI" instance=ExtResource("1_base")]
 ui_type = 0
 title_text = "Board Clue"
-body_text = "Study first, creativity second, hunger last."
-hint_text = "Start with the study clue, then art, then snack."
+total_steps = 7
+body_text = "A chalk note reads: 'Seven marked objects keep the name of what this room demands. Take them in order: memory, reaction, control, division, preservation, safety, and finally the silent witness. Their letters reveal the answer.'"
+hint_text = "Each correct object adds one character to a seven-letter word."

@@ -1,9 +1,8 @@
 [gd_scene format=3]
 
-[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/sequence_clue_ui.tscn" id="1_base"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
 
 [node name="ArtClueUI" instance=ExtResource("1_base")]
+ui_type = 1
 title_text = "Art Clue"
-expected_step_index = 1
-sequence_success_message = "Correct. Creativity belongs in the second step."
-sequence_wrong_message = "Wrong order. Re-read the board and start over."
+info_text = "A sketch pinned here reads: 'Reaction follows memory, and the silent witness waits until all else is done.'"

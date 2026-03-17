@@ -1,8 +1,8 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://b8a4b2v3vfxma"]
 
-[ext_resource type="Script" path="res://scripts/components/interactable.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_script"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/board_clue_ui.tscn" id="2_ui"]
-[ext_resource type="Texture2D" path="res://assets/rooms/hidden_objects_room/board.png" id="3_texture"]
+[ext_resource type="Texture2D" uid="uid://dbjkr5xrr7iy4" path="res://assets/rooms/hidden_objects_room/board.png" id="3_texture"]
 
 [sub_resource type="RectangleShape2D" id="1_body_shape"]
 size = Vector2(190, 72)
@@ -10,27 +10,37 @@ size = Vector2(190, 72)
 [sub_resource type="RectangleShape2D" id="2_interact_shape"]
 size = Vector2(220, 110)
 
-[node name="BoardClue" type="StaticBody2D"]
+[node name="BoardClue" type="StaticBody2D" unique_id=1854622810]
 script = ExtResource("1_script")
 ui_scene = ExtResource("2_ui")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=527522503]
 scale = Vector2(0.2977606, 0.47340173)
 texture = ExtResource("3_texture")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=922341998]
 shape = SubResource("1_body_shape")
 
-[node name="InteractArea" type="Area2D" parent="."]
+[node name="InteractArea" type="Area2D" parent="." unique_id=346393358]
 
-[node name="InteractShape" type="CollisionShape2D" parent="InteractArea"]
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=1886371331]
 shape = SubResource("2_interact_shape")
 
-[node name="InteractLabel" type="Label" parent="."]
+[node name="InteractLabel" type="Label" parent="." unique_id=1376293696]
 visible = false
 offset_left = -80.0
 offset_top = -78.0
 offset_right = 80.0
 offset_bottom = -52.0
-text = "Press E to inspect"
+text = "Press E to read board"
+horizontal_alignment = 1
+
+[node name="BoardHint" type="Label" parent="." unique_id=1789255313]
+modulate = Color(0.92, 0.84, 0.46, 1)
+offset_left = -124.0
+offset_top = -2.0
+offset_right = 116.0
+offset_bottom = 34.0
+theme_override_font_sizes/font_size = 16
+text = "Start here"
 horizontal_alignment = 1

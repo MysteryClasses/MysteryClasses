@@ -1,0 +1,15 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
+
+[node name="ScissorObjectUI" instance=ExtResource("1_base")]
+ui_type = 2
+title_text = "Scissors"
+fragment_id = "scissors"
+fragment_character = "I"
+expected_step_index = 3
+total_steps = 7
+fragment_success_message = "Stamped inside the handle is the letter 'I'. You take it."
+fragment_repeat_message = "You already took the letter hidden in the scissors."
+fragment_wrong_message = "The cutting tool is being used too soon. The sequence resets."
+fragment_solved_message = "The scissors already yielded their letter: I."
