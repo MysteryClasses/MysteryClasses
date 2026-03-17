@@ -11,5 +11,5 @@ func _initialize_ui(title_text: String) -> void:
 		title_label.text = title_text
 
 
-func _game_manager() -> GameManager:
+func _game_manager():
 	return get_node("/root/GameManager")
