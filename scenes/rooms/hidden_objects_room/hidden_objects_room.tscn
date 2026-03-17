@@ -21,6 +21,18 @@
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/chemistry_glass_object.tscn" id="24_chemistry_glass_object"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/scissor_object.tscn" id="25_scissor_object"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_top"]
+size = Vector2(928.5, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_bottom"]
+size = Vector2(922.5, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_left"]
+size = Vector2(32, 483)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_right"]
+size = Vector2(32, 479)
+
 [node name="HiddenObjectsRoom" type="Node2D" unique_id=405100079]
 
 [node name="Floor" type="Sprite2D" parent="." unique_id=882566549]
@@ -39,6 +51,34 @@ position = Vector2(57.000004, -30.999998)
 scale = Vector2(0.8980126, 1)
 color = Color(0.53, 0.42, 0.28, 1)
 polygon = PackedVector2Array(180, 286, 1135, 286, 1135, 308, 180, 308)
+
+[node name="BoundaryTop" type="StaticBody2D" parent="." unique_id=2086560179]
+position = Vector2(657.5, 70)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryTop" unique_id=1081247853]
+position = Vector2(-12.75, 31)
+shape = SubResource("RectangleShape2D_wall_top")
+
+[node name="BoundaryBottom" type="StaticBody2D" parent="." unique_id=412977015]
+position = Vector2(657.5, 736)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryBottom" unique_id=1520872071]
+position = Vector2(-11.75, -120)
+shape = SubResource("RectangleShape2D_wall_bottom")
+
+[node name="BoundaryLeft" type="StaticBody2D" parent="." unique_id=353698260]
+position = Vector2(180, 403)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryLeft" unique_id=635496111]
+position = Vector2(23, -45.5)
+shape = SubResource("RectangleShape2D_wall_left")
+
+[node name="BoundaryRight" type="StaticBody2D" parent="." unique_id=1418589160]
+position = Vector2(1135, 403)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryRight" unique_id=1928941693]
+position = Vector2(-42, -45.5)
+shape = SubResource("RectangleShape2D_wall_right")
 
 [node name="FireExtinguisher" type="Sprite2D" parent="." unique_id=284469101]
 position = Vector2(242, 565)
