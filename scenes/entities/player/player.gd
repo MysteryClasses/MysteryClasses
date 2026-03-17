@@ -5,7 +5,12 @@ extends CharacterBody2D
 
 # Speichert letzte Blickrichtung für Idle Animation
 var last_direction: String = "down"
-func _physics_process(delta):
+
+func _ready():
+	# Ensure player is in the player group for teleports and interactions
+	add_to_group("player")
+
+func _physics_process(_delta):
 	# Richtungsvektor für gedrückte Tasten
 	var direction = Vector2.ZERO
 

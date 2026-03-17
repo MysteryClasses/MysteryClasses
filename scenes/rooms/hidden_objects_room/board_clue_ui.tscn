@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
+
+[node name="BoardClueUI" instance=ExtResource("1_base")]
+ui_type = 0
+title_text = "Board Clue"
+body_text = "Study first, creativity second, hunger last."
+hint_text = "Start with the study clue, then art, then snack."

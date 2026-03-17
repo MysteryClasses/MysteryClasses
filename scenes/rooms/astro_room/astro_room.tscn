@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ds2g3b5y2lv73" path="res://scenes/rooms/astro_room/clue_textbook.tscn" id="3_kdby3"]
 [ext_resource type="PackedScene" uid="uid://cthjnupkbpuxq" path="res://scenes/rooms/astro_room/challenge_astro.tscn" id="4_door"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="5_dbyfq"]
+[ext_resource type="AudioStream" uid="uid://c1j6bfhxgbetq" path="res://assets/musics/astro_room.mp3" id="9_c23eh"]
 
 [sub_resource type="RectangleShape2D" id="wall_top_shape"]
 size = Vector2(620, 10)
@@ -144,6 +145,11 @@ position = Vector2(37, -22)
 scale = Vector2(0.6, 0.6)
 target_scene = "res://scenes/rooms/hallway/hallway.tscn"
 
+[node name="TeleportToHiddenRoom" parent="." unique_id=170399224 instance=ExtResource("5_dbyfq")]
+position = Vector2(599, 315)
+scale = Vector2(0.8, 0.8)
+target_scene = "res://scenes/rooms/hidden_objects_room/hidden_objects_room.tscn"
+
 [node name="WallTop" type="StaticBody2D" parent="." unique_id=299427781]
 position = Vector2(318, -51)
 
@@ -167,3 +173,8 @@ position = Vector2(618, 149)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=805949794]
 shape = SubResource("wall_right_shape")
+
+[node name="AstroRoom" type="AudioStreamPlayer" parent="." unique_id=281746484]
+process_mode = 3
+stream = ExtResource("9_c23eh")
+autoplay = true

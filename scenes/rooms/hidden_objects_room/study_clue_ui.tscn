@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/sequence_clue_ui.tscn" id="1_base"]
+
+[node name="StudyClueUI" instance=ExtResource("1_base")]
+title_text = "Study Clue"
+expected_step_index = 0
+sequence_success_message = "Correct. The study clue comes first."
+sequence_wrong_message = "Wrong order. The study clue should be your first interaction."

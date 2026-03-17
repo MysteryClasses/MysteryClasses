@@ -64,5 +64,3 @@ You have 7 different input actions defined:
 
 
 
-
-
