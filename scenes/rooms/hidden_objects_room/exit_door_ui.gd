@@ -1,4 +1,4 @@
-extends "res://scenes/rooms/hidden_objects_room/hidden_room_ui_base.gd"
+extends "res://scenes/rooms/hidden_objects_room/hidden_objects_room_ui_base.gd"
 
 @export var required_challenge_id: String = "hidden_objects_room_desk_sequence"
 @export var target_scene: String = "res://scenes/rooms/astro_room/astro_room.tscn"

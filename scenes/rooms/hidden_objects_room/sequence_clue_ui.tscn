@@ -1,9 +1,0 @@
-[gd_scene format=3]
-
-[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
-
-[node name="SequenceClueUI" instance=ExtResource("1_base")]
-ui_type = 1
-title_text = "Sequence Clue"
-sequence_success_message = "Correct clue."
-sequence_wrong_message = "Wrong order. Start again from the first clue."

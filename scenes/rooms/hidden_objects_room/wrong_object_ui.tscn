@@ -1,8 +1,0 @@
-[gd_scene format=3]
-
-[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
-
-[node name="WrongObjectUI" instance=ExtResource("1_base")]
-ui_type = 2
-title_text = "Wrong Object"
-body_text = "Wrong object. Progress reset."
