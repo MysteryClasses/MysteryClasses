@@ -2,8 +2,8 @@ extends "res://scenes/rooms/hidden_objects_room/hidden_room_ui_base.gd"
 
 @export var required_challenge_id: String = "hidden_objects_room_desk_sequence"
 @export var target_scene: String = "res://scenes/rooms/astro_room/astro_room.tscn"
-@export_multiline var locked_message: String = "The exit is locked. Solve the hidden object sequence first."
-@export_multiline var unlocked_message: String = "The sequence is solved. You can leave the room."
+@export_multiline var locked_message: String = "The exit is locked. A note points you to the board on the back wall before the marked objects can be understood."
+@export_multiline var unlocked_message: String = "The word is complete. You can leave the room."
 
 @onready var message_label: Label = $Panel/VBoxContainer/MessageLabel
 @onready var action_button: Button = $Panel/VBoxContainer/ActionButton

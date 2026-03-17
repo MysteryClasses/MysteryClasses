@@ -1,0 +1,15 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
+
+[node name="ChemistryGlassObjectUI" instance=ExtResource("1_base")]
+ui_type = 4
+title_text = "Chemistry Glass"
+fragment_id = "chemistry_glass"
+fragment_character = "N"
+expected_step_index = 1
+total_steps = 7
+fragment_success_message = "Etched into the glass is a glowing 'N'. You claim it."
+fragment_repeat_message = "The etched letter from the glass is already yours."
+fragment_wrong_message = "The reaction vessel is out of place here. The sequence resets."
+fragment_solved_message = "The chemistry glass already surrendered its letter: N."

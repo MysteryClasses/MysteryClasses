@@ -1,0 +1,15 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
+
+[node name="StatueObjectUI" instance=ExtResource("1_base")]
+ui_type = 4
+title_text = "Statue"
+fragment_id = "statue"
+fragment_character = "T"
+expected_step_index = 6
+total_steps = 7
+fragment_success_message = "A letter 'T' is carved into the statue's base. It completes the word."
+fragment_repeat_message = "The statue's final letter is already collected."
+fragment_wrong_message = "The silent witness belongs at the very end. The sequence resets."
+fragment_solved_message = "The statue already yielded its letter: T."

@@ -20,6 +20,8 @@
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/salt_shaker_object.tscn" id="23_salt_shaker_object"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/chemistry_glass_object.tscn" id="24_chemistry_glass_object"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/scissor_object.tscn" id="25_scissor_object"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/fire_extinguisher_object.tscn" id="26_fire_extinguisher_object"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/statue_object.tscn" id="27_statue_object"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_top"]
 size = Vector2(928.5, 32)
@@ -80,20 +82,16 @@ position = Vector2(1135, 403)
 position = Vector2(-42, -45.5)
 shape = SubResource("RectangleShape2D_wall_right")
 
-[node name="FireExtinguisher" type="Sprite2D" parent="." unique_id=284469101]
+[node name="FireExtinguisherObject" parent="." unique_id=284469101 instance=ExtResource("26_fire_extinguisher_object")]
 position = Vector2(242, 565)
-scale = Vector2(0.27443886, 0.22911288)
-texture = ExtResource("16_fire_extinguisher")
 
 [node name="Stool" type="Sprite2D" parent="." unique_id=892070466]
 position = Vector2(415, 319)
 scale = Vector2(0.46267316, 0.38709)
 texture = ExtResource("3_stool")
 
-[node name="Statue" type="Sprite2D" parent="." unique_id=1818843979]
+[node name="StatueObject" parent="." unique_id=1818843979 instance=ExtResource("27_statue_object")]
 position = Vector2(415.00003, 277)
-scale = Vector2(0.2988283, 0.26136816)
-texture = ExtResource("17_statue")
 
 [node name="StudyDeskBase" type="Sprite2D" parent="." unique_id=1000863310]
 position = Vector2(812.99994, 557)

@@ -1,9 +1,8 @@
 [gd_scene format=3]
 
-[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/sequence_clue_ui.tscn" id="1_base"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
 
 [node name="SnackClueUI" instance=ExtResource("1_base")]
+ui_type = 3
 title_text = "Snack Clue"
-expected_step_index = 2
-sequence_success_message = "Correct. Hunger comes last. The exit is now unlocked."
-sequence_wrong_message = "Wrong order."
+info_text = "A wrapper note says: 'Preservation comes before safety, never after it.'"

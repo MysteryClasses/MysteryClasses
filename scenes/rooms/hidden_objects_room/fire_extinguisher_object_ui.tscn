@@ -1,0 +1,15 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
+
+[node name="FireExtinguisherObjectUI" instance=ExtResource("1_base")]
+ui_type = 4
+title_text = "Fire Extinguisher"
+fragment_id = "fire_extinguisher"
+fragment_character = "H"
+expected_step_index = 5
+total_steps = 7
+fragment_success_message = "A hidden plate behind the extinguisher bears the letter 'H'."
+fragment_repeat_message = "The extinguisher has already given up its letter."
+fragment_wrong_message = "Safety comes late in the sequence. The word collapses and resets."
+fragment_solved_message = "The extinguisher already revealed its letter: H."
