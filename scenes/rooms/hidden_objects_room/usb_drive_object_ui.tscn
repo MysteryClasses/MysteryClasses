@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
 
 [node name="UsbDriveObjectUI" instance=ExtResource("1_base")]
-ui_type = 4
+ui_type = 2
 title_text = "USB Drive"
 fragment_id = "usb_drive"
 fragment_character = "I"

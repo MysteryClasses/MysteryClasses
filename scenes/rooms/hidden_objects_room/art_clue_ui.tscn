@@ -3,6 +3,6 @@
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
 
 [node name="ArtClueUI" instance=ExtResource("1_base")]
-ui_type = 3
+ui_type = 1
 title_text = "Art Clue"
 info_text = "A sketch pinned here reads: 'Reaction follows memory, and the silent witness waits until all else is done.'"
