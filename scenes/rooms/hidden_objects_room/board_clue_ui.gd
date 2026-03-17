@@ -4,6 +4,8 @@ extends Control
 @export var challenge_id: String = "hidden_objects_room_desk_sequence"
 @export var title_text: String = "Board Clue"
 @export_multiline var clue_text: String = "Study first, creativity second, hunger last."
+@export var total_steps: int = 3
+@export_multiline var order_hint_text: String = "Start with the study clue, then art, then snack."
 
 @onready var title_label: Label = $Panel/VBoxContainer/TitleLabel
 @onready var clue_label: Label = $Panel/VBoxContainer/ClueLabel
@@ -26,7 +28,7 @@ func _build_status_text() -> String:
 		return "Sequence complete. The exit is unlocked."
 
 	var progress: int = _game_manager().get_challenge_progress(challenge_id)
-	return "Current progress: %d/3. Start with the study clue, then art, then snack." % progress
+	return "Current progress: %d/%d. %s" % [progress, total_steps, order_hint_text]
 
 
 func _game_manager() -> GameManager:
