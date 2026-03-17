@@ -25,10 +25,10 @@ size = Vector2(10, 420)
 [node name="AstroRoom" type="Node2D" unique_id=1218151489]
 
 [node name="Background" type="ColorRect" parent="." unique_id=134611230]
-offset_left = -476.0
-offset_top = -142.0
-offset_right = 1137.0
-offset_bottom = 763.0
+offset_left = 18.0
+offset_top = -51.0
+offset_right = 618.0
+offset_bottom = 349.0
 color = Color(0.4, 0.6, 0.3, 1)
 
 [node name="Chair" type="Sprite2D" parent="." unique_id=2094755596]
@@ -129,53 +129,49 @@ position = Vector2(320, 320)
 zoom = Vector2(0.8, 0.8)
 
 [node name="ClueKnife" parent="." unique_id=1868197863 instance=ExtResource("3_clue")]
-position = Vector2(-312, 582)
+position = Vector2(41, 150)
 scale = Vector2(0.5, 0.5)
 
 [node name="ClueTextbook" parent="." unique_id=888888888 instance=ExtResource("3_kdby3")]
-position = Vector2(551, 633)
+position = Vector2(38, 298)
 scale = Vector2(0.3, 0.3)
 
 [node name="ChallengeAstro" parent="." unique_id=999999999 instance=ExtResource("4_door")]
-position = Vector2(704, 430.99997)
+position = Vector2(291, -21.999992)
 scale = Vector2(0.7, 0.7)
 
 [node name="Teleport" parent="." unique_id=1010616404 instance=ExtResource("5_dbyfq")]
-position = Vector2(-295, -54)
+position = Vector2(37, -22)
 scale = Vector2(0.6, 0.6)
 target_scene = "res://scenes/rooms/hallway/hallway.tscn"
 
 [node name="TeleportToHiddenRoom" parent="." unique_id=170399224 instance=ExtResource("5_dbyfq")]
-position = Vector2(900, 200)
+position = Vector2(599, 315)
 scale = Vector2(0.8, 0.8)
 target_scene = "res://scenes/rooms/hidden_objects_room/hidden_objects_room.tscn"
 
 [node name="WallTop" type="StaticBody2D" parent="." unique_id=299427781]
-position = Vector2(295, -64)
+position = Vector2(318, -51)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop" unique_id=1702026895]
-position = Vector2(-16, -66)
 shape = SubResource("wall_top_shape")
 
 [node name="WallBottom" type="StaticBody2D" parent="." unique_id=1187647235]
 position = Vector2(318, 349)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom" unique_id=2143089896]
-position = Vector2(-83, 390)
 shape = SubResource("wall_bottom_shape")
 
 [node name="WallLeft" type="StaticBody2D" parent="." unique_id=1464402688]
-position = Vector2(20, 165)
+position = Vector2(18, 149)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=1066057935]
-position = Vector2(-489, 101)
 shape = SubResource("wall_left_shape")
 
 [node name="WallRight" type="StaticBody2D" parent="." unique_id=246213006]
-position = Vector2(652, 161)
+position = Vector2(618, 149)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=805949794]
-position = Vector2(463, 140)
 shape = SubResource("wall_right_shape")
 
 [node name="AstroRoom" type="AudioStreamPlayer" parent="." unique_id=281746484]

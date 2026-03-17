@@ -5,5 +5,5 @@
 [node name="ArtClueUI" instance=ExtResource("1_base")]
 title_text = "Art Clue"
 expected_step_index = 1
-success_message = "Correct. Creativity belongs in the second step."
-wrong_message = "Wrong order. Re-read the board and start over."
+sequence_success_message = "Correct. Creativity belongs in the second step."
+sequence_wrong_message = "Wrong order. Re-read the board and start over."

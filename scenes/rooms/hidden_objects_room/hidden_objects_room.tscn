@@ -41,8 +41,8 @@ scale = Vector2(0.86190975, 0.825)
 texture = ExtResource("1_floor")
 
 [node name="BackWall" type="Polygon2D" parent="." unique_id=1974112201]
-position = Vector2(61.000004, -52)
-scale = Vector2(0.896335, 1)
+position = Vector2(61.000004, 37.553192)
+scale = Vector2(0.896335, 0.706383)
 color = Color(0.89, 0.86, 0.78, 1)
 polygon = PackedVector2Array(180, 70, 1135, 70, 1135, 305, 180, 305)
 
@@ -86,12 +86,12 @@ scale = Vector2(0.27443886, 0.22911288)
 texture = ExtResource("16_fire_extinguisher")
 
 [node name="Stool" type="Sprite2D" parent="." unique_id=892070466]
-position = Vector2(469, 352)
+position = Vector2(415, 319)
 scale = Vector2(0.46267316, 0.38709)
 texture = ExtResource("3_stool")
 
 [node name="Statue" type="Sprite2D" parent="." unique_id=1818843979]
-position = Vector2(467, 315)
+position = Vector2(415.00003, 277)
 scale = Vector2(0.2988283, 0.26136816)
 texture = ExtResource("17_statue")
 

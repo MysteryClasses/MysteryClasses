@@ -1,70 +1,9 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://scenes/rooms/hidden_objects_room/sequence_clue_ui.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/hidden_room_clue_ui.tscn" id="1_base"]
 
-[node name="SequenceClueUI" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_script")
-
-[node name="Background" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.7)
-
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -280.0
-offset_top = -160.0
-offset_right = 280.0
-offset_bottom = 160.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = 24.0
-offset_right = -24.0
-offset_bottom = -24.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 16
-
-[node name="TitleLabel" type="Label" parent="Panel/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 22
-text = "Sequence Clue"
-horizontal_alignment = 1
-
-[node name="MessageLabel" type="Label" parent="Panel/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="ProgressLabel" type="Label" parent="Panel/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="CloseButton" type="Button" parent="Panel/VBoxContainer"]
-layout_mode = 2
-text = "Close"
+[node name="SequenceClueUI" instance=ExtResource("1_base")]
+ui_type = 1
+title_text = "Sequence Clue"
+sequence_success_message = "Correct clue."
+sequence_wrong_message = "Wrong order. Start again from the first clue."
