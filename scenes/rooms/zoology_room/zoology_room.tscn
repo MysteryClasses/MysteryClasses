@@ -9,14 +9,18 @@
 [ext_resource type="Texture2D" uid="uid://wf3ys8y0u56x" path="res://assets/rooms/zoology_room/books.png" id="7_qlio5"]
 [ext_resource type="Texture2D" uid="uid://cqjm4tgktc008" path="res://assets/rooms/zoology_room/board_2.png" id="8_p03gl"]
 [ext_resource type="Texture2D" uid="uid://bhl0y15m8bpej" path="res://assets/rooms/zoology_room/light.png" id="9_g8xsm"]
+[ext_resource type="Texture2D" uid="uid://dnkjqb6iije4t" path="res://assets/rooms/zoology_room/door.png" id="9_rpiyh"]
 [ext_resource type="Texture2D" uid="uid://balaxt2hqkk0q" path="res://assets/rooms/zoology_room/table.png" id="10_vu6ta"]
 [ext_resource type="Texture2D" uid="uid://d1a5cvrhp4ig" path="res://assets/rooms/zoology_room/board.png" id="11_r47d6"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="12_lc4jf"]
 [ext_resource type="PackedScene" uid="uid://bvj8kfv2xqmje" path="res://scenes/rooms/astro_room/clue_knife.tscn" id="13_mbnmq"]
-[ext_resource type="PackedScene" path="res://scenes/rooms/zoology_room/clue_fox_ui.tscn" id="14_8b20n"]
+[ext_resource type="PackedScene" uid="uid://d2hwesvu4rerg" path="res://scenes/rooms/zoology_room/clue_fox_ui.tscn" id="14_8b20n"]
+[ext_resource type="PackedScene" uid="uid://beqrl8s2puwy4" path="res://scenes/rooms/zoology_room/clue_owl_ui.tscn" id="15_put5j"]
 [ext_resource type="PackedScene" uid="uid://ds2g3b5y2lv73" path="res://scenes/rooms/astro_room/clue_textbook.tscn" id="15_puxjj"]
 [ext_resource type="PackedScene" uid="uid://cthjnupkbpuxq" path="res://scenes/rooms/astro_room/challenge_astro.tscn" id="16_0blye"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="17_jgig2"]
+[ext_resource type="PackedScene" uid="uid://brb4bhntbp54" path="res://scenes/rooms/zoology_room/clue_bear_ui.tscn" id="17_rpiyh"]
+[ext_resource type="PackedScene" uid="uid://dw32wbdvh5v75" path="res://scenes/rooms/zoology_room/challenge_zoology_ui.tscn" id="19_m4rus"]
 
 [sub_resource type="RectangleShape2D" id="wall_top_shape"]
 size = Vector2(620, 10)
@@ -150,6 +154,11 @@ position = Vector2(601, 199.00002)
 scale = Vector2(1.5407238, 1.79823)
 texture = ExtResource("8_p03gl")
 
+[node name="Door" type="Sprite2D" parent="." unique_id=784357645]
+position = Vector2(94.36387, -10.777998)
+scale = Vector2(1.2121147, 1.0694376)
+texture = ExtResource("9_rpiyh")
+
 [node name="Lamp" type="Sprite2D" parent="." unique_id=1364574866]
 position = Vector2(40.320847, 302)
 scale = Vector2(0.8180099, 1.0069137)
@@ -177,25 +186,28 @@ position = Vector2(320, 320)
 zoom = Vector2(0.8, 0.8)
 
 [node name="ClueFox" parent="." unique_id=1775706234 instance=ExtResource("13_mbnmq")]
-position = Vector2(333, -18)
+position = Vector2(407, 203)
 scale = Vector2(0.25, 0.25)
 ui_scene = ExtResource("14_8b20n")
 
 [node name="ClueCoyote" parent="." unique_id=357891012 instance=ExtResource("13_mbnmq")]
-position = Vector2(333, -18)
+position = Vector2(407, 103)
 scale = Vector2(0.25, 0.25)
 
 [node name="ClueOwl" parent="." unique_id=1868197863 instance=ExtResource("13_mbnmq")]
 position = Vector2(222, -12)
 scale = Vector2(0.5, 0.5)
+ui_scene = ExtResource("15_put5j")
 
 [node name="ClueBear" parent="." unique_id=888888888 instance=ExtResource("15_puxjj")]
 position = Vector2(475, 197)
 scale = Vector2(0.3, 0.3)
+ui_scene = ExtResource("17_rpiyh")
 
 [node name="ChallengeZoology" parent="." unique_id=777777777 instance=ExtResource("16_0blye")]
-position = Vector2(77.00009, -3.0000153)
+position = Vector2(363, -9)
 scale = Vector2(0.48999998, 0.48999998)
+ui_scene = ExtResource("19_m4rus")
 
 [node name="Teleport" parent="." unique_id=1010616404 instance=ExtResource("17_jgig2")]
 position = Vector2(150, 282)

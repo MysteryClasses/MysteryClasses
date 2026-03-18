@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://bvj8kfv2xqmje"]
+[gd_scene format=3 uid="uid://bsq2ubwjnks1n"]
 
-[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_8hsis"]
-[ext_resource type="PackedScene" uid="uid://oatv3bo60xv3" path="res://scenes/rooms/astro_room/clue_knife_ui.tscn" id="2_kfk1i"]
-[ext_resource type="Texture2D" uid="uid://b3dyu64ku7u4a" path="res://assets/rooms/zoology_room/coyote.png" id="3_8hsis"]
+[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_sm4oq"]
+[ext_resource type="PackedScene" uid="uid://oatv3bo60xv3" path="res://scenes/rooms/astro_room/clue_knife_ui.tscn" id="2_wq6sq"]
+[ext_resource type="Texture2D" uid="uid://dnwqkbvsfdg22" path="res://assets/rooms/zoology_room/owl.png" id="3_pw6q5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_paper"]
 size = Vector2(64, 64)
@@ -10,13 +10,12 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
 size = Vector2(96, 96)
 
-[node name="ClueCoyote" type="StaticBody2D" unique_id=1775706234]
-script = ExtResource("1_8hsis")
-ui_scene = ExtResource("2_kfk1i")
+[node name="ClueOwl" type="StaticBody2D" unique_id=1775706234]
+script = ExtResource("1_sm4oq")
+ui_scene = ExtResource("2_wq6sq")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=97224628]
-scale = Vector2(2.0625, 1.9375)
-texture = ExtResource("3_8hsis")
+texture = ExtResource("3_pw6q5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=537324537]
 shape = SubResource("RectangleShape2D_paper")
@@ -27,6 +26,7 @@ shape = SubResource("RectangleShape2D_paper")
 shape = SubResource("RectangleShape2D_interaction")
 
 [node name="InteractLabel" type="Label" parent="." unique_id=2133172850]
+visible = false
 modulate = Color(1, 1, 0, 1)
 offset_left = -48.0
 offset_top = -60.0

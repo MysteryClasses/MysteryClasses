@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://brb4bhntbp54"]
+
+[ext_resource type="Script" uid="uid://bp88bt4mdj2nm" path="res://scripts/components/clue_ui_base.gd" id="1_6kw5g"]
+
+[node name="Control" type="Control" unique_id=1362117202]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6kw5g")
+correct_code = "8"
+
+[node name="Background" type="ColorRect" parent="." unique_id=178517059]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.85)
+
+[node name="Panel" type="Panel" parent="." unique_id=1678304148]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1261422234]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 80.0
+offset_right = -30.0
+offset_bottom = -368.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Challenge" type="Label" parent="Panel/VBoxContainer" unique_id=1824553845]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "BEAR"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2106652199]
+layout_mode = 2
+
+[node name="ClueText" type="Label" parent="Panel/VBoxContainer" unique_id=-2060399406]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "My tail is short, but it helps me to run through dense underbrush."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer" unique_id=-2060399405]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="Panel/VBoxContainer" unique_id=1636978246]
+layout_mode = 2
+text = "Close"

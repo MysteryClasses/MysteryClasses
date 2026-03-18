@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://beqrl8s2puwy4"]
+
+[ext_resource type="Script" uid="uid://bp88bt4mdj2nm" path="res://scripts/components/clue_ui_base.gd" id="1_53ks4"]
+
+[node name="Control" type="Control" unique_id=1362117202]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_53ks4")
+correct_code = "5"
+success_message = "Correct! May (5) was the missing month!"
+
+[node name="Background" type="ColorRect" parent="." unique_id=178517059]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.85)
+
+[node name="Panel" type="Panel" parent="." unique_id=239664957]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=529836585]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 80.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Challenge" type="Label" parent="Panel/VBoxContainer" unique_id=695712635]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "OWL"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1579726829]
+layout_mode = 2
+
+[node name="ClueText" type="Label" parent="Panel/VBoxContainer" unique_id=2018842662]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Ermine is hiding behind white colour in winter, but its tail reveals who it is."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1971056813]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="Panel/VBoxContainer" unique_id=559868347]
+layout_mode = 2
+text = "Close"

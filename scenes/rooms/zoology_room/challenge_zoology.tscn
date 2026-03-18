@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://cthjnupkbpuxq"]
+[gd_scene format=3 uid="uid://dd36ubuqlkvm8"]
 
-[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_3508r"]
-[ext_resource type="PackedScene" uid="uid://b2asnibbp1jst" path="res://scenes/rooms/astro_room/challenge_astro_ui.tscn" id="2_kljlp"]
-[ext_resource type="Texture2D" uid="uid://dnkjqb6iije4t" path="res://assets/rooms/zoology_room/door.png" id="3_3508r"]
+[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_1btfk"]
+[ext_resource type="PackedScene" uid="uid://b2asnibbp1jst" path="res://scenes/rooms/astro_room/challenge_astro_ui.tscn" id="2_ovdc8"]
+[ext_resource type="Texture2D" uid="uid://d1a5cvrhp4ig" path="res://assets/rooms/zoology_room/board.png" id="3_1btfk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_paper"]
 size = Vector2(64, 64)
@@ -10,12 +10,12 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
 size = Vector2(96, 96)
 
-[node name="ChallengeDoor" type="StaticBody2D" unique_id=777777777]
-script = ExtResource("1_3508r")
-ui_scene = ExtResource("2_kljlp")
+[node name="ChallengeBoard" type="StaticBody2D" unique_id=777777777]
+script = ExtResource("1_1btfk")
+ui_scene = ExtResource("2_ovdc8")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1337442156]
-texture = ExtResource("3_3508r")
+texture = ExtResource("3_1btfk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1207598858]
 shape = SubResource("RectangleShape2D_paper")

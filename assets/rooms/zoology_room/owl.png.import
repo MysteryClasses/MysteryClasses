@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmpmnumxcqf5x"
-path="res://.godot/imported/bear.png-25248274f0f18539815d8029e2676307.ctex"
+uid="uid://dnwqkbvsfdg22"
+path="res://.godot/imported/owl.png-e4fa2e6c1ec9f63dbc65490525f9736c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rooms/zoology_room/bear.png"
-dest_files=["res://.godot/imported/bear.png-25248274f0f18539815d8029e2676307.ctex"]
+source_file="res://assets/rooms/zoology_room/owl.png"
+dest_files=["res://.godot/imported/owl.png-e4fa2e6c1ec9f63dbc65490525f9736c.ctex"]
 
 [params]
 

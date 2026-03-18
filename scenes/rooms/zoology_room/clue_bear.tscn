@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://ds2g3b5y2lv73"]
+[gd_scene format=3 uid="uid://bogi3a7f0tufo"]
 
-[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_fbrw8"]
-[ext_resource type="PackedScene" uid="uid://cp5wmde6m600d" path="res://scenes/rooms/astro_room/clue_textbook_ui.tscn" id="2_i27tt"]
-[ext_resource type="Texture2D" uid="uid://cmpmnumxcqf5x" path="res://assets/rooms/zoology_room/bear.png" id="3_fbrw8"]
+[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_8octe"]
+[ext_resource type="PackedScene" uid="uid://cp5wmde6m600d" path="res://scenes/rooms/astro_room/clue_textbook_ui.tscn" id="2_uiwme"]
+[ext_resource type="Texture2D" uid="uid://cmpmnumxcqf5x" path="res://assets/rooms/zoology_room/bear.png" id="3_ffq5m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_paper"]
 size = Vector2(64, 64)
@@ -11,11 +11,12 @@ size = Vector2(64, 64)
 size = Vector2(96, 96)
 
 [node name="ClueBear" type="StaticBody2D" unique_id=643607480]
-script = ExtResource("1_fbrw8")
-ui_scene = ExtResource("2_i27tt")
+script = ExtResource("1_8octe")
+ui_scene = ExtResource("2_uiwme")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=655084417]
-texture = ExtResource("3_fbrw8")
+scale = Vector2(1.5625, 1.625)
+texture = ExtResource("3_ffq5m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=587832994]
 shape = SubResource("RectangleShape2D_paper")
@@ -26,7 +27,6 @@ shape = SubResource("RectangleShape2D_paper")
 shape = SubResource("RectangleShape2D_interaction")
 
 [node name="InteractLabel" type="Label" parent="." unique_id=2012600865]
-visible = false
 modulate = Color(1, 1, 0, 1)
 offset_left = -48.0
 offset_top = -60.0
