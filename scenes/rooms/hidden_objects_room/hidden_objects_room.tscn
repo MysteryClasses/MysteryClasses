@@ -34,7 +34,7 @@ size = Vector2(32, 479)
 [node name="HiddenObjectsRoom" type="Node2D" unique_id=405100079]
 
 [node name="Floor" type="Sprite2D" parent="." unique_id=882566549]
-position = Vector2(647, 355)
+position = Vector2(647, 357)
 scale = Vector2(0.7986111, 0.7445653)
 texture = ExtResource("1_floor")
 
@@ -205,7 +205,7 @@ texture = ExtResource("22_4kiwu")
 region_enabled = true
 region_rect = Rect2(200, 296, 32, 48)
 
-[node name="RemoteObject" parent="TablePair06" unique_id=147104155 instance=ExtResource("21_remote_object")]
+[node name="RemoteObject" parent="TablePair06" unique_id=407547545 instance=ExtResource("21_remote_object")]
 position = Vector2(-22, 28)
 
 [node name="TablePair07" type="Sprite2D" parent="." unique_id=1899930452]
