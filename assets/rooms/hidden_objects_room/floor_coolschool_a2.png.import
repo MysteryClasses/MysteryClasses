@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k3rgdbpyutoo"
-path="res://.godot/imported/front_desk.png-56c203bf61a926d5d94d1dd6dc6c8721.ctex"
+uid="uid://bec1iyg6aupdr"
+path="res://.godot/imported/floor_coolschool_a2.png-87332a31026b6da850c9eda19dd7fbb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rooms/hidden_objects_room/front_desk.png"
-dest_files=["res://.godot/imported/front_desk.png-56c203bf61a926d5d94d1dd6dc6c8721.ctex"]
+source_file="res://assets/rooms/hidden_objects_room/floor_coolschool_a2.png"
+dest_files=["res://.godot/imported/floor_coolschool_a2.png-87332a31026b6da850c9eda19dd7fbb9.ctex"]
 
 [params]
 

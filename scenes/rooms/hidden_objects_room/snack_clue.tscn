@@ -1,36 +1,42 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://cx33jrhk6wcat"]
 
-[ext_resource type="Script" path="res://scripts/components/interactable.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_script"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/snack_clue_ui.tscn" id="2_ui"]
-[ext_resource type="Texture2D" path="res://assets/rooms/hidden_objects_room/snack_clue.png" id="3_texture"]
+[ext_resource type="Texture2D" uid="uid://dfmb0610bajke" path="res://assets/rooms/hidden_objects_room/cozy_cafe_icons.png" id="3_texture"]
 
 [sub_resource type="RectangleShape2D" id="1_body_shape"]
-size = Vector2(34, 36)
+size = Vector2(12.5, 11)
 
 [sub_resource type="RectangleShape2D" id="2_interact_shape"]
-size = Vector2(84, 72)
+size = Vector2(13, 11.5)
 
-[node name="SnackClue" type="StaticBody2D"]
+[node name="SnackClue" type="StaticBody2D" unique_id=299016423]
 script = ExtResource("1_script")
 ui_scene = ExtResource("2_ui")
 
-[node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.448, 0.532)
+[node name="Sprite" type="Sprite2D" parent="." unique_id=2106369819]
+texture_filter = 1
+position = Vector2(1.0000004, 2)
+scale = Vector2(0.6218751, 0.621875)
 texture = ExtResource("3_texture")
+region_enabled = true
+region_rect = Rect2(64, 64, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=736681097]
+position = Vector2(1, 2)
 shape = SubResource("1_body_shape")
 
-[node name="InteractArea" type="Area2D" parent="."]
+[node name="InteractArea" type="Area2D" parent="." unique_id=1658922701]
 
-[node name="InteractShape" type="CollisionShape2D" parent="InteractArea"]
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=122402778]
+position = Vector2(1, 2)
 shape = SubResource("2_interact_shape")
 
-[node name="InteractLabel" type="Label" parent="."]
+[node name="InteractLabel" type="Label" parent="." unique_id=1928218832]
 visible = false
-offset_left = -64.0
-offset_top = -56.0
-offset_right = 64.0
-offset_bottom = -30.0
+offset_left = -44.0
+offset_top = -44.0
+offset_right = 44.0
+offset_bottom = -18.0
 text = "Press E to inspect"
 horizontal_alignment = 1

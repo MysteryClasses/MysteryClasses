@@ -1,35 +1,38 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://cichuqplnf3t0"]
 
-[ext_resource type="Script" path="res://scripts/components/interactable.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_script"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/exit_door_ui.tscn" id="2_ui"]
-[ext_resource type="Texture2D" path="res://assets/rooms/hidden_objects_room/door.png" id="3_texture"]
+[ext_resource type="Texture2D" uid="uid://bcldwqo6y05ix" path="res://assets/rooms/hidden_objects_room/door.png" id="3_texture"]
 
 [sub_resource type="RectangleShape2D" id="1_body_shape"]
-size = Vector2(64, 120)
+size = Vector2(38, 63)
 
 [sub_resource type="RectangleShape2D" id="2_interact_shape"]
-size = Vector2(96, 148)
+size = Vector2(80, 108)
 
-[node name="ExitDoor" type="StaticBody2D"]
+[node name="ExitDoor" type="StaticBody2D" unique_id=1016589885]
 script = ExtResource("1_script")
 ui_scene = ExtResource("2_ui")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=692278265]
+texture_filter = 1
 texture = ExtResource("3_texture")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1233401490]
+position = Vector2(0, -32)
 shape = SubResource("1_body_shape")
 
-[node name="InteractArea" type="Area2D" parent="."]
+[node name="InteractArea" type="Area2D" parent="." unique_id=1329022698]
 
-[node name="InteractShape" type="CollisionShape2D" parent="InteractArea"]
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=1872993398]
+position = Vector2(1, -27)
 shape = SubResource("2_interact_shape")
 
-[node name="InteractLabel" type="Label" parent="."]
+[node name="InteractLabel" type="Label" parent="." unique_id=352997337]
 visible = false
 offset_left = -76.0
-offset_top = -104.0
+offset_top = -34.0
 offset_right = 76.0
-offset_bottom = -78.0
+offset_bottom = -8.0
 text = "Press E to inspect"
 horizontal_alignment = 1

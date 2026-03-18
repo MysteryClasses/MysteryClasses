@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w75vb7o5bno7"
-path="res://.godot/imported/chemistry_glass.png-b5659cd9138530ea44e99a1f3d72e2d4.ctex"
+uid="uid://cq0a3vkr00xv4"
+path="res://.godot/imported/extinguisher.png-8fe3ce95610f5428eefbd1d4969e78f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rooms/hidden_objects_room/chemistry_glass.png"
-dest_files=["res://.godot/imported/chemistry_glass.png-b5659cd9138530ea44e99a1f3d72e2d4.ctex"]
+source_file="res://assets/rooms/hidden_objects_room/extinguisher.png"
+dest_files=["res://.godot/imported/extinguisher.png-8fe3ce95610f5428eefbd1d4969e78f3.ctex"]
 
 [params]
 
