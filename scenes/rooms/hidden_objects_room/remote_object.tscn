@@ -1,36 +1,40 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://c2d61n0pjodvh"]
 
-[ext_resource type="Script" path="res://scripts/components/interactable.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_script"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/remote_object_ui.tscn" id="2_ui"]
-[ext_resource type="Texture2D" path="res://assets/rooms/hidden_objects_room/remote.png" id="3_texture"]
+[ext_resource type="Texture2D" uid="uid://scyf6wixsc8h" path="res://assets/rooms/hidden_objects_room/remote.png" id="3_texture"]
 
 [sub_resource type="RectangleShape2D" id="1_body_shape"]
-size = Vector2(36, 22)
+size = Vector2(24.5, 18)
 
 [sub_resource type="RectangleShape2D" id="2_interact_shape"]
-size = Vector2(88, 64)
+size = Vector2(24, 19)
 
-[node name="RemoteObject" type="StaticBody2D"]
+[node name="RemoteObject" type="StaticBody2D" unique_id=1675389658]
 script = ExtResource("1_script")
 ui_scene = ExtResource("2_ui")
 
-[node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.21628834, 0.26960942)
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1854981623]
+texture_filter = 1
+position = Vector2(9.931033, -5.2010174)
+scale = Vector2(0.13793103, 0.15654382)
 texture = ExtResource("3_texture")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=457237567]
+position = Vector2(11, -5)
 shape = SubResource("1_body_shape")
 
-[node name="InteractArea" type="Area2D" parent="."]
+[node name="InteractArea" type="Area2D" parent="." unique_id=1215211344]
 
-[node name="InteractShape" type="CollisionShape2D" parent="InteractArea"]
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=788588888]
+position = Vector2(11, -6)
 shape = SubResource("2_interact_shape")
 
-[node name="InteractLabel" type="Label" parent="."]
+[node name="InteractLabel" type="Label" parent="." unique_id=845302233]
 visible = false
-offset_left = -64.0
-offset_top = -48.0
-offset_right = 64.0
-offset_bottom = -22.0
+offset_left = -48.0
+offset_top = -34.0
+offset_right = 48.0
+offset_bottom = -8.0
 text = "Press E to inspect"
 horizontal_alignment = 1

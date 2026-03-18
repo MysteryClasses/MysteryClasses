@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1wlr5cvf80dc"
-path="res://.godot/imported/desk.png-12cf55515bdf442eb1062cec9d5937b7.ctex"
+uid="uid://dxyibt80dicv1"
+path="res://.godot/imported/coolschool_A4.png-79b6a03641e13143b3362a782d9f77bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rooms/hidden_objects_room/desk.png"
-dest_files=["res://.godot/imported/desk.png-12cf55515bdf442eb1062cec9d5937b7.ctex"]
+source_file="res://assets/rooms/hidden_objects_room/coolschool_A4.png"
+dest_files=["res://.godot/imported/coolschool_A4.png-79b6a03641e13143b3362a782d9f77bf.ctex"]
 
 [params]
 

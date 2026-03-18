@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy5cj2utihfl5"
-path="res://.godot/imported/statue.png-6f27d8470abe23bcaa5211d10cf20c7d.ctex"
+uid="uid://dnacf7flfj161"
+path="res://.godot/imported/CoolSchool_tileset.png-17d29384e590edfe3738075737ce2b6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rooms/hidden_objects_room/statue.png"
-dest_files=["res://.godot/imported/statue.png-6f27d8470abe23bcaa5211d10cf20c7d.ctex"]
+source_file="res://assets/rooms/hidden_objects_room/CoolSchool_tileset.png"
+dest_files=["res://.godot/imported/CoolSchool_tileset.png-17d29384e590edfe3738075737ce2b6c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbdnhibai55ur"
-path="res://.godot/imported/snack_clue.png-344c45848cd1f3ad9a5e30a2ecfd3f74.ctex"
+uid="uid://dfmb0610bajke"
+path="res://.godot/imported/cozy_cafe_icons.png-75806b3be3b5e36a9da661d69e13629d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rooms/hidden_objects_room/snack_clue.png"
-dest_files=["res://.godot/imported/snack_clue.png-344c45848cd1f3ad9a5e30a2ecfd3f74.ctex"]
+source_file="res://assets/rooms/hidden_objects_room/cozy_cafe_icons.png"
+dest_files=["res://.godot/imported/cozy_cafe_icons.png-75806b3be3b5e36a9da661d69e13629d.ctex"]
 
 [params]
 

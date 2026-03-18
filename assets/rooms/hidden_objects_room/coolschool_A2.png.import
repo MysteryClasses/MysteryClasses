@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8tpb7mo017re"
-path="res://.godot/imported/fire_extinguisher.png-d346c1783bf62f1864086eb51e8c051c.ctex"
+uid="uid://cxbd1ft6slf8g"
+path="res://.godot/imported/coolschool_A2.png-4557df6f619530b132c1c20b51ac991b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rooms/hidden_objects_room/fire_extinguisher.png"
-dest_files=["res://.godot/imported/fire_extinguisher.png-d346c1783bf62f1864086eb51e8c051c.ctex"]
+source_file="res://assets/rooms/hidden_objects_room/coolschool_A2.png"
+dest_files=["res://.godot/imported/coolschool_A2.png-4557df6f619530b132c1c20b51ac991b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwf5o54qk7g3w"
-path="res://.godot/imported/study_clue.png-b77a07ba311e6b40a7bee7a64c998868.ctex"
+uid="uid://xwqfwl6rmvs8"
+path="res://.godot/imported/wall_backwall_tile.png-6fcfc46985709c0d4d299fd63b0ece8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rooms/hidden_objects_room/study_clue.png"
-dest_files=["res://.godot/imported/study_clue.png-b77a07ba311e6b40a7bee7a64c998868.ctex"]
+source_file="res://assets/rooms/hidden_objects_room/wall_backwall_tile.png"
+dest_files=["res://.godot/imported/wall_backwall_tile.png-6fcfc46985709c0d4d299fd63b0ece8d.ctex"]
 
 [params]
 
