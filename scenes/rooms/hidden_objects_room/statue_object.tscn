@@ -36,5 +36,5 @@ offset_left = -56.0
 offset_top = -66.0
 offset_right = 56.0
 offset_bottom = -40.0
-text = "Press E to inspect"
+text = ""
 horizontal_alignment = 1
