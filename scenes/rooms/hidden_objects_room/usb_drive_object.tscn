@@ -8,7 +8,7 @@
 size = Vector2(14, 11)
 
 [sub_resource type="RectangleShape2D" id="2_interact_shape"]
-size = Vector2(14, 12)
+size = Vector2(40, 32)
 
 [node name="UsbDriveObject" type="StaticBody2D" unique_id=1282912591]
 script = ExtResource("1_script")
@@ -27,7 +27,7 @@ shape = SubResource("1_body_shape")
 [node name="InteractArea" type="Area2D" parent="." unique_id=721296548]
 
 [node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=1032909664]
-position = Vector2(-2, 1)
+position = Vector2(-2, 2)
 shape = SubResource("2_interact_shape")
 
 [node name="InteractLabel" type="Label" parent="." unique_id=1875031724]
