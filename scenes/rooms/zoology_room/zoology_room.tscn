@@ -13,14 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://balaxt2hqkk0q" path="res://assets/rooms/zoology_room/table.png" id="10_vu6ta"]
 [ext_resource type="Texture2D" uid="uid://d1a5cvrhp4ig" path="res://assets/rooms/zoology_room/board.png" id="11_r47d6"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="12_lc4jf"]
-[ext_resource type="PackedScene" uid="uid://bvj8kfv2xqmje" path="res://scenes/rooms/astro_room/clue_knife.tscn" id="13_mbnmq"]
-[ext_resource type="PackedScene" uid="uid://d2hwesvu4rerg" path="res://scenes/rooms/zoology_room/clue_fox_ui.tscn" id="14_8b20n"]
-[ext_resource type="PackedScene" uid="uid://beqrl8s2puwy4" path="res://scenes/rooms/zoology_room/clue_owl_ui.tscn" id="15_put5j"]
-[ext_resource type="PackedScene" uid="uid://ds2g3b5y2lv73" path="res://scenes/rooms/astro_room/clue_textbook.tscn" id="15_puxjj"]
-[ext_resource type="PackedScene" uid="uid://cthjnupkbpuxq" path="res://scenes/rooms/astro_room/challenge_astro.tscn" id="16_0blye"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="17_jgig2"]
-[ext_resource type="PackedScene" uid="uid://brb4bhntbp54" path="res://scenes/rooms/zoology_room/clue_bear_ui.tscn" id="17_rpiyh"]
-[ext_resource type="PackedScene" uid="uid://dw32wbdvh5v75" path="res://scenes/rooms/zoology_room/challenge_zoology_ui.tscn" id="19_m4rus"]
 
 [sub_resource type="RectangleShape2D" id="wall_top_shape"]
 size = Vector2(620, 10)
@@ -55,8 +48,8 @@ texture = ExtResource("2_2eo3b")
 region_enabled = true
 
 [node name="RandomChair" type="Sprite2D" parent="." unique_id=1222520262]
-position = Vector2(549.00006, 241)
-scale = Vector2(0.6658443, 0.75800586)
+position = Vector2(545.32556, 241)
+scale = Vector2(0.85924006, 0.75800586)
 texture = ExtResource("3_y8pam")
 
 [node name="RandomChair" type="Sprite2D" parent="RandomChair" unique_id=1953392722]
@@ -105,7 +98,7 @@ scale = Vector2(0.8858811, 1.0145943)
 texture = ExtResource("5_rpiyh")
 
 [node name="Chair2" type="Sprite2D" parent="Chair/Chair2/Chair2" unique_id=1668368343]
-position = Vector2(-3.0517578e-05, 60.320263)
+position = Vector2(-3.0517578e-05, 62.23519)
 scale = Vector2(0.8858811, 1.0145943)
 texture = ExtResource("5_rpiyh")
 
@@ -120,12 +113,12 @@ scale = Vector2(0.8858811, 1.0145943)
 texture = ExtResource("5_rpiyh")
 
 [node name="Chair2" type="Sprite2D" parent="Chair/Chair2/Chair3/Chair2" unique_id=915988181]
-position = Vector2(-3.0517578e-05, 60.320263)
+position = Vector2(0.18528844, 60.486088)
 scale = Vector2(0.8858811, 1.0145943)
 texture = ExtResource("5_rpiyh")
 
 [node name="Chair3" type="Sprite2D" parent="Chair/Chair2/Chair3" unique_id=1602757753]
-position = Vector2(115.42088, 1.8729951)
+position = Vector2(120.82394, -0.9574609)
 scale = Vector2(0.8858811, 1.0145943)
 texture = ExtResource("5_rpiyh")
 
@@ -140,8 +133,8 @@ scale = Vector2(0.8858811, 1.0145943)
 texture = ExtResource("5_rpiyh")
 
 [node name="Carpet" type="Sprite2D" parent="." unique_id=1618363327]
-position = Vector2(152.00002, 290)
-scale = Vector2(0.9792451, 1.1172227)
+position = Vector2(166.73256, 290)
+scale = Vector2(1.296074, 1.1172227)
 texture = ExtResource("6_m4rus")
 
 [node name="Books" type="Sprite2D" parent="." unique_id=60438345]
@@ -155,13 +148,13 @@ scale = Vector2(1.5407238, 1.79823)
 texture = ExtResource("8_p03gl")
 
 [node name="Door" type="Sprite2D" parent="." unique_id=784357645]
-position = Vector2(94.36387, -10.777998)
-scale = Vector2(1.2121147, 1.0694376)
+position = Vector2(94.36387, -13.777995)
+scale = Vector2(1.2121147, 1.1631876)
 texture = ExtResource("9_rpiyh")
 
 [node name="Lamp" type="Sprite2D" parent="." unique_id=1364574866]
-position = Vector2(40.320847, 302)
-scale = Vector2(0.8180099, 1.0069137)
+position = Vector2(44.820843, 302)
+scale = Vector2(1.1083323, 1.0069137)
 texture = ExtResource("9_g8xsm")
 
 [node name="Deko" type="Sprite2D" parent="." unique_id=765205872]
@@ -185,32 +178,8 @@ position = Vector2(320, 320)
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=199332052]
 zoom = Vector2(0.8, 0.8)
 
-[node name="ClueFox" parent="." unique_id=1775706234 instance=ExtResource("13_mbnmq")]
-position = Vector2(407, 203)
-scale = Vector2(0.25, 0.25)
-ui_scene = ExtResource("14_8b20n")
-
-[node name="ClueCoyote" parent="." unique_id=357891012 instance=ExtResource("13_mbnmq")]
-position = Vector2(407, 103)
-scale = Vector2(0.25, 0.25)
-
-[node name="ClueOwl" parent="." unique_id=1868197863 instance=ExtResource("13_mbnmq")]
-position = Vector2(222, -12)
-scale = Vector2(0.5, 0.5)
-ui_scene = ExtResource("15_put5j")
-
-[node name="ClueBear" parent="." unique_id=888888888 instance=ExtResource("15_puxjj")]
-position = Vector2(475, 197)
-scale = Vector2(0.3, 0.3)
-ui_scene = ExtResource("17_rpiyh")
-
-[node name="ChallengeZoology" parent="." unique_id=777777777 instance=ExtResource("16_0blye")]
-position = Vector2(363, -9)
-scale = Vector2(0.48999998, 0.48999998)
-ui_scene = ExtResource("19_m4rus")
-
 [node name="Teleport" parent="." unique_id=1010616404 instance=ExtResource("17_jgig2")]
-position = Vector2(150, 282)
+position = Vector2(149, 272)
 scale = Vector2(0.6, 0.6)
 target_scene = "res://scenes/rooms/hallway/hallway.tscn"
 
