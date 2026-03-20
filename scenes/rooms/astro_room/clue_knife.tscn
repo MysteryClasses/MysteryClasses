@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bvj8kfv2xqmje"]
 
-[ext_resource type="Script" uid="uid://csnuybvsse1b8" path="res://scripts/components/interactable.gd" id="1_8hsis"]
+[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_8hsis"]
 [ext_resource type="PackedScene" uid="uid://oatv3bo60xv3" path="res://scenes/rooms/astro_room/clue_knife_ui.tscn" id="2_kfk1i"]
-[ext_resource type="Texture2D" uid="uid://cbug2jv2u63xc" path="res://assets/rooms/astro_room/knife.png" id="3_rdos4"]
+[ext_resource type="Texture2D" uid="uid://cbug2jv2u63xc" path="res://assets/rooms/astro_room/knife.png" id="3_8hsis"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_paper"]
 size = Vector2(64, 64)
@@ -15,7 +15,9 @@ script = ExtResource("1_8hsis")
 ui_scene = ExtResource("2_kfk1i")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=97224628]
-texture = ExtResource("3_rdos4")
+position = Vector2(-4.7683716e-07, -9.536743e-07)
+scale = Vector2(0.671875, 0.76562506)
+texture = ExtResource("3_8hsis")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=537324537]
 shape = SubResource("RectangleShape2D_paper")
@@ -26,11 +28,10 @@ shape = SubResource("RectangleShape2D_paper")
 shape = SubResource("RectangleShape2D_interaction")
 
 [node name="InteractLabel" type="Label" parent="." unique_id=2133172850]
-visible = false
 modulate = Color(1, 1, 0, 1)
 offset_left = -48.0
 offset_top = -60.0
-offset_right = 48.0
-offset_bottom = -40.0
+offset_right = 92.0
+offset_bottom = -37.0
 text = "Press E to interact"
 horizontal_alignment = 1

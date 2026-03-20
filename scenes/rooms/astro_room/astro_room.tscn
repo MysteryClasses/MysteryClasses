@@ -129,11 +129,11 @@ position = Vector2(320, 320)
 zoom = Vector2(0.8, 0.8)
 
 [node name="ClueKnife" parent="." unique_id=1868197863 instance=ExtResource("3_clue")]
-position = Vector2(41, 150)
+position = Vector2(355, 125)
 scale = Vector2(0.5, 0.5)
 
 [node name="ClueTextbook" parent="." unique_id=888888888 instance=ExtResource("3_kdby3")]
-position = Vector2(38, 298)
+position = Vector2(148, 211)
 scale = Vector2(0.3, 0.3)
 
 [node name="ChallengeAstro" parent="." unique_id=999999999 instance=ExtResource("4_door")]

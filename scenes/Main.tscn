@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://cqjdxuql2y38k" path="res://scenes/rooms/astro_room/astro_room.tscn" id="1_campus"]
 
-
 [node name="Main" type="Node2D" unique_id=504464441]
 
 [node name="Campus" parent="." unique_id=587667337 instance=ExtResource("1_campus")]
