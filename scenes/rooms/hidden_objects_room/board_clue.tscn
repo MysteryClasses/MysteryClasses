@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b8a4b2v3vfxma"]
 
-[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_script"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/board_clue_ui.tscn" id="2_ui"]
-[ext_resource type="Texture2D" uid="uid://bjixk8wy7dcj1" path="res://assets/rooms/hidden_objects_room/coolschool_B.png" id="3_texture"]
+[ext_resource type="Texture2D" uid="uid://c5vp3sknli450" path="res://assets/rooms/hidden_objects_room/coolschool_B.png" id="3_texture"]
 
 [sub_resource type="RectangleShape2D" id="1_body_shape"]
-size = Vector2(128, 56)
+size = Vector2(128, 38)
 
 [sub_resource type="RectangleShape2D" id="2_interact_shape"]
 size = Vector2(156, 92)
@@ -21,6 +21,7 @@ region_enabled = true
 region_rect = Rect2(152, 16, 128, 56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=922341998]
+position = Vector2(0, -9)
 shape = SubResource("1_body_shape")
 
 [node name="InteractArea" type="Area2D" parent="." unique_id=346393358]
@@ -35,7 +36,6 @@ offset_left = -80.0
 offset_top = -24.0
 offset_right = 80.0
 offset_bottom = 2.0
-text = ""
 horizontal_alignment = 1
 
 [node name="BoardHint" type="Label" parent="." unique_id=1789255313]

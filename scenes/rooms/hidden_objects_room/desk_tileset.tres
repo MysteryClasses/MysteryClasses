@@ -1,0 +1,10 @@
+[gd_resource type="TileSet" format=3 uid="uid://cmt4usbbo3ef3"]
+
+[ext_resource type="PackedScene" uid="uid://cqt3b6ule75bo" path="res://scenes/rooms/hidden_objects_room/desk_station.tscn" id="1_txju7"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ae8xo"]
+scenes/1/scene = ExtResource("1_txju7")
+
+[resource]
+tile_size = Vector2i(120, 120)
+sources/0 = SubResource("TileSetScenesCollectionSource_ae8xo")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cs5kc0quc45xm"]
 
-[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_script"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/chemistry_glass_object_ui.tscn" id="2_ui"]
 [ext_resource type="Texture2D" uid="uid://cxv3crduivmjc" path="res://assets/rooms/hidden_objects_room/icon_31.png" id="3_texture"]
 
@@ -8,7 +8,7 @@
 size = Vector2(22, 22)
 
 [sub_resource type="RectangleShape2D" id="2_interact_shape"]
-size = Vector2(34.5, 43)
+size = Vector2(34.5, 60.5)
 
 [node name="ChemistryGlassObject" type="StaticBody2D" unique_id=503969979]
 script = ExtResource("1_script")
@@ -27,7 +27,7 @@ shape = SubResource("1_body_shape")
 [node name="InteractArea" type="Area2D" parent="." unique_id=214710954]
 
 [node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=1970497393]
-position = Vector2(0, -3)
+position = Vector2(0, 5.75)
 shape = SubResource("2_interact_shape")
 
 [node name="InteractLabel" type="Label" parent="." unique_id=1496195654]
@@ -36,5 +36,4 @@ offset_left = -44.0
 offset_top = -42.0
 offset_right = 44.0
 offset_bottom = -16.0
-text = ""
 horizontal_alignment = 1

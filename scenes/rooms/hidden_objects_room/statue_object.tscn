@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bgu2kvunxttte"]
 
-[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_script"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/statue_object_ui.tscn" id="2_ui"]
 [ext_resource type="Texture2D" uid="uid://dw28nkwusxkjm" path="res://assets/rooms/hidden_objects_room/cute anime stone statue of lucky cat.png" id="3_texture"]
 
@@ -8,7 +8,7 @@
 size = Vector2(34, 36)
 
 [sub_resource type="RectangleShape2D" id="2_interact_shape"]
-size = Vector2(44, 42)
+size = Vector2(58, 51)
 
 [node name="StatueObject" type="StaticBody2D" unique_id=218047740]
 script = ExtResource("1_script")
@@ -27,7 +27,7 @@ shape = SubResource("1_body_shape")
 [node name="InteractArea" type="Area2D" parent="." unique_id=1229698745]
 
 [node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=723440773]
-position = Vector2(-14, -11)
+position = Vector2(-13, -6.5)
 shape = SubResource("2_interact_shape")
 
 [node name="InteractLabel" type="Label" parent="." unique_id=2017195758]
@@ -36,5 +36,4 @@ offset_left = -56.0
 offset_top = -66.0
 offset_right = 56.0
 offset_bottom = -40.0
-text = ""
 horizontal_alignment = 1
