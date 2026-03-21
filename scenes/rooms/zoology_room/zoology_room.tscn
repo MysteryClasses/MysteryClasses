@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bhl0y15m8bpej" path="res://assets/rooms/zoology_room/light.png" id="9_g8xsm"]
 [ext_resource type="Texture2D" uid="uid://balaxt2hqkk0q" path="res://assets/rooms/zoology_room/table.png" id="10_vu6ta"]
 [ext_resource type="Texture2D" uid="uid://d1a5cvrhp4ig" path="res://assets/rooms/zoology_room/board.png" id="11_r47d6"]
-[ext_resource type="PackedScene" uid="uid://dpoh33i6sjb16" path="res://scenes/rooms/zoology_room/door.tscn" id="12_fynir"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="12_lc4jf"]
+[ext_resource type="PackedScene" uid="uid://cktou377aapdy" path="res://scenes/entities/room_door/door_wood_front_view.tscn" id="12_o1boe"]
 [ext_resource type="TileSet" uid="uid://bkgbvwr3576yw" path="res://scenes/rooms/zoology_room/desk_tileset.tres" id="14_o1boe"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="17_jgig2"]
 
@@ -34,10 +34,10 @@ size = Vector2(34, 49)
 size = Vector2(22, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4yucn"]
-size = Vector2(609, 57)
+size = Vector2(609, 51)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0hf6"]
-size = Vector2(90, 48)
+size = Vector2(90, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2eo3b"]
 size = Vector2(45, 39)
@@ -68,10 +68,7 @@ texture = ExtResource("6_m4rus")
 
 [node name="Player" parent="." unique_id=1472362224 instance=ExtResource("12_lc4jf")]
 z_index = 1
-position = Vector2(320, 320)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=199332052]
-zoom = Vector2(0.8, 0.8)
+position = Vector2(153, 31)
 
 [node name="Teleport" parent="." unique_id=1010616404 instance=ExtResource("17_jgig2")]
 position = Vector2(149, 272)
@@ -154,61 +151,66 @@ shape = SubResource("RectangleShape2D_fynir")
 position = Vector2(535, 127)
 shape = SubResource("RectangleShape2D_put5j")
 
-[node name="Backwall" type="StaticBody2D" parent="." unique_id=730120150]
+[node name="WallTop" type="StaticBody2D" parent="." unique_id=730120150]
 
-[node name="SpriteBackwall" type="Sprite2D" parent="Backwall" unique_id=1195004123]
+[node name="SpriteBackwall" type="Sprite2D" parent="WallTop" unique_id=1195004123]
 texture_filter = 1
 position = Vector2(316.75, -13.75)
 scale = Vector2(6.467033, 1.3775511)
 texture = ExtResource("1_n0hf6")
 
-[node name="CollisionBackwall" type="CollisionShape2D" parent="Backwall" unique_id=948702416]
-position = Vector2(317.5, -27.5)
+[node name="CollisionBackwall" type="CollisionShape2D" parent="WallTop" unique_id=948702416]
+position = Vector2(317.5, -30.5)
 shape = SubResource("RectangleShape2D_4yucn")
 
-[node name="Board" type="StaticBody2D" parent="Backwall" unique_id=1015170419]
+[node name="Board" type="StaticBody2D" parent="WallTop" unique_id=1015170419]
+position = Vector2(0, -6)
 
-[node name="SpriteBoard" type="Sprite2D" parent="Backwall/Board" unique_id=174436508]
+[node name="SpriteBoard" type="Sprite2D" parent="WallTop/Board" unique_id=174436508]
 texture_filter = 1
 position = Vector2(365, -11.000001)
 scale = Vector2(1.6218175, 1.3846349)
 texture = ExtResource("11_r47d6")
 
-[node name="CollisionBoard" type="CollisionShape2D" parent="Backwall/Board" unique_id=1504570543]
-position = Vector2(364, -16)
+[node name="CollisionBoard" type="CollisionShape2D" parent="WallTop/Board" unique_id=1504570543]
+position = Vector2(364, -16.5)
 shape = SubResource("RectangleShape2D_n0hf6")
 
-[node name="Vanity" type="StaticBody2D" parent="Backwall" unique_id=1860420426]
+[node name="Vanity" type="StaticBody2D" parent="WallTop" unique_id=1860420426]
 
-[node name="SpriteVanity" type="Sprite2D" parent="Backwall/Vanity" unique_id=625556071]
+[node name="SpriteVanity" type="Sprite2D" parent="WallTop/Vanity" unique_id=625556071]
 texture_filter = 1
 position = Vector2(464.99997, 3)
 scale = Vector2(0.81599283, 0.87063533)
 texture = ExtResource("4_put5j")
 
-[node name="CollisionVanity" type="CollisionShape2D" parent="Backwall/Vanity" unique_id=1095511366]
+[node name="CollisionVanity" type="CollisionShape2D" parent="WallTop/Vanity" unique_id=1095511366]
 position = Vector2(466, -5)
 shape = SubResource("RectangleShape2D_2eo3b")
 
-[node name="LampSmall" type="StaticBody2D" parent="Backwall" unique_id=2081599596]
+[node name="LampSmall" type="StaticBody2D" parent="WallTop" unique_id=2081599596]
 
-[node name="SpriteLamp" type="Sprite2D" parent="Backwall/LampSmall" unique_id=658754169]
+[node name="SpriteLamp" type="Sprite2D" parent="WallTop/LampSmall" unique_id=658754169]
 texture_filter = 1
 position = Vector2(477, -28)
 scale = Vector2(0.6034483, 0.5851064)
 texture = ExtResource("2_2eo3b")
 
-[node name="Bookshelf" type="StaticBody2D" parent="Backwall" unique_id=1099556579]
+[node name="Bookshelf" type="StaticBody2D" parent="WallTop" unique_id=1099556579]
 
-[node name="SpriteBookshelf" type="Sprite2D" parent="Backwall/Bookshelf" unique_id=60438345]
+[node name="SpriteBookshelf" type="Sprite2D" parent="WallTop/Bookshelf" unique_id=60438345]
 texture_filter = 1
 position = Vector2(559.00006, -7.0000005)
 scale = Vector2(1.2874053, 1.0320922)
 texture = ExtResource("7_qlio5")
 
-[node name="CollisionBookshelf" type="CollisionShape2D" parent="Backwall/Bookshelf" unique_id=1569138690]
+[node name="CollisionBookshelf" type="CollisionShape2D" parent="WallTop/Bookshelf" unique_id=1569138690]
 position = Vector2(559, -12.5)
 shape = SubResource("RectangleShape2D_y8pam")
+
+[node name="DoorWoodFront" parent="WallTop" unique_id=1205847696 instance=ExtResource("12_o1boe")]
+position = Vector2(150, -14)
+target_scene = "res://scenes/rooms/hallway/hallway.tscn"
 
 [node name="Lamp" type="StaticBody2D" parent="." unique_id=593074997]
 position = Vector2(-3, 1)
@@ -235,6 +237,6 @@ texture = ExtResource("8_p03gl")
 position = Vector2(606.5, 213.5)
 shape = SubResource("RectangleShape2D_m4rus")
 
-[node name="Door" parent="." unique_id=569836580 instance=ExtResource("12_fynir")]
-position = Vector2(153, -5)
-target_scene = "res://scenes/rooms/hallway/hallway.tscn"
+[node name="Camera2D" type="Camera2D" parent="." unique_id=199332052]
+position = Vector2(313, 162)
+zoom = Vector2(1.5, 1.5)

@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cp5wmde6m600d"]
+[gd_scene format=3 uid="uid://cd7us8bgiq4qa"]
 
-[ext_resource type="Script" uid="uid://dra4akmmd1f0q" path="res://scripts/components/clue_ui_base.gd" id="1_q3dr1"]
+[ext_resource type="Script" uid="uid://b80dwo8kewi2x" path="res://scripts/components/clue_ui_base.gd" id="1_q3dr1"]
 [ext_resource type="Texture2D" uid="uid://cv28be3qns4xs" path="res://assets/rooms/astro_room/astro_textbook_clue.png" id="2_tbfu0"]
 
 [node name="Control" type="Control" unique_id=1362117202]
@@ -52,7 +52,7 @@ grow_vertical = 2
 [node name="Challenge" type="Label" parent="Panel/VBoxContainer" unique_id=1824553845]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "TEXTBOOK CLUE"
+text = "Textbook Note"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2106652199]
@@ -71,27 +71,6 @@ layout_mode = 2
 texture = ExtResource("2_tbfu0")
 expand_mode = 3
 stretch_mode = 5
-
-[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer" unique_id=-2060399405]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1303903645]
-layout_mode = 2
-alignment = 1
-
-[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=897649575]
-custom_minimum_size = Vector2(60, 0)
-layout_mode = 2
-placeholder_text = "Guess the missing number"
-alignment = 1
-expand_to_text_length = true
-
-[node name="SubmitButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1569942316]
-layout_mode = 2
-text = "Submit"
-
-[node name="HSeparator4" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1785207130]
-layout_mode = 2
 
 [node name="FeedbackLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1759599977]
 layout_mode = 2

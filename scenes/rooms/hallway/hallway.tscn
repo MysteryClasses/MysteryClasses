@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="2_oy518"]
 [ext_resource type="PackedScene" uid="uid://b7q6gkhh1mewa" path="res://scenes/rooms/hallway/locker.tscn" id="4_atylr"]
 [ext_resource type="AudioStream" uid="uid://mk81o8dqiupq" path="res://assets/musics/horror_music.mp3" id="5_btcgh"]
-[ext_resource type="PackedScene" uid="uid://bvlihmgad2abx" path="res://scenes/entities/room_door/room_door.tscn" id="5_w5ien"]
-[ext_resource type="Script" uid="uid://beoike0ksp6wn" path="res://scenes/entities/teleport/teleport.gd" id="6_uvm12"]
+[ext_resource type="PackedScene" uid="uid://cn4abvecickd2" path="res://scenes/entities/room_door/door_grey_top_view.tscn" id="6_uvm12"]
 [ext_resource type="TileSet" uid="uid://cq0srft8o5x5l" path="res://scenes/rooms/hallway/hallway_tileset.tres" id="6_w5ien"]
+[ext_resource type="Texture2D" uid="uid://do8auu6na26fo" path="res://assets/shared/classroom/Interiors_free_48x48.png" id="7_uvm12"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eafqw"]
 size = Vector2(16, 288)
@@ -32,15 +32,16 @@ size = Vector2(768, 16)
 size = Vector2(768, 16)
 
 [node name="Hallway" type="Node2D" unique_id=43590407]
+position = Vector2(-67, 41)
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1429428147]
 
 [node name="Player" parent="." unique_id=1820359016 instance=ExtResource("2_oy518")]
-position = Vector2(632, 175)
+position = Vector2(659, 543)
 
 [node name="Locker" parent="." unique_id=388848055 instance=ExtResource("4_atylr")]
 z_index = 1
-position = Vector2(391, 116.00003)
+position = Vector2(934, 118)
 scale = Vector2(0.2, 0.2)
 
 [node name="HorrorMusic" type="AudioStreamPlayer" parent="." unique_id=810347197]
@@ -104,17 +105,36 @@ position = Vector2(640, 120)
 [node name="Collision" type="CollisionShape2D" parent="Walls/WallOuterTop" unique_id=517777961]
 shape = SubResource("RectangleShape2D_w5ien")
 
-[node name="DoorToAstroRoom" type="Node2D" parent="." unique_id=1205847696 instance=ExtResource("5_w5ien")]
-position = Vector2(640, 132)
-script = ExtResource("6_uvm12")
-target_scene = "res://scenes/rooms/astro_room/astro_room.tscn"
+[node name="DoorToZoologyRoom" parent="." unique_id=717746386 instance=ExtResource("6_uvm12")]
+position = Vector2(813, 596)
+target_scene = "res://scenes/rooms/zoology_room/zoology_room.tscn"
 
-[node name="DoorToHiddenRoom" type="Node2D" parent="." unique_id=318540884 instance=ExtResource("5_w5ien")]
-position = Vector2(1008, 360)
-script = ExtResource("6_uvm12")
+[node name="DoormattToZoologyRoom" type="Sprite2D" parent="DoorToZoologyRoom" unique_id=817200238]
+position = Vector2(-1, -18)
+scale = Vector2(0.5, 0.4)
+texture = ExtResource("7_uvm12")
+region_enabled = true
+region_rect = Rect2(635.4747, 1096.6567, 73.01459, 55.77832)
+
+[node name="DoorToHiddenRoom" parent="." unique_id=1190118152 instance=ExtResource("6_uvm12")]
+position = Vector2(507, 596)
 target_scene = "res://scenes/rooms/hidden_objects_room/hidden_objects_room.tscn"
 
-[node name="DoorToZoologyRoom" type="Node2D" parent="." unique_id=433262349 instance=ExtResource("5_w5ien")]
-position = Vector2(272, 360)
-script = ExtResource("6_uvm12")
-target_scene = "res://scenes/rooms/zoology_room/zoology_room.tscn"
+[node name="DoormattToHiddenRoom" type="Sprite2D" parent="DoorToHiddenRoom" unique_id=1856900094]
+position = Vector2(0, -18)
+scale = Vector2(0.5, 0.4)
+texture = ExtResource("7_uvm12")
+region_enabled = true
+region_rect = Rect2(635.4747, 1096.6567, 73.01459, 55.77832)
+
+[node name="DoorToAstroRoom" parent="." unique_id=1855610837 instance=ExtResource("6_uvm12")]
+position = Vector2(1020, 452)
+rotation = 1.5707964
+target_scene = "res://scenes/rooms/astro_room/astro_room.tscn"
+
+[node name="DoormattToAstroRoom" type="Sprite2D" parent="DoorToAstroRoom" unique_id=1248412054]
+position = Vector2(-3.8146973e-06, 18)
+scale = Vector2(0.5, 0.4)
+texture = ExtResource("7_uvm12")
+region_enabled = true
+region_rect = Rect2(635.4747, 1096.6567, 73.01459, 55.77832)

@@ -27,13 +27,15 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		_player_in_range = true
-		$InteractLabel.visible = true
+		if get_node_or_null("InteractLabel"):
+			$InteractLabel.visible = true
 
 # Stops showing InteractLabel if player leaves
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		_player_in_range = false
-		$InteractLabel.visible = false
+		if get_node_or_null("InteractLabel"):
+			$InteractLabel.visible = true
 
 func _open_ui() -> void:
 	if _active_ui != null or ui_scene == null:

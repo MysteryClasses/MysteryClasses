@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bec1iyg6aupdr" path="res://assets/rooms/hidden_objects_room/floor_coolschool_a2.png" id="1_floor"]
 [ext_resource type="Texture2D" uid="uid://xwqfwl6rmvs8" path="res://assets/rooms/hidden_objects_room/wall_backwall_tile.png" id="2_wall"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="9_player"]
+[ext_resource type="PackedScene" uid="uid://cktou377aapdy" path="res://scenes/entities/room_door/door_wood_front_view.tscn" id="10_81a30"]
 [ext_resource type="PackedScene" uid="uid://b8a4b2v3vfxma" path="res://scenes/rooms/hidden_objects_room/board_clue.tscn" id="10_board_clue"]
 [ext_resource type="PackedScene" uid="uid://dpfey2t1w4vjn" path="res://scenes/rooms/hidden_objects_room/study_clue.tscn" id="11_study_clue"]
 [ext_resource type="PackedScene" uid="uid://c2nqi2gqx6aij" path="res://scenes/rooms/hidden_objects_room/art_clue.tscn" id="12_art_clue"]
@@ -12,10 +13,8 @@
 [ext_resource type="TileSet" uid="uid://cmt4usbbo3ef3" path="res://scenes/rooms/hidden_objects_room/desk_tileset.tres" id="19_hqaxb"]
 [ext_resource type="Texture2D" uid="uid://dnacf7flfj161" path="res://assets/rooms/hidden_objects_room/CoolSchool_tileset.png" id="19_rhm8f"]
 [ext_resource type="AudioStream" uid="uid://f1wdb7pk15m8" path="res://assets/musics/hidden_room.mp3" id="20_hqaxb"]
-[ext_resource type="PackedScene" uid="uid://bvlihmgad2abx" path="res://scenes/entities/room_door/room_door.tscn" id="21_4kiwu"]
 [ext_resource type="PackedScene" uid="uid://c2d61n0pjodvh" path="res://scenes/rooms/hidden_objects_room/keyboard.tscn" id="21_remote_object"]
 [ext_resource type="Texture2D" uid="uid://c5vp3sknli450" path="res://assets/rooms/hidden_objects_room/coolschool_B.png" id="22_4kiwu"]
-[ext_resource type="Script" uid="uid://beoike0ksp6wn" path="res://scenes/entities/teleport/teleport.gd" id="22_flc2b"]
 [ext_resource type="PackedScene" uid="uid://d3kah78vj8aw4" path="res://scenes/rooms/hidden_objects_room/usb_drive_object.tscn" id="22_usb_drive_object"]
 [ext_resource type="PackedScene" uid="uid://dlhuiylc0dpgb" path="res://scenes/rooms/hidden_objects_room/salt_shaker_object.tscn" id="23_salt_shaker_object"]
 [ext_resource type="PackedScene" uid="uid://cs5kc0quc45xm" path="res://scenes/rooms/hidden_objects_room/chemistry_glass_object.tscn" id="24_chemistry_glass_object"]
@@ -113,7 +112,7 @@ scale = Vector2(0.8392157, 0.8548386)
 texture = ExtResource("2_wall")
 
 [node name="ExitDoor" parent="Backwall" unique_id=1104613386 instance=ExtResource("14_exit_door")]
-position = Vector2(188.271, 48)
+position = Vector2(179.92987, 44.160378)
 scale = Vector2(1.1915888, 1)
 
 [node name="CupboardLeft" type="Sprite2D" parent="Backwall" unique_id=2094015648]
@@ -207,6 +206,10 @@ position = Vector2(395.60742, 2.63208)
 scale = Vector2(1, 0.99999964)
 shape = SubResource("RectangleShape2D_flc2b")
 
+[node name="Door" parent="Backwall" unique_id=1205847696 instance=ExtResource("10_81a30")]
+position = Vector2(-98.90187, 10.235849)
+target_scene = "res://scenes/rooms/hallway/hallway.tscn"
+
 [node name="FireExtinguisher" parent="." unique_id=284469101 instance=ExtResource("26_fire_extinguisher_object")]
 position = Vector2(1059, 202)
 scale = Vector2(0.99999994, 1)
@@ -277,7 +280,7 @@ tile_set = ExtResource("19_hqaxb")
 [node name="Player" parent="YSortLayer" unique_id=852258411 instance=ExtResource("9_player")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(704, 533)
+position = Vector2(806, 204)
 
 [node name="DeskLeft" type="Sprite2D" parent="YSortLayer" unique_id=741247216]
 z_index = 1
@@ -388,8 +391,3 @@ skew = 0.08270013
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSortLayer/DeskRight/StaticBody2D" unique_id=1222867912]
 position = Vector2(-4.5, 5.7435913)
 shape = SubResource("RectangleShape2D_6jpe8")
-
-[node name="DoorToHallway" type="Node2D" parent="." unique_id=1205847696 instance=ExtResource("21_4kiwu")]
-position = Vector2(450, 160)
-script = ExtResource("22_flc2b")
-target_scene = "res://scenes/rooms/hallway/hallway.tscn"

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ds2g3b5y2lv73"]
 
-[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_fbrw8"]
-[ext_resource type="PackedScene" uid="uid://cp5wmde6m600d" path="res://scenes/rooms/astro_room/clue_textbook_ui.tscn" id="2_i27tt"]
+[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_fbrw8"]
+[ext_resource type="PackedScene" uid="uid://cd7us8bgiq4qa" path="res://scenes/rooms/astro_room/clue_textbook_ui.tscn" id="2_i27tt"]
 [ext_resource type="Texture2D" uid="uid://0w56enxedykv" path="res://assets/shared/textbook.png" id="3_fbrw8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_paper"]
@@ -16,7 +16,7 @@ ui_scene = ExtResource("2_i27tt")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=655084417]
 position = Vector2(-10.624999, -8.124999)
-scale = Vector2(1.3320313, 1.1289063)
+scale = Vector2(0.8, 0.678)
 texture = ExtResource("3_fbrw8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=587832994]
@@ -28,13 +28,3 @@ shape = SubResource("RectangleShape2D_paper")
 [node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=2019551259]
 position = Vector2(-8, -10)
 shape = SubResource("RectangleShape2D_interaction")
-
-[node name="InteractLabel" type="Label" parent="." unique_id=2012600865]
-modulate = Color(1, 1, 0, 1)
-offset_left = -48.0
-offset_top = -60.0
-offset_right = 48.0
-offset_bottom = -40.0
-text = "Press E to interact"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true

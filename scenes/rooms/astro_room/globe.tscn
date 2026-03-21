@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://blbdt7is3ramy"]
+
+[ext_resource type="Texture2D" uid="uid://do8auu6na26fo" path="res://assets/shared/classroom/Interiors_free_48x48.png" id="1_y6vfb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m4v7n"]
+radius = 1.0
+height = 22.0
+
+[node name="Globe" type="StaticBody2D" unique_id=107247288]
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=2068023739]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_y6vfb")
+region_enabled = true
+region_rect = Rect2(579.0653, 3169.324, 40.147522, 62.45166)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=12208703]
+position = Vector2(-1, 6)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_m4v7n")
