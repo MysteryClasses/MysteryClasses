@@ -3,7 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://c5vp3sknli450" path="res://assets/rooms/hidden_objects_room/coolschool_B.png" id="1_ocjt7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocjt7"]
-size = Vector2(48, 38)
+size = Vector2(48, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4ure"]
+size = Vector2(29, 12)
 
 [node name="DeskStation" type="Node2D" unique_id=709827710]
 
@@ -23,6 +26,10 @@ region_rect = Rect2(200, 296, 32, 48)
 
 [node name="TableBody" type="StaticBody2D" parent="." unique_id=1582262493]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TableBody" unique_id=2054477735]
-position = Vector2(0, 9)
+[node name="CollisionTable" type="CollisionShape2D" parent="TableBody" unique_id=2054477735]
+position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_ocjt7")
+
+[node name="CollisionChair" type="CollisionShape2D" parent="TableBody" unique_id=1254682070]
+position = Vector2(-1.5, 22)
+shape = SubResource("RectangleShape2D_k4ure")

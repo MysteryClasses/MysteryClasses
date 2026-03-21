@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7fgu65qdysu2"]
 
-[ext_resource type="Script" uid="uid://d2yj3sa5jemk" path="res://scenes/entities/player/player.gd" id="1_635qg"]
+[ext_resource type="Script" uid="uid://vq6r486u5861" path="res://scenes/entities/player/player.gd" id="1_635qg"]
 [ext_resource type="Texture2D" uid="uid://dxsy6ogb36tug" path="res://assets/shared/player_spritesheet.png" id="2_o7et6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1"]
@@ -192,6 +192,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" unique_id=1753191406 groups=["player"]]
 z_index = 2
+texture_filter = 1
 script = ExtResource("1_635qg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1877244123]
