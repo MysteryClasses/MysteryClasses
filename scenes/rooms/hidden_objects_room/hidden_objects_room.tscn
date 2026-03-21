@@ -8,15 +8,18 @@
 [ext_resource type="PackedScene" uid="uid://c2nqi2gqx6aij" path="res://scenes/rooms/hidden_objects_room/art_clue.tscn" id="12_art_clue"]
 [ext_resource type="PackedScene" uid="uid://cx33jrhk6wcat" path="res://scenes/rooms/hidden_objects_room/snack_clue.tscn" id="13_snack_clue"]
 [ext_resource type="PackedScene" uid="uid://cichuqplnf3t0" path="res://scenes/rooms/hidden_objects_room/exit_door.tscn" id="14_exit_door"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/scissors_ui.tscn" id="15_hqaxb"]
 [ext_resource type="TileSet" uid="uid://cmt4usbbo3ef3" path="res://scenes/rooms/hidden_objects_room/desk_tileset.tres" id="19_hqaxb"]
 [ext_resource type="Texture2D" uid="uid://dnacf7flfj161" path="res://assets/rooms/hidden_objects_room/CoolSchool_tileset.png" id="19_rhm8f"]
 [ext_resource type="AudioStream" uid="uid://f1wdb7pk15m8" path="res://assets/musics/hidden_room.mp3" id="20_hqaxb"]
+[ext_resource type="PackedScene" uid="uid://bvlihmgad2abx" path="res://scenes/entities/room_door/room_door.tscn" id="21_4kiwu"]
 [ext_resource type="PackedScene" uid="uid://c2d61n0pjodvh" path="res://scenes/rooms/hidden_objects_room/keyboard.tscn" id="21_remote_object"]
 [ext_resource type="Texture2D" uid="uid://c5vp3sknli450" path="res://assets/rooms/hidden_objects_room/coolschool_B.png" id="22_4kiwu"]
+[ext_resource type="Script" uid="uid://beoike0ksp6wn" path="res://scenes/entities/teleport/teleport.gd" id="22_flc2b"]
 [ext_resource type="PackedScene" uid="uid://d3kah78vj8aw4" path="res://scenes/rooms/hidden_objects_room/usb_drive_object.tscn" id="22_usb_drive_object"]
 [ext_resource type="PackedScene" uid="uid://dlhuiylc0dpgb" path="res://scenes/rooms/hidden_objects_room/salt_shaker_object.tscn" id="23_salt_shaker_object"]
 [ext_resource type="PackedScene" uid="uid://cs5kc0quc45xm" path="res://scenes/rooms/hidden_objects_room/chemistry_glass_object.tscn" id="24_chemistry_glass_object"]
-[ext_resource type="PackedScene" uid="uid://eh633jq51psi" path="res://scenes/rooms/hidden_objects_room/scissor_object.tscn" id="25_scissor_object"]
+[ext_resource type="PackedScene" uid="uid://eh633jq51psi" path="res://scenes/rooms/hidden_objects_room/scissors.tscn" id="25_scissor_object"]
 [ext_resource type="PackedScene" uid="uid://cr8dy7dw1lgc4" path="res://scenes/rooms/hidden_objects_room/fire_extinguisher_object.tscn" id="26_fire_extinguisher_object"]
 [ext_resource type="PackedScene" uid="uid://bgu2kvunxttte" path="res://scenes/rooms/hidden_objects_room/statue_object.tscn" id="27_statue_object"]
 
@@ -259,6 +262,7 @@ position = Vector2(665, 456)
 rotation = 0.82741004
 scale = Vector2(0.8, 0.867)
 skew = 0.069194555
+ui_scene = ExtResource("15_hqaxb")
 
 [node name="YSortLayer" type="Node2D" parent="." unique_id=522626008]
 y_sort_enabled = true
@@ -384,3 +388,8 @@ skew = 0.08270013
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSortLayer/DeskRight/StaticBody2D" unique_id=1222867912]
 position = Vector2(-4.5, 5.7435913)
 shape = SubResource("RectangleShape2D_6jpe8")
+
+[node name="DoorToHallway" type="Node2D" parent="." unique_id=1205847696 instance=ExtResource("21_4kiwu")]
+position = Vector2(450, 160)
+script = ExtResource("22_flc2b")
+target_scene = "res://scenes/rooms/hallway/hallway.tscn"

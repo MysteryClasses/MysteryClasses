@@ -1,0 +1,17 @@
+[gd_resource type="TileSet" format=3 uid="uid://cq0srft8o5x5l"]
+
+[ext_resource type="Texture2D" uid="uid://ccih8ncdrm3t8" path="res://assets/shared/Room_Builder_free_48x48.png" id="1_xegjk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73hl3"]
+texture = ExtResource("1_xegjk")
+texture_region_size = Vector2i(48, 48)
+12:11/0 = 0
+13:11/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+11:11/0 = 0
+
+[resource]
+tile_size = Vector2i(48, 48)
+sources/1 = SubResource("TileSetAtlasSource_73hl3")

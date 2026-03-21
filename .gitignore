@@ -16,7 +16,7 @@ data_*/
 **/*.uid
 
 # MCP Addon
-addons/godot_mcp/
+addons/
 
 # MAC stuff
 .DS_Store

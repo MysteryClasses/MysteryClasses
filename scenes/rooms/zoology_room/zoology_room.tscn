@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://d1a5cvrhp4ig" path="res://assets/rooms/zoology_room/board.png" id="11_r47d6"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="12_lc4jf"]
 [ext_resource type="TileSet" uid="uid://bkgbvwr3576yw" path="res://scenes/rooms/zoology_room/desk_tileset.tres" id="14_o1boe"]
+[ext_resource type="PackedScene" uid="uid://bvlihmgad2abx" path="res://scenes/entities/room_door/room_door.tscn" id="15_4yucn"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="17_jgig2"]
 
 [sub_resource type="RectangleShape2D" id="wall_bottom_shape"]
@@ -240,3 +241,7 @@ texture = ExtResource("8_p03gl")
 [node name="CollisionBoardSide" type="CollisionShape2D" parent="BoardSide" unique_id=1427686417]
 position = Vector2(606.5, 213.5)
 shape = SubResource("RectangleShape2D_m4rus")
+
+[node name="DoorToHallway" parent="." unique_id=1205847696 instance=ExtResource("15_4yucn")]
+position = Vector2(320, -30)
+target_scene = "res://scenes/rooms/hallway/hallway.tscn"

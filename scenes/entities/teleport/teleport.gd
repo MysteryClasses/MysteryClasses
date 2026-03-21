@@ -1,5 +1,6 @@
 extends Node2D
 
+# Target scene to load when player interacts
 @export var target_scene: String
 
 @onready var area: Area2D = $InteractArea
@@ -25,8 +26,16 @@ func _process(_delta):
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_inside = true
+		# Show interact hint if label exists
+		var label = get_node_or_null("InteractLabel")
+		if label:
+			label.visible = true
 
 
 func _on_body_exited(body):
 	if body.is_in_group("player"):
 		player_inside = false
+		# Hide interact hint if label exists
+		var label = get_node_or_null("InteractLabel")
+		if label:
+			label.visible = false
