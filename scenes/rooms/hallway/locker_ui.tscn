@@ -77,26 +77,26 @@ alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "Code 1"
+placeholder_text = "Number 1"
 alignment = 1
 expand_to_text_length = true
 
 [node name="LineEdit2" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=578220059]
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "Code 2"
+placeholder_text = "Number 2"
 alignment = 1
 
 [node name="LineEdit3" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=928050702]
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "Code 3"
+placeholder_text = "Number 3"
 alignment = 1
 
 [node name="LineEdit4" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1182301835]
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "Code 4"
+placeholder_text = "Number 4"
 alignment = 1
 
 [node name="SubmitButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=648515642]

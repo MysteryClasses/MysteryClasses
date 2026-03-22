@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://drbojb8u4k20e"]
+
+[ext_resource type="Script" uid="uid://d07vthgchml7y" path="res://scripts/autoload/hud.gd" id="1_0mwgc"]
+
+[node name="Hud" type="Node2D" unique_id=1995184322]
+process_mode = 3
+script = ExtResource("1_0mwgc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=474968107]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=428029889]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 101.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=1755057608]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="MenuButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=552850907]
+layout_mode = 2
+text = "S"
+
+[node name="MuteButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1460907017]
+layout_mode = 2
+text = "🔊"
+
+[node name="ChallengesButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=186789839]
+layout_mode = 2
+text = "C"
