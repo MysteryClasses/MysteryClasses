@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://oatv3bo60xv3"]
 
-[ext_resource type="Script" uid="uid://dra4akmmd1f0q" path="res://scripts/components/clue_ui_base.gd" id="1_idxst"]
+[ext_resource type="Script" uid="uid://b80dwo8kewi2x" path="res://scripts/components/clue_ui_base.gd" id="1_idxst"]
 [ext_resource type="Texture2D" uid="uid://c56mvemq3aaan" path="res://assets/rooms/astro_room/astro_calendar_clue.png" id="2_u07ru"]
 
 [node name="Control" type="Control" unique_id=1362117202]
@@ -53,11 +53,18 @@ grow_vertical = 2
 [node name="Calendar" type="Label" parent="Panel/VBoxContainer" unique_id=1824553845]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "CLASSROOM CALENDAR"
+text = "Classroom Calendar"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2106652199]
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1483031819]
 layout_mode = 2
+
+[node name="ClueText" type="Label" parent="Panel/VBoxContainer" unique_id=1919290479]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "What a beautiful calendar you found there..."
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer" unique_id=991383642]
 custom_minimum_size = Vector2(0, 250)
@@ -65,27 +72,6 @@ layout_mode = 2
 texture = ExtResource("2_u07ru")
 expand_mode = 2
 stretch_mode = 5
-
-[node name="HSeparator3" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1476894889]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1303903645]
-layout_mode = 2
-alignment = 1
-
-[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1691661553]
-custom_minimum_size = Vector2(60, 0)
-layout_mode = 2
-placeholder_text = "Guess the missing number"
-alignment = 1
-expand_to_text_length = true
-
-[node name="SubmitButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1569942316]
-layout_mode = 2
-text = "Submit"
-
-[node name="HSeparator4" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1785207130]
-layout_mode = 2
 
 [node name="FeedbackLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1759599977]
 layout_mode = 2

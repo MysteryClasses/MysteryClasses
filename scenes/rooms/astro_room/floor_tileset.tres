@@ -1,0 +1,13 @@
+[gd_resource type="TileSet" format=3 uid="uid://b5bkiuclwq3xl"]
+
+[ext_resource type="Texture2D" uid="uid://nyeyg3ni1oew" path="res://assets/rooms/astro_room/floor_tiles.png" id="1_k0fyp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_38ttj"]
+texture = ExtResource("1_k0fyp")
+4:14/0 = 0
+5:14/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_38ttj")

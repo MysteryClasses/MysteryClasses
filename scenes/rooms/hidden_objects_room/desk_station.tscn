@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cqt3b6ule75bo"]
+
+[ext_resource type="Texture2D" uid="uid://c5vp3sknli450" path="res://assets/rooms/hidden_objects_room/coolschool_B.png" id="1_ocjt7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocjt7"]
+size = Vector2(48, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4ure"]
+size = Vector2(29, 12)
+
+[node name="DeskStation" type="Node2D" unique_id=709827710]
+
+[node name="Table" type="Sprite2D" parent="." unique_id=1782848094]
+texture_filter = 1
+texture = ExtResource("1_ocjt7")
+region_enabled = true
+region_rect = Rect2(0, 112, 48, 56)
+
+[node name="Chair" type="Sprite2D" parent="." unique_id=2096803245]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(-2, 36)
+texture = ExtResource("1_ocjt7")
+region_enabled = true
+region_rect = Rect2(200, 296, 32, 48)
+
+[node name="TableBody" type="StaticBody2D" parent="." unique_id=1582262493]
+
+[node name="CollisionTable" type="CollisionShape2D" parent="TableBody" unique_id=2054477735]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_ocjt7")
+
+[node name="CollisionChair" type="CollisionShape2D" parent="TableBody" unique_id=1254682070]
+position = Vector2(-1.5, 22)
+shape = SubResource("RectangleShape2D_k4ure")

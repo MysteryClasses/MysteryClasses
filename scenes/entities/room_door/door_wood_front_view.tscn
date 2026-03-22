@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cktou377aapdy"]
+
+[ext_resource type="Script" uid="uid://beoike0ksp6wn" path="res://scenes/entities/teleport/teleport.gd" id="1_10grm"]
+[ext_resource type="Texture2D" uid="uid://do8auu6na26fo" path="res://assets/shared/classroom/Interiors_free_48x48.png" id="2_kctpg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4mfv"]
+size = Vector2(50, 47)
+
+[node name="DoorWoodFront" type="Node2D" unique_id=1205847696]
+script = ExtResource("1_10grm")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=341596298]
+texture = ExtResource("2_kctpg")
+region_enabled = true
+region_rect = Rect2(575.74054, 1169.8223, 49.195374, 75.95642)
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1460256483]
+
+[node name="Collision" type="CollisionShape2D" parent="InteractArea" unique_id=1978617976]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_w4mfv")
+
+[node name="InteractLabel" type="Label" parent="." unique_id=311135973]
+visible = false
+offset_left = -40.0
+offset_top = -60.0
+offset_right = 40.0
+offset_bottom = -37.0
+text = "Press E"
+horizontal_alignment = 1

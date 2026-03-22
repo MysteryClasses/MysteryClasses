@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b7q6gkhh1mewa"]
 
 [ext_resource type="Texture2D" uid="uid://dmqf4xfkq72jr" path="res://assets/rooms/hallway/locker_front.png" id="1_pit1g"]
-[ext_resource type="Script" uid="uid://csnuybvsse1b8" path="res://scripts/components/interactable.gd" id="1_qbthv"]
+[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_qbthv"]
 [ext_resource type="PackedScene" uid="uid://cvjq3golyw2mv" path="res://scenes/rooms/hallway/locker_ui.tscn" id="2_byf1g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wv1gg"]
@@ -28,11 +28,3 @@ shape = SubResource("RectangleShape2D_wv1gg")
 position = Vector2(0, 16.999996)
 scale = Vector2(28.84, 20.839998)
 shape = SubResource("RectangleShape2D_pit1g")
-
-[node name="InteractLabel" type="Label" parent="." unique_id=1745509938]
-custom_minimum_size = Vector2(0, 30)
-offset_left = 307.0
-offset_top = -127.0
-offset_right = 447.0
-offset_bottom = -104.0
-text = "Press E to interact"

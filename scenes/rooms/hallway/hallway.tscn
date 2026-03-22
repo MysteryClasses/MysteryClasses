@@ -1,81 +1,140 @@
-[gd_scene format=3 uid="uid://bg05614rc70ah"]
+[gd_scene format=4 uid="uid://bg05614rc70ah"]
 
-[ext_resource type="PackedScene" uid="uid://bd5vyq0fsuiwe" path="res://scenes/entities/door/door.tscn" id="1_ak2e8"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="2_oy518"]
-[ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="3_oy518"]
 [ext_resource type="PackedScene" uid="uid://b7q6gkhh1mewa" path="res://scenes/rooms/hallway/locker.tscn" id="4_atylr"]
 [ext_resource type="AudioStream" uid="uid://mk81o8dqiupq" path="res://assets/musics/horror_music.mp3" id="5_btcgh"]
+[ext_resource type="PackedScene" uid="uid://cn4abvecickd2" path="res://scenes/entities/room_door/door_grey_top_view.tscn" id="6_uvm12"]
+[ext_resource type="TileSet" uid="uid://cq0srft8o5x5l" path="res://scenes/rooms/hallway/hallway_tileset.tres" id="6_w5ien"]
+[ext_resource type="Texture2D" uid="uid://do8auu6na26fo" path="res://assets/shared/classroom/Interiors_free_48x48.png" id="7_uvm12"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_60kri"]
-size = Vector2(590, 30)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eafqw"]
+size = Vector2(16, 288)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gtxeg"]
+size = Vector2(16, 288)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yd4d"]
+size = Vector2(576, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xifva"]
+size = Vector2(576, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g0cra"]
+size = Vector2(16, 496)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3plxi"]
+size = Vector2(16, 496)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvm12"]
+size = Vector2(768, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ien"]
+size = Vector2(768, 16)
 
 [node name="Hallway" type="Node2D" unique_id=43590407]
+position = Vector2(-67, 41)
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1429428147]
 
-[node name="Wall1" type="TileMapLayer" parent="." unique_id=931255994]
-
-[node name="Wall" type="ColorRect" parent="Wall1" unique_id=1451230262]
-z_index = 1
-offset_top = 540.0
-offset_right = 590.0
-offset_bottom = 570.0
-
-[node name="Body" type="StaticBody2D" parent="Wall1" unique_id=1050559200]
-
-[node name="Collision" type="CollisionShape2D" parent="Wall1/Body" unique_id=659663926]
-position = Vector2(292, 557)
-shape = SubResource("RectangleShape2D_60kri")
-
-[node name="Wall2" type="TileMapLayer" parent="." unique_id=1684122925]
-
-[node name="Wall" type="ColorRect" parent="Wall2" unique_id=1877649700]
-z_index = 1
-offset_left = 690.0
-offset_top = 540.0
-offset_right = 1280.0
-offset_bottom = 570.0
-
-[node name="Body" type="StaticBody2D" parent="Wall2" unique_id=1673745441]
-
-[node name="Collision" type="CollisionShape2D" parent="Wall2/Body" unique_id=837499742]
-position = Vector2(985, 557)
-shape = SubResource("RectangleShape2D_60kri")
-
-[node name="FloorLayer" type="TileMapLayer" parent="." unique_id=1116199603]
-
-[node name="Hallway" type="ColorRect" parent="FloorLayer" unique_id=1634484095]
-z_index = 1
-offset_top = 570.0
-offset_right = 1280.0
-offset_bottom = 720.0
-color = Color(0.5019608, 0.5019608, 0.5019608, 1)
-
-[node name="Floor" type="ColorRect" parent="FloorLayer" unique_id=251054526]
-offset_right = 1280.0
-offset_bottom = 720.0
-color = Color(0.20392157, 0.3254902, 0.4862745, 1)
-
-[node name="Door" parent="." unique_id=1700271649 instance=ExtResource("1_ak2e8")]
-z_index = 1
-position = Vector2(640, 555)
-
 [node name="Player" parent="." unique_id=1820359016 instance=ExtResource("2_oy518")]
-z_index = 2
-position = Vector2(641, 644)
-
-[node name="Teleport" parent="." unique_id=1010616404 instance=ExtResource("3_oy518")]
-z_index = 1
-position = Vector2(1259, 642)
-scale = Vector2(0.6, 0.6)
-target_scene = "res://scenes/rooms/astro_room/astro_room.tscn"
+position = Vector2(659, 543)
 
 [node name="Locker" parent="." unique_id=388848055 instance=ExtResource("4_atylr")]
 z_index = 1
-position = Vector2(339, 581)
+position = Vector2(934, 118)
 scale = Vector2(0.2, 0.2)
 
 [node name="HorrorMusic" type="AudioStreamPlayer" parent="." unique_id=810347197]
 process_mode = 3
 stream = ExtResource("5_btcgh")
 autoplay = true
+
+[node name="FloorLayer" type="TileMapLayer" parent="." unique_id=1290310052]
+z_index = -1
+position = Vector2(160, -456)
+tile_map_data = PackedByteArray("AAACAAwAAQALAAsAAAACAA0AAQALAAwAAAACAA4AAQANAAsAAGADAAwAAQAMAAsAAAADAA0AAQAMAAwAAAADAA4AAQANAAwAAGAEAAwAAQANAAsAAAAEAA0AAQANAAwAAAAFAAwAAQALAAsAAAAFAA0AAQALAAwAAAAGAAwAAQAMAAsAAAAGAA0AAQAMAAwAAAAHAAwAAQANAAsAAAAIAAwAAQALAAsAAAALAAwAAQALAAsAAAALAA0AAQALAAwAAAAMAAwAAQAMAAsAAAAMAA0AAQAMAAwAAAANAAwAAQANAAsAAAANAA0AAQANAAwAAAAOAAwAAQALAAsAAAAOAA0AAQALAAwAAAAPAAwAAQAMAAsAAAAPAA0AAQAMAAwAAAAQAAwAAQANAAsAAAAQAA0AAQANAAwAAAARAAwAAQALAAsAAAARAA0AAQALAAwAAAAKAAwAAQANAAsAAAAKAA0AAQANAAwAAAAJAAwAAQAMAAsAAAAJAA0AAQAMAAwAAAAIAA0AAQALAAwAAAAHAA0AAQANAAwAAAADAA8AAQAMAAwAAGADABAAAQALAAwAAGACAA8AAQAMAAsAAGACABAAAQALAAsAAGADABEAAQANAAwAAGADABIAAQAMAAwAAGADABMAAQALAAwAAGACABEAAQANAAsAAGACABIAAQAMAAsAAGACABMAAQALAAsAAGAOABQAAQANAAsAABAOABUAAQANAAwAABANABQAAQALAAsAABANABUAAQALAAwAABARAA4AAQANAAwAAGARAA8AAQAMAAwAAGARABAAAQALAAwAAGAQAA4AAQANAAsAAGAQAA8AAQAMAAsAAGAQABAAAQALAAsAAGARABEAAQANAAwAAGARABIAAQAMAAwAAGARABMAAQALAAwAAGAQABEAAQANAAsAAGAQABIAAQAMAAsAAGAQABMAAQALAAsAAGAEABQAAQALAAsAABADABQAAQAMAAsAABACABQAAQANAAsAABAEABUAAQALAAwAABADABUAAQAMAAwAABACABUAAQANAAwAABAHABQAAQALAAsAABAGABQAAQAMAAsAABAFABQAAQANAAsAABAHABUAAQALAAwAABAGABUAAQAMAAwAABAFABUAAQANAAwAABAKABQAAQALAAsAABAJABQAAQAMAAsAABAIABQAAQANAAsAABAKABUAAQALAAwAABAJABUAAQAMAAwAABAIABUAAQANAAwAABAMABQAAQAMAAsAABALABQAAQANAAsAABAMABUAAQAMAAwAABALABUAAQANAAwAABAQABQAAQALAAsAABAPABQAAQAMAAsAABAQABUAAQALAAwAABAPABUAAQAMAAwAABARABQAAQANAAsAABARABUAAQANAAwAABA=")
+tile_set = ExtResource("6_w5ien")
+
+[node name="Walls" type="Node2D" parent="." unique_id=1899669407]
+
+[node name="WallInnerRight" type="StaticBody2D" parent="Walls" unique_id=615475574]
+position = Vector2(928, 360)
+
+[node name="Collision" type="CollisionShape2D" parent="Walls/WallInnerRight" unique_id=667425438]
+shape = SubResource("RectangleShape2D_eafqw")
+
+[node name="WallInnerLeft" type="StaticBody2D" parent="Walls" unique_id=578375476]
+position = Vector2(352, 360)
+
+[node name="Collision" type="CollisionShape2D" parent="Walls/WallInnerLeft" unique_id=417649024]
+shape = SubResource("RectangleShape2D_gtxeg")
+
+[node name="WallInnerBottom" type="StaticBody2D" parent="Walls" unique_id=760145761]
+position = Vector2(640, 504)
+
+[node name="Collision" type="CollisionShape2D" parent="Walls/WallInnerBottom" unique_id=1724236240]
+shape = SubResource("RectangleShape2D_0yd4d")
+
+[node name="WallInnerTop" type="StaticBody2D" parent="Walls" unique_id=407710683]
+position = Vector2(640, 216)
+
+[node name="Collision" type="CollisionShape2D" parent="Walls/WallInnerTop" unique_id=996352581]
+shape = SubResource("RectangleShape2D_xifva")
+
+[node name="WallOuterRight" type="StaticBody2D" parent="Walls" unique_id=145266448]
+position = Vector2(1024, 360)
+
+[node name="Collision" type="CollisionShape2D" parent="Walls/WallOuterRight" unique_id=1267536793]
+shape = SubResource("RectangleShape2D_g0cra")
+
+[node name="WallOuterLeft" type="StaticBody2D" parent="Walls" unique_id=791384132]
+position = Vector2(256, 360)
+
+[node name="Collision" type="CollisionShape2D" parent="Walls/WallOuterLeft" unique_id=1577310643]
+shape = SubResource("RectangleShape2D_3plxi")
+
+[node name="WallOuterBottom" type="StaticBody2D" parent="Walls" unique_id=621411356]
+position = Vector2(640, 600)
+
+[node name="Collision" type="CollisionShape2D" parent="Walls/WallOuterBottom" unique_id=1511545291]
+shape = SubResource("RectangleShape2D_uvm12")
+
+[node name="WallOuterTop" type="StaticBody2D" parent="Walls" unique_id=1260034852]
+position = Vector2(640, 120)
+
+[node name="Collision" type="CollisionShape2D" parent="Walls/WallOuterTop" unique_id=517777961]
+shape = SubResource("RectangleShape2D_w5ien")
+
+[node name="DoorToZoologyRoom" parent="." unique_id=717746386 instance=ExtResource("6_uvm12")]
+position = Vector2(813, 596)
+target_scene = "res://scenes/rooms/zoology_room/zoology_room.tscn"
+
+[node name="DoormattToZoologyRoom" type="Sprite2D" parent="DoorToZoologyRoom" unique_id=817200238]
+position = Vector2(-1, -18)
+scale = Vector2(0.5, 0.4)
+texture = ExtResource("7_uvm12")
+region_enabled = true
+region_rect = Rect2(635.4747, 1096.6567, 73.01459, 55.77832)
+
+[node name="DoorToHiddenRoom" parent="." unique_id=1190118152 instance=ExtResource("6_uvm12")]
+position = Vector2(507, 596)
+target_scene = "res://scenes/rooms/hidden_objects_room/hidden_objects_room.tscn"
+
+[node name="DoormattToHiddenRoom" type="Sprite2D" parent="DoorToHiddenRoom" unique_id=1856900094]
+position = Vector2(0, -18)
+scale = Vector2(0.5, 0.4)
+texture = ExtResource("7_uvm12")
+region_enabled = true
+region_rect = Rect2(635.4747, 1096.6567, 73.01459, 55.77832)
+
+[node name="DoorToAstroRoom" parent="." unique_id=1855610837 instance=ExtResource("6_uvm12")]
+position = Vector2(1020, 452)
+rotation = 1.5707964
+target_scene = "res://scenes/rooms/astro_room/astro_room.tscn"
+
+[node name="DoormattToAstroRoom" type="Sprite2D" parent="DoorToAstroRoom" unique_id=1248412054]
+position = Vector2(-3.8146973e-06, 18)
+scale = Vector2(0.5, 0.4)
+texture = ExtResource("7_uvm12")
+region_enabled = true
+region_rect = Rect2(635.4747, 1096.6567, 73.01459, 55.77832)

@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cs5kc0quc45xm"]
+[gd_scene format=3 uid="uid://de2mhy6a05lgv"]
 
 [ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_script"]
-[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/chemistry_glass_object_ui.tscn" id="2_ui"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/chemistry_glass_ui.tscn" id="2_ui"]
 [ext_resource type="Texture2D" uid="uid://cxv3crduivmjc" path="res://assets/rooms/hidden_objects_room/icon_31.png" id="3_texture"]
 
 [sub_resource type="RectangleShape2D" id="1_body_shape"]

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dk38r57rqinkt"]
+
+[ext_resource type="Texture2D" uid="uid://uwp2oudpsq5c" path="res://assets/rooms/zoology_room/chair.png" id="1_ecxa5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecxa5"]
+size = Vector2(53, 14)
+
+[node name="DeskStation" type="Node2D" unique_id=432564989]
+
+[node name="TableAndChair" type="Sprite2D" parent="." unique_id=1499937942]
+texture_filter = 1
+texture = ExtResource("1_ecxa5")
+
+[node name="TableBody" type="StaticBody2D" parent="." unique_id=1000775823]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TableBody" unique_id=1934523199]
+position = Vector2(-3.5, -6)
+shape = SubResource("RectangleShape2D_ecxa5")

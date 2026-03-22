@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dlhuiylc0dpgb"]
 
-[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_script"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/hidden_objects_room/salt_shaker_object_ui.tscn" id="2_ui"]
 [ext_resource type="Texture2D" uid="uid://c5i4d668wcsy3" path="res://assets/rooms/hidden_objects_room/salt_shaker.png" id="3_texture"]
 
@@ -8,7 +8,7 @@
 size = Vector2(12, 18)
 
 [sub_resource type="RectangleShape2D" id="2_interact_shape"]
-size = Vector2(21.5, 31)
+size = Vector2(15.75, 62.5)
 
 [node name="SaltShakerObject" type="StaticBody2D" unique_id=1908604547]
 script = ExtResource("1_script")
@@ -27,7 +27,7 @@ shape = SubResource("1_body_shape")
 [node name="InteractArea" type="Area2D" parent="." unique_id=1626658136]
 
 [node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=1591894277]
-position = Vector2(-1, -3)
+position = Vector2(-3.875, 12.75)
 shape = SubResource("2_interact_shape")
 
 [node name="InteractLabel" type="Label" parent="." unique_id=1074506116]
@@ -36,5 +36,4 @@ offset_left = -40.0
 offset_top = -40.0
 offset_right = 40.0
 offset_bottom = -14.0
-text = ""
 horizontal_alignment = 1

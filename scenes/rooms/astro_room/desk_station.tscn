@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bf12enc7cecp7"]
+
+[ext_resource type="Texture2D" uid="uid://do8auu6na26fo" path="res://assets/shared/classroom/Interiors_free_48x48.png" id="1_s4prt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pa5te"]
+size = Vector2(46, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trqrb"]
+size = Vector2(28.5, 8)
+
+[node name="DeskStation" type="Node2D" unique_id=1038868204]
+scale = Vector2(0.6, 0.6)
+
+[node name="ChairAndTable" type="StaticBody2D" parent="." unique_id=1315062287]
+
+[node name="CollisionTable" type="CollisionShape2D" parent="ChairAndTable" unique_id=1830577983]
+position = Vector2(13, -8.5)
+shape = SubResource("RectangleShape2D_pa5te")
+
+[node name="Sprite" type="Sprite2D" parent="ChairAndTable" unique_id=1156047903]
+texture = ExtResource("1_s4prt")
+region_enabled = true
+region_rect = Rect2(355.80392, 1711.3948, 74.17468, 104.03113)
+
+[node name="Collision" type="CollisionShape2D" parent="ChairAndTable" unique_id=1173086354]
+position = Vector2(55.5, -6)
+shape = SubResource("RectangleShape2D_trqrb")
+
+[node name="ChairRight" type="StaticBody2D" parent="." unique_id=2045266380]
+
+[node name="Sprite" type="Sprite2D" parent="ChairRight" unique_id=1673462973]
+position = Vector2(56, -8)
+texture = ExtResource("1_s4prt")
+region_enabled = true
+region_rect = Rect2(148.20277, 1825.6508, 36.048325, 62.342407)
+
+[node name="Collision" type="CollisionShape2D" parent="ChairRight" unique_id=1415640977]
+position = Vector2(-21.25, 0)
+shape = SubResource("RectangleShape2D_trqrb")
