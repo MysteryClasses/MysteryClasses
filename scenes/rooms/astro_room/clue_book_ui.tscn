@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cd7us8bgiq4qa"]
+[gd_scene format=3 uid="uid://ds33fyasw7rle"]
 
-[ext_resource type="Script" uid="uid://b80dwo8kewi2x" path="res://scripts/components/clue_ui_base.gd" id="1_q3dr1"]
-[ext_resource type="Texture2D" uid="uid://cv28be3qns4xs" path="res://assets/rooms/astro_room/astro_textbook_clue.png" id="2_tbfu0"]
+[ext_resource type="Script" uid="uid://dra4akmmd1f0q" path="res://scripts/components/clue_ui_base.gd" id="1_pvojj"]
+[ext_resource type="Texture2D" uid="uid://bbcgocikgpfbl" path="res://assets/rooms/astro_room/book_cover.png" id="2_pvojj"]
 
 [node name="Control" type="Control" unique_id=1362117202]
 process_mode = 3
@@ -11,8 +11,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_q3dr1")
-correct_code = "8"
+script = ExtResource("1_pvojj")
+correct_code = "5"
+success_message = "Correct! May (5) was the missing month!"
 
 [node name="Background" type="ColorRect" parent="." unique_id=178517059]
 layout_mode = 1
@@ -49,33 +50,29 @@ offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Challenge" type="Label" parent="Panel/VBoxContainer" unique_id=1824553845]
+[node name="Book" type="Label" parent="Panel/VBoxContainer" unique_id=1824553845]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "Textbook Note"
+text = "Book"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2106652199]
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1483031819]
 layout_mode = 2
 
-[node name="ClueText" type="Label" parent="Panel/VBoxContainer" unique_id=-2060399406]
+[node name="ClueText" type="Label" parent="Panel/VBoxContainer" unique_id=1919290479]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-text = "You opened the book. It's about astronomy. On the first page a piece of a note is glued to the book. A quote is written on it. But why... ?"
+text = "This book seems to have fallen out of the bookshelf. 
+So that's where sinus crosses the line..."
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="ClueImage" type="TextureRect" parent="Panel/VBoxContainer" unique_id=255298031]
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer" unique_id=991383642]
 custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
-texture = ExtResource("2_tbfu0")
-expand_mode = 3
+texture = ExtResource("2_pvojj")
+expand_mode = 2
 stretch_mode = 5
-
-[node name="FeedbackLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1759599977]
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-horizontal_alignment = 1
 
 [node name="CloseButton" type="Button" parent="Panel/VBoxContainer" unique_id=1636978246]
 layout_mode = 2

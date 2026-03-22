@@ -60,6 +60,19 @@ size = Vector2(29, 135.38464)
 
 [node name="HiddenObjectsRoom" type="Node2D" unique_id=405100079]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1931001968]
+position = Vector2(648, 360)
+zoom = Vector2(1.5, 1.5)
+limit_left = 180
+limit_top = 70
+limit_right = 1135
+limit_bottom = 736
+
+[node name="HiddenRoom" type="AudioStreamPlayer" parent="." unique_id=1739907598]
+process_mode = 3
+stream = ExtResource("20_hqaxb")
+autoplay = true
+
 [node name="Floor" type="Sprite2D" parent="." unique_id=882566549]
 position = Vector2(647, 357)
 scale = Vector2(0.7986111, 0.7445653)
@@ -92,19 +105,6 @@ position = Vector2(1135, 403)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryRight" unique_id=1928941693]
 position = Vector2(-42, -45.5)
 shape = SubResource("RectangleShape2D_wall_right")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1931001968]
-position = Vector2(648, 360)
-zoom = Vector2(1.5, 1.5)
-limit_left = 180
-limit_top = 70
-limit_right = 1135
-limit_bottom = 736
-
-[node name="HiddenRoom" type="AudioStreamPlayer" parent="." unique_id=1739907598]
-process_mode = 3
-stream = ExtResource("20_hqaxb")
-autoplay = true
 
 [node name="Backwall" type="Sprite2D" parent="." unique_id=559112007]
 position = Vector2(648, 153.25)

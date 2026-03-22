@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dji3ld6g2sat6"]
+
+[ext_resource type="Texture2D" uid="uid://do8auu6na26fo" path="res://assets/shared/classroom/Interiors_free_48x48.png" id="1_imys5"]
+[ext_resource type="Script" uid="uid://csnuybvsse1b8" path="res://scripts/components/interactable.gd" id="2_bqjp6"]
+[ext_resource type="Texture2D" uid="uid://c5vp3sknli450" path="res://assets/rooms/hidden_objects_room/coolschool_B.png" id="3_6yte1"]
+[ext_resource type="PackedScene" uid="uid://ds33fyasw7rle" path="res://scenes/rooms/astro_room/clue_book_ui.tscn" id="3_bqjp6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsu2w"]
+size = Vector2(97, 67)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bqjp6"]
+radius = 2.0
+height = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5fegv"]
+radius = 15.033297
+
+[node name="ClueBook" type="StaticBody2D" unique_id=1348421283]
+
+[node name="Shelf" type="Sprite2D" parent="." unique_id=1316351398]
+texture = ExtResource("1_imys5")
+region_enabled = true
+region_rect = Rect2(575.85803, 3281.719, 96.39514, 99.26807)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=677040321]
+position = Vector2(0.5, -15.5)
+shape = SubResource("RectangleShape2D_tsu2w")
+
+[node name="Book" type="StaticBody2D" parent="." unique_id=313973684]
+script = ExtResource("2_bqjp6")
+ui_scene = ExtResource("3_bqjp6")
+
+[node name="Sprite" type="Sprite2D" parent="Book" unique_id=1659373703]
+position = Vector2(15, 61)
+scale = Vector2(0.65625, 0.6923077)
+texture = ExtResource("3_6yte1")
+region_enabled = true
+region_rect = Rect2(340.7606, 454.19946, 32.557343, 26.013947)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Book" unique_id=707260978]
+position = Vector2(16, 45)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_bqjp6")
+
+[node name="InteractArea" type="Area2D" parent="Book" unique_id=1380053185]
+
+[node name="InteractShape" type="CollisionShape2D" parent="Book/InteractArea" unique_id=1880285375]
+position = Vector2(16, 64)
+shape = SubResource("CircleShape2D_5fegv")
