@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cofi1iyvfl0af" path="res://scenes/rooms/astro_room/clue_solarsystem_ui.tscn" id="2_qij21"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qij21"]
-size = Vector2(49, 42)
+size = Vector2(49, 142)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lm8yc"]
 size = Vector2(62, 65)
@@ -14,13 +14,27 @@ size = Vector2(62, 65)
 script = ExtResource("2_fdw7q")
 ui_scene = ExtResource("2_qij21")
 
-[node name="Sprite" type="Sprite2D" parent="." unique_id=1965666633]
+[node name="TableTop" type="Sprite2D" parent="." unique_id=780697384]
+position = Vector2(0, -114.00001)
+scale = Vector2(1.03, 1.03)
 texture = ExtResource("1_1iv2n")
 region_enabled = true
-region_rect = Rect2(95.85645, 1582.8723, 48.69387, 80.02734)
+region_rect = Rect2(48.196, 1583.412, 48, 51.316)
+
+[node name="TableMid" type="Sprite2D" parent="." unique_id=971292131]
+position = Vector2(0, -64)
+scale = Vector2(1.03, 1.03)
+texture = ExtResource("1_1iv2n")
+region_enabled = true
+region_rect = Rect2(48.196, 1583.412, 48, 51.316)
+
+[node name="GlassTable" type="Sprite2D" parent="." unique_id=133369979]
+texture = ExtResource("1_1iv2n")
+region_enabled = true
+region_rect = Rect2(95.856, 1582.872, 48, 80.027)
 
 [node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=734909516]
-position = Vector2(0.5, -5)
+position = Vector2(0.5, -55)
 shape = SubResource("RectangleShape2D_qij21")
 
 [node name="InteractArea" type="Area2D" parent="." unique_id=571644860]

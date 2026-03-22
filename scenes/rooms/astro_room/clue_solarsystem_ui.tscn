@@ -62,7 +62,8 @@ layout_mode = 2
 [node name="ClueText" type="Label" parent="Panel/VBoxContainer" unique_id=1919290479]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-text = "Behind the glass there is a poster of our solar system. Hm... something doesn't seem right..."
+text = "Behind the glass there is a poster of our solar system. 
+Hm... something doesn't seem right..."
 horizontal_alignment = 1
 autowrap_mode = 2
 
