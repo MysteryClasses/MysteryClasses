@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://mk81o8dqiupq" path="res://assets/musics/horror_music.mp3" id="5_btcgh"]
 [ext_resource type="PackedScene" uid="uid://cn4abvecickd2" path="res://scenes/entities/room_door/door_grey_top_view.tscn" id="6_uvm12"]
 [ext_resource type="TileSet" uid="uid://cq0srft8o5x5l" path="res://scenes/rooms/hallway/hallway_tileset.tres" id="6_w5ien"]
+[ext_resource type="PackedScene" uid="uid://0urwknjhoghs" path="res://scenes/rooms/hallway/locked_door.tscn" id="7_3plxi"]
 [ext_resource type="Texture2D" uid="uid://do8auu6na26fo" path="res://assets/shared/classroom/Interiors_free_48x48.png" id="7_uvm12"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eafqw"]
@@ -138,3 +139,6 @@ scale = Vector2(0.5, 0.4)
 texture = ExtResource("7_uvm12")
 region_enabled = true
 region_rect = Rect2(635.4747, 1096.6567, 73.01459, 55.77832)
+
+[node name="LockedDoor" parent="." unique_id=1922031976 instance=ExtResource("7_3plxi")]
+position = Vector2(321, 150)

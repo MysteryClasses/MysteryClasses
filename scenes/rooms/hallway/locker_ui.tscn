@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvjq3golyw2mv"]
 
-[ext_resource type="Script" uid="uid://be6ficqxvuv5b" path="res://scripts/components/challenge_multi_input.gd" id="1_2p2u7"]
+[ext_resource type="Script" uid="uid://pqp7dvfcto1y" path="res://scripts/components/challenge_multi_input.gd" id="1_2p2u7"]
 
 [node name="Control" type="Control" unique_id=1362117202]
 process_mode = 3
@@ -12,6 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2p2u7")
 correct_codes = Array[String](["8", "0", "5", "6"])
+challenge_id = "hallway_locker"
 
 [node name="Background" type="ColorRect" parent="." unique_id=178517059]
 layout_mode = 1
@@ -62,7 +63,8 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "You see your friends locker but its locked. 
 Four numbers are needed and the correct order is important (obviously...).
-The numbers go from zero to nine."
+The numbers go from zero to nine.
+"
 horizontal_alignment = 1
 autowrap_mode = 2
 
