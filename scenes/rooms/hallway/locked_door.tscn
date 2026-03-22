@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://0urwknjhoghs"]
+
+[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_7hv3w"]
+[ext_resource type="Texture2D" uid="uid://ck8h3kpfotmo7" path="res://assets/rooms/astro_room/door.png" id="1_212wk"]
+[ext_resource type="PackedScene" uid="uid://bat7g8252wddu" path="res://scenes/rooms/hallway/locked_door_ui.tscn" id="2_kn1m1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hv3w"]
+size = Vector2(38, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_212wk"]
+size = Vector2(46, 45)
+
+[node name="LockedDoor" type="StaticBody2D" unique_id=1922031976]
+script = ExtResource("1_7hv3w")
+ui_scene = ExtResource("2_kn1m1")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=375376144]
+texture = ExtResource("1_212wk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1003246836]
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_7hv3w")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1313741978]
+
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=882275434]
+position = Vector2(0, -10.5)
+shape = SubResource("RectangleShape2D_212wk")

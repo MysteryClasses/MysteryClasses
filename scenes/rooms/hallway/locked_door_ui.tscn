@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bat7g8252wddu"]
+
+[ext_resource type="Script" uid="uid://ggno3cngbop0" path="res://scenes/rooms/hallway/locked_door_ui.gd" id="1_qwh1k"]
+
+[node name="LockedDoorUI" type="Control" unique_id=299297288]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qwh1k")
+required_challenges = Array[String](["hallway_locker", "hidden_objects_room_desk_sequence"])
+
+[node name="Panel" type="Panel" parent="." unique_id=621361546]
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1660063293]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MessageLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1663065001]
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ProgressLabel" type="Label" parent="Panel/VBoxContainer" unique_id=2040060527]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Panel/VBoxContainer" unique_id=1740654130]
+layout_mode = 2
+text = "Close"
