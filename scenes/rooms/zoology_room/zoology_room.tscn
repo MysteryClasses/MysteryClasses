@@ -52,6 +52,7 @@ size = Vector2(31, 24)
 size = Vector2(17, 73)
 
 [node name="AstroRoom" type="Node2D" unique_id=1218151489]
+position = Vector2(1, 0)
 
 [node name="Background" type="ColorRect" parent="." unique_id=150361974]
 offset_left = 19.0

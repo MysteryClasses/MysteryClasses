@@ -2,14 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="2_player"]
 [ext_resource type="PackedScene" uid="uid://bvj8kfv2xqmje" path="res://scenes/rooms/astro_room/clue_calendar.tscn" id="3_clue"]
-[ext_resource type="PackedScene" uid="uid://ds2g3b5y2lv73" path="res://scenes/rooms/astro_room/clue_textbook.tscn" id="3_kdby3"]
+[ext_resource type="PackedScene" uid="uid://ds2g3b5y2lv73" path="res://scenes/rooms/astro_room/clue_note.tscn" id="3_kdby3"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="5_dbyfq"]
+[ext_resource type="Texture2D" uid="uid://c5vp3sknli450" path="res://assets/rooms/hidden_objects_room/coolschool_B.png" id="7_155i6"]
 [ext_resource type="PackedScene" uid="uid://bf12enc7cecp7" path="res://scenes/rooms/astro_room/desk_station.tscn" id="8_c23eh"]
 [ext_resource type="PackedScene" uid="uid://blbdt7is3ramy" path="res://scenes/rooms/astro_room/globe.tscn" id="9_0tvi1"]
 [ext_resource type="AudioStream" uid="uid://c1j6bfhxgbetq" path="res://assets/musics/astro_room.mp3" id="9_c23eh"]
 [ext_resource type="PackedScene" uid="uid://bi1kb2dd7vxed" path="res://scenes/entities/room_door/door_wood_top_view.tscn" id="10_0tvi1"]
 [ext_resource type="TileSet" uid="uid://b5bkiuclwq3xl" path="res://scenes/rooms/astro_room/floor_tileset.tres" id="10_6e3e4"]
 [ext_resource type="PackedScene" uid="uid://juqagxlkd8gn" path="res://scenes/rooms/astro_room/wall.tscn" id="11_0tvi1"]
+[ext_resource type="PackedScene" uid="uid://dkdyo22bw7pg3" path="res://scenes/rooms/astro_room/clue_solarsystem.tscn" id="11_155i6"]
 
 [sub_resource type="RectangleShape2D" id="wall_bottom_shape"]
 size = Vector2(620, 10)
@@ -65,18 +67,38 @@ autoplay = true
 [node name="DeskTopLeft" parent="." unique_id=1038868204 instance=ExtResource("8_c23eh")]
 position = Vector2(143, 59)
 
+[node name="OpenBook" type="Sprite2D" parent="DeskTopLeft" unique_id=94630971]
+position = Vector2(11.666666, -4.9999995)
+rotation = 1.5707964
+texture = ExtResource("7_155i6")
+region_enabled = true
+region_rect = Rect2(295.09277, 453.69388, 34.096558, 25.913422)
+
 [node name="DeskTopMid" parent="." unique_id=1862256495 instance=ExtResource("8_c23eh")]
-position = Vector2(295, 62)
+position = Vector2(314.66666, 84.666664)
+
+[node name="TwoBooks" type="Sprite2D" parent="DeskTopMid" unique_id=1625892934]
+position = Vector2(12.222221, -41.111107)
+texture = ExtResource("7_155i6")
+region_enabled = true
+region_rect = Rect2(197.15036, 445.03317, 32.05081, 33.414642)
+
+[node name="ThreeBooks" type="Sprite2D" parent="DeskTopMid" unique_id=2111150320]
+position = Vector2(9.999999, -2.222222)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("7_155i6")
+region_enabled = true
+region_rect = Rect2(142.59586, 432.7584, 47.7352, 47.73523)
 
 [node name="DeskTopRight" parent="." unique_id=1321288791 instance=ExtResource("8_c23eh")]
-position = Vector2(436, 60)
+position = Vector2(482.66666, 67.333336)
 
 [node name="DeskBotLeft" parent="." unique_id=1472777871 instance=ExtResource("8_c23eh")]
-position = Vector2(144, 190)
+position = Vector2(184.00003, 206)
 
 [node name="ClueTextbook" parent="DeskBotLeft" unique_id=888888888 instance=ExtResource("3_kdby3")]
 z_index = 1
-position = Vector2(23.33339, 16.666626)
+position = Vector2(16.666588, -5.555563)
 rotation = 0.06981316
 scale = Vector2(0.5, 0.5)
 
@@ -97,3 +119,7 @@ process_callback = 0
 position = Vector2(26, 254.00002)
 rotation = 1.5707964
 target_scene = "res://scenes/rooms/hallway/hallway.tscn"
+
+[node name="ClueSolarsystem" parent="." unique_id=968528751 instance=ExtResource("11_155i6")]
+position = Vector2(596.00006, 223.3333)
+scale = Vector2(0.6, 0.6)

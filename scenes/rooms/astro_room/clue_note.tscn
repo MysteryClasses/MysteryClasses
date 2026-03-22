@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ds2g3b5y2lv73"]
+
+[ext_resource type="Script" uid="uid://csnuybvsse1b8" path="res://scripts/components/interactable.gd" id="1_ws6cg"]
+[ext_resource type="PackedScene" uid="uid://cd7us8bgiq4qa" path="res://scenes/rooms/astro_room/clue_note_ui.tscn" id="2_kobo5"]
+[ext_resource type="Texture2D" uid="uid://do8auu6na26fo" path="res://assets/shared/classroom/Interiors_free_48x48.png" id="3_mkm17"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paper"]
+size = Vector2(56, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
+size = Vector2(129, 132)
+
+[node name="ClueNote" type="StaticBody2D" unique_id=643607480]
+script = ExtResource("1_ws6cg")
+ui_scene = ExtResource("2_kobo5")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=655084417]
+position = Vector2(-10.624999, -8.124999)
+scale = Vector2(1.5, 1.273)
+texture = ExtResource("3_mkm17")
+region_enabled = true
+region_rect = Rect2(487.1645, 1714.067, 42.513184, 60.44397)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=587832994]
+position = Vector2(-10, -9)
+shape = SubResource("RectangleShape2D_paper")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1954460380]
+
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=2019551259]
+position = Vector2(-8.5, -12)
+shape = SubResource("RectangleShape2D_interaction")
