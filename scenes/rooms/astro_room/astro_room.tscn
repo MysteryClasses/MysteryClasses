@@ -43,10 +43,17 @@ zoom = Vector2(1.05, 1.05)
 process_callback = 0
 
 [node name="Door" parent="." unique_id=1205847696 instance=ExtResource("10_0tvi1")]
-position = Vector2(26, 254.00003)
+position = Vector2(21.333332, 253.99998)
 rotation = 1.5707964
 target_scene = "res://scenes/rooms/hallway/hallway.tscn"
 spawn_id = "DoormattToAstroRoom"
+
+[node name="Sprite2D" type="Sprite2D" parent="Door" unique_id=72029868]
+position = Vector2(0.66669464, -25.333334)
+scale = Vector2(0.8349939, 0.39628112)
+texture = ExtResource("14_f6tmt")
+region_enabled = true
+region_rect = Rect2(487.71436, 1351.8367, 81.002625, 86.51587)
 
 [node name="Carpet" type="Sprite2D" parent="." unique_id=1524104541]
 position = Vector2(594.6667, -15.333335)
