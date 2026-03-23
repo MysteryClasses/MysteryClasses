@@ -6,7 +6,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w4mfv"]
 size = Vector2(58, 18)
 
-[node name="RoomDoor" type="Node2D" unique_id=1205847696]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ppngw"]
+size = Vector2(55, 13)
+
+[node name="RoomDoor" type="StaticBody2D" unique_id=1402177221]
 script = ExtResource("1_pegag")
 
 [node name="InteractArea" type="Area2D" parent="." unique_id=1460256483]
@@ -28,3 +31,7 @@ horizontal_alignment = 1
 texture = ExtResource("2_50nd7")
 region_enabled = true
 region_rect = Rect2(528.53375, 1118.7545, 55.277832, 14.363525)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=533612445]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_ppngw")

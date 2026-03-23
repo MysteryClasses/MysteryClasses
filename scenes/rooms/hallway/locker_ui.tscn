@@ -52,7 +52,7 @@ grow_vertical = 2
 [node name="Challenge" type="Label" parent="Panel/VBoxContainer" unique_id=1824553845]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "TEXTBOOK CLUE"
+text = "Locker"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=2106652199]
@@ -61,9 +61,9 @@ layout_mode = 2
 [node name="ClueText" type="Label" parent="Panel/VBoxContainer" unique_id=-2060399406]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-text = "You see your friends locker but its locked. 
-Four numbers are needed and the correct order is important (obviously...).
-The numbers go from zero to nine.
+text = "You see your friends locker but its locked by four one-digit numbers.
+Your friend once mentioned sth like \"The numbers run like the time\".
+Could that help with how to align the numbers?
 "
 horizontal_alignment = 1
 autowrap_mode = 2
