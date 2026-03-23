@@ -9,20 +9,23 @@ var challenge_progress: Dictionary = {}
 var challenge_collected_tokens: Dictionary = {}
 var challenge_collected_items: Dictionary = {}
 
-# For future: Checks if player has a certain clue
+# Spawn system: set by teleport before scene change, read by player on _ready()
+var target_spawn_id: String = ""
+
+
 func has_clue(clue_id: String) -> bool:
 	return clue_id in collected_clues
 
-# Adds clue to player's clue list
+
 func collect_clue(clue_id: String) -> void:
 	if not has_clue(clue_id):
 		collected_clues.append(clue_id)
 
-# Checks if a certain Challenge is solved
+
 func is_challenge_solved(challenge_id: String) -> bool:
 	return challenge_id in solved_challenges
 
-# Adds Challenge to solved Challenges
+
 func solve_challenge(challenge_id: String) -> void:
 	if not is_challenge_solved(challenge_id):
 		solved_challenges.append(challenge_id)

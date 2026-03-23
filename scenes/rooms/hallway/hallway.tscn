@@ -33,9 +33,6 @@ size = Vector2(768, 16)
 size = Vector2(768, 16)
 
 [node name="Hallway" type="Node2D" unique_id=43590407]
-position = Vector2(-67, 41)
-
-[node name="SpawnPoint" type="Marker2D" parent="." unique_id=1429428147]
 
 [node name="Player" parent="." unique_id=1820359016 instance=ExtResource("2_oy518")]
 position = Vector2(659, 543)
@@ -132,6 +129,7 @@ region_rect = Rect2(635.4747, 1096.6567, 73.01459, 55.77832)
 position = Vector2(1020, 452)
 rotation = 1.5707964
 target_scene = "res://scenes/rooms/astro_room/astro_room.tscn"
+spawn_id = "Door"
 
 [node name="DoormattToAstroRoom" type="Sprite2D" parent="DoorToAstroRoom" unique_id=1248412054]
 position = Vector2(-3.8146973e-06, 18)
@@ -142,3 +140,7 @@ region_rect = Rect2(635.4747, 1096.6567, 73.01459, 55.77832)
 
 [node name="LockedDoor" parent="." unique_id=1922031976 instance=ExtResource("7_3plxi")]
 position = Vector2(321, 150)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=853321621]
+position = Vector2(640, 360)
+zoom = Vector2(1.4, 1.4)
