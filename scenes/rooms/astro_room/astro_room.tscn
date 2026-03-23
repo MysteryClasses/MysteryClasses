@@ -38,14 +38,15 @@ stream = ExtResource("9_c23eh")
 autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=199332052]
-position = Vector2(325.33334, 135.33334)
-zoom = Vector2(0.8, 0.8)
+position = Vector2(315, 138)
+zoom = Vector2(1.05, 1.05)
 process_callback = 0
 
 [node name="Door" parent="." unique_id=1205847696 instance=ExtResource("10_0tvi1")]
 position = Vector2(26, 254.00003)
 rotation = 1.5707964
 target_scene = "res://scenes/rooms/hallway/hallway.tscn"
+spawn_id = "DoormattToAstroRoom"
 
 [node name="Carpet" type="Sprite2D" parent="." unique_id=1524104541]
 position = Vector2(594.6667, -15.333335)

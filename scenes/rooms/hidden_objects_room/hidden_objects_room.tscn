@@ -209,6 +209,7 @@ shape = SubResource("RectangleShape2D_flc2b")
 [node name="Door" parent="Backwall" unique_id=1205847696 instance=ExtResource("10_81a30")]
 position = Vector2(-98.90187, 10.235849)
 target_scene = "res://scenes/rooms/hallway/hallway.tscn"
+spawn_id = "DoormattToHiddenRoom"
 
 [node name="FireExtinguisher" parent="." unique_id=284469101 instance=ExtResource("26_fire_extinguisher_object")]
 position = Vector2(1059, 202)
