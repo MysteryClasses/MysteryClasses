@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://drbojb8u4k20e"]
 
-[ext_resource type="Script" uid="uid://d07vthgchml7y" path="res://scripts/autoload/hud.gd" id="1_0mwgc"]
+[ext_resource type="Script" uid="uid://c5n6tt0a841am" path="res://scripts/autoload/hud.gd" id="1_0mwgc"]
+[ext_resource type="PackedScene" uid="uid://gwtgklbbqgt3" path="res://scenes/ui/analytics_panel.tscn" id="2_hqnrr"]
 
 [node name="Hud" type="Node2D" unique_id=1995184322]
 process_mode = 3
@@ -33,3 +34,10 @@ text = "🔊"
 [node name="ChallengesButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=186789839]
 layout_mode = 2
 text = "C"
+
+[node name="AnalyticsPanel" parent="." unique_id=1495039442 instance=ExtResource("2_hqnrr")]
+z_index = 10
+offset_left = -1.0
+offset_top = 6.0
+offset_right = 39.0
+offset_bottom = 46.0

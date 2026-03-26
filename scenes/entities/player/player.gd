@@ -2,9 +2,11 @@ extends CharacterBody2D
 
 # Bewegungsgeschwindigkeit
 @export var speed: float = 300.0
+@export var player_tag := "test_session" 
 
 # Speichert letzte Blickrichtung für Idle Animation
 var last_direction: String = "down"
+
 
 
 func _ready():
@@ -12,6 +14,10 @@ func _ready():
 	# call_deferred wartet bis der aktuelle Frame fertig ist — dann ist
 	# current_scene garantiert gesetzt und alle Nodes sind im Baum
 	_apply_spawn_point.call_deferred()
+	await Talo.players.identify("anonymous", Talo.players.generate_identifier())
+	Talo.current_player.set_prop("session_tag", player_tag)
+	await Talo.events.track("GameStarted", {"scene": get_tree().get_current_scene().name})
+
 
 
 func _apply_spawn_point() -> void:

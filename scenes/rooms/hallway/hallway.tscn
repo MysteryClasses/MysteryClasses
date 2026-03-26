@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://bg05614rc70ah"]
 
+[ext_resource type="Script" uid="uid://cj8vjk86l5cch" path="res://scenes/rooms/hallway/hallway.gd" id="1_g0cra"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="2_oy518"]
 [ext_resource type="PackedScene" uid="uid://b7q6gkhh1mewa" path="res://scenes/rooms/hallway/locker.tscn" id="4_atylr"]
 [ext_resource type="TileSet" uid="uid://bvg5f0oiv4lbt" path="res://scenes/rooms/hallway/wall_tileset.tres" id="5_3plxi"]
@@ -34,6 +35,7 @@ size = Vector2(768, 16)
 size = Vector2(794, 53)
 
 [node name="Hallway" type="Node2D" unique_id=43590407]
+script = ExtResource("1_g0cra")
 
 [node name="Player" parent="." unique_id=1820359016 instance=ExtResource("2_oy518")]
 position = Vector2(659, 543)

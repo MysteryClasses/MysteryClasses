@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://gwtgklbbqgt3"]
+
+[ext_resource type="Script" uid="uid://dxqcasi48ut74" path="res://scripts/analytics_panel.gd" id="1_0b0ql"]
+
+[node name="AnalyticsPanel" type="Control" unique_id=1495039442]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0b0ql")
+
+[node name="Panel" type="Panel" parent="." unique_id=1049645087]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 250.0
+offset_right = 826.0
+offset_bottom = 431.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=16804888]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 30.0
+offset_bottom = 114.0
+
+[node name="Title" type="Label" parent="Panel/VBoxContainer" unique_id=638395760]
+layout_mode = 2
+
+[node name="Scene Info" type="Label" parent="Panel/VBoxContainer" unique_id=1904757606]
+layout_mode = 2
+
+[node name="Music Status" type="Label" parent="Panel/VBoxContainer" unique_id=1979049304]
+layout_mode = 2
+
+[node name="Item Interactions" type="Label" parent="Panel/VBoxContainer" unique_id=996031279]
+layout_mode = 2
