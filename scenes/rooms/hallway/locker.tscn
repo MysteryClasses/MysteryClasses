@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b7q6gkhh1mewa"]
 
 [ext_resource type="Texture2D" uid="uid://dmqf4xfkq72jr" path="res://assets/rooms/hallway/locker_front.png" id="1_pit1g"]
-[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_qbthv"]
+[ext_resource type="Script" uid="uid://dmmj5r6t0wknq" path="res://scripts/components/interactable.gd" id="1_qbthv"]
 [ext_resource type="PackedScene" uid="uid://cvjq3golyw2mv" path="res://scenes/rooms/hallway/locker_ui.tscn" id="2_byf1g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wv1gg"]

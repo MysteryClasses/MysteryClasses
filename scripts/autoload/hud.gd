@@ -15,7 +15,7 @@ func _on_mute_pressed() -> void:
 	# Flip the state and apply it to the master bus (index 0)
 	_is_muted = !_is_muted
 	AudioServer.set_bus_mute(0, _is_muted)
-	AnalyticsManager.set_music_enabled
+
 
 	# Update button label so the player knows the current state
 	var btn := $CanvasLayer/MarginContainer/VBoxContainer/MuteButton

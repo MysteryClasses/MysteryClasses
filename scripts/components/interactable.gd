@@ -3,6 +3,7 @@ class_name Interactable
 
 # UI scene to open when the player interacts
 @export var ui_scene: PackedScene
+@export var object_id : String = "default_object"
 
 # State-Variables to check if player is close
 # or if the UI is open
@@ -53,3 +54,10 @@ func _on_ui_closed() -> void:
 	if _active_ui and _active_ui.get_parent():
 		_active_ui.get_parent().queue_free()
 	_active_ui = null
+	
+func interact() -> void:
+	# Track interaction
+	AnalyticsManager.track_interaction(object_id)
+
+	# Custom behavior
+	print("Interacted with: ", object_id)

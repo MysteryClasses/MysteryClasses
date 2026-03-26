@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://b2akvb1xhtykw"]
 
+[ext_resource type="Script" uid="uid://b4b1erx6l2m1j" path="res://scripts/autoload/SceneTracker.gd" id="1_fynir"]
 [ext_resource type="Texture2D" uid="uid://bm8sgr4rqyvb2" path="res://assets/rooms/zoology_room/wand.png" id="1_n0hf6"]
 [ext_resource type="Texture2D" uid="uid://vojf0p4di84h" path="res://assets/rooms/zoology_room/lamp.png" id="2_2eo3b"]
 [ext_resource type="Texture2D" uid="uid://ttp4ofqdv416" path="res://assets/rooms/zoology_room/chairs.png" id="3_y8pam"]
@@ -53,6 +54,7 @@ size = Vector2(17, 73)
 
 [node name="AstroRoom" type="Node2D" unique_id=1218151489]
 position = Vector2(1, 0)
+script = ExtResource("1_fynir")
 
 [node name="Background" type="ColorRect" parent="." unique_id=150361974]
 offset_left = 19.0

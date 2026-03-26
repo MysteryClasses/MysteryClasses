@@ -1,58 +1,41 @@
 extends Node
 
-var item_interactions = {}
+@export var player_tag := "test_session"
 
-var scene_enter_time = 0
-var current_scene_name = ""
 
-# Store music state
-var music_enabled = true
+var session_id : String
+var interaction_counts := {}
 
-signal analytics_updated
+func _ready() -> void:
+	session_id = str(Time.get_unix_time_from_system())
 
-func _ready():
-	scene_enter_time = Time.get_ticks_msec()
+func track_event(event_name:String, props:Dictionary = {}) -> void:
+	var fixed_props: Dictionary[String, String] = {}
 
-func enter_scene(scene_name):
-	current_scene_name = scene_name
-	scene_enter_time = Time.get_ticks_msec()
+	for key in props.keys():
+		fixed_props[str(key)] = str(props[key])
 
-func exit_scene():
-	var leave_time = Time.get_ticks_msec()
-	var duration = (leave_time - scene_enter_time) / 1000.0
-	
-	track_event("scene_time_spent", {
-		"scene": current_scene_name,
+	fixed_props["session_id"] = str(session_id)
+	fixed_props["player_tag"] = str(player_tag)
+
+	await Talo.events.track(event_name, fixed_props)
+
+
+func track_scene_time(scene_name:String, duration:float) -> void:
+	await track_event("scene_time_spent", {
+		"scene": scene_name,
 		"duration_seconds": duration
 	})
-	
-	emit_signal("analytics_updated")
 
 
-func track_item_interaction(item_name):
-	if not item_interactions.has(item_name):
-		item_interactions[item_name] = 0
-	
-	item_interactions[item_name] += 1
-	
-	track_event("item_interaction", {
-		"item_name": item_name,
-		"count": item_interactions[item_name]
+
+func track_interaction(object_id:String) -> void:
+	if not interaction_counts.has(object_id):
+		interaction_counts[object_id] = 0
+
+	interaction_counts[object_id] += 1
+
+	await track_event("object_interacted", {
+		"object_id": object_id,
+		"interaction_count": interaction_counts[object_id]
 	})
-	
-	emit_signal("analytics_updated")
-
-
-func set_music_enabled(enabled):
-	music_enabled = enabled
-	
-	track_event("music_toggle", {
-		"enabled": enabled
-	})
-	
-	emit_signal("analytics_updated")
-
-
-func track_event(event_name, data):
-	# Replace this with actual Talo call
-	print("Send to Talo:", event_name, data)
