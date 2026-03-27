@@ -120,6 +120,7 @@ region_rect = Rect2(240, 176, 96, 88)
 [node name="SaltShakerObject" parent="Backwall/CupboardLeft" unique_id=261705340 instance=ExtResource("23_salt_shaker_object")]
 position = Vector2(40, -5)
 scale = Vector2(1, 1.0000001)
+object_id = "hidden_objects_saltshaker"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Backwall/CupboardLeft" unique_id=1430353864]
 
@@ -147,6 +148,7 @@ region_rect = Rect2(144, 208, 48, 56)
 
 [node name="StatueObject" parent="Backwall/MiniCupboardLeft" unique_id=1818843979 instance=ExtResource("27_statue_object")]
 position = Vector2(11, -17)
+object_id = "hidden_objects_statue"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Backwall/MiniCupboardLeft" unique_id=298196469]
 
@@ -172,6 +174,7 @@ region_rect = Rect2(336, 176, 48, 88)
 
 [node name="ChemistryGlass" parent="Backwall/FurnitureRight/BookshelfRight" unique_id=615606839 instance=ExtResource("24_chemistry_glass_object")]
 position = Vector2(-15, -8)
+object_id = "hidden_objects_chemistryglass"
 
 [node name="CupboardRight" type="Sprite2D" parent="Backwall/FurnitureRight" unique_id=1821515546]
 position = Vector2(481.40186, 18.42453)
@@ -209,6 +212,7 @@ spawn_id = "DoormattToHiddenRoom"
 [node name="FireExtinguisher" parent="." unique_id=284469101 instance=ExtResource("26_fire_extinguisher_object")]
 position = Vector2(1059, 202)
 scale = Vector2(0.99999994, 1)
+object_id = "hidden_objects_fireextinguisher"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="FireExtinguisher" unique_id=1583497958]
 
@@ -250,11 +254,13 @@ region_rect = Rect2(152, 552, 32, 24)
 [node name="SnackClue" parent="." unique_id=2118512738 instance=ExtResource("13_snack_clue")]
 z_index = 1
 position = Vector2(409, 415)
+object_id = "hidden_objects_clue_snack"
 
 [node name="UsbDrive" parent="." unique_id=1099350042 instance=ExtResource("22_usb_drive_object")]
 z_index = 2
 position = Vector2(906, 294.99997)
 rotation = -0.64751714
+object_id = "hidden_objects_usb"
 
 [node name="Scissors" parent="." unique_id=253015236 instance=ExtResource("25_scissor_object")]
 position = Vector2(665, 456)
@@ -262,6 +268,7 @@ rotation = 0.82741004
 scale = Vector2(0.8, 0.867)
 skew = 0.069194555
 ui_scene = ExtResource("15_hqaxb")
+object_id = "hidden_objects_scissors"
 
 [node name="YSortLayer" type="Node2D" parent="." unique_id=522626008]
 y_sort_enabled = true
@@ -289,6 +296,7 @@ region_rect = Rect2(336, 40, 48, 152)
 [node name="ArtClue" parent="YSortLayer/DeskLeft" unique_id=1939699104 instance=ExtResource("12_art_clue")]
 z_index = 1
 position = Vector2(0, -43)
+object_id = "hidden_objects_clue_art"
 
 [node name="bookstack2" type="Sprite2D" parent="YSortLayer/DeskLeft" unique_id=793208542]
 z_index = 1
@@ -366,6 +374,7 @@ region_rect = Rect2(104, 544, 32, 32)
 [node name="StudyClue" parent="YSortLayer/DeskRight" unique_id=73736880 instance=ExtResource("11_study_clue")]
 position = Vector2(-2, 30.769243)
 scale = Vector2(0.9, 0.739)
+object_id = "hidden_objects_clue_study"
 
 [node name="bookstack" type="Sprite2D" parent="YSortLayer/DeskRight" unique_id=1759742085]
 z_index = 1
@@ -381,6 +390,7 @@ position = Vector2(-20, -57.84613)
 rotation = 0.17702796
 scale = Vector2(1.2903252, 1.07835)
 skew = 0.08270013
+object_id = "hidden_objects_keyboard"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="YSortLayer/DeskRight" unique_id=819084075]
 

@@ -13,6 +13,7 @@ size = Vector2(46, 45)
 [node name="LockedDoor" type="StaticBody2D" unique_id=1922031976]
 script = ExtResource("1_7hv3w")
 ui_scene = ExtResource("2_kn1m1")
+object_id = "hallway_locked_door"
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=375376144]
 texture = ExtResource("1_212wk")

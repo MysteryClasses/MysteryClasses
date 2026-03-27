@@ -63,7 +63,7 @@ func _init_socket() -> void:
 	socket = TaloSocket.new()
 	add_child(socket)
 
-	if Talo.settings.auto_connect_socket:
+	if settings.auto_connect_socket:
 		socket.open_connection()
 
 func _notification(what: int):
@@ -138,5 +138,5 @@ func _handle_quit() -> void:
 
 		await events.pending_events_flushed
 
-	if Talo.settings.handle_tree_quit:
+	if settings.handle_tree_quit:
 		get_tree().quit()

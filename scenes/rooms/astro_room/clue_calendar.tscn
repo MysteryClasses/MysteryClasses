@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bvj8kfv2xqmje"]
 
-[ext_resource type="Script" uid="uid://csnuybvsse1b8" path="res://scripts/components/interactable.gd" id="1_7uptq"]
+[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_7uptq"]
 [ext_resource type="PackedScene" uid="uid://oatv3bo60xv3" path="res://scenes/rooms/astro_room/clue_calendar_ui.tscn" id="2_u3wbv"]
 [ext_resource type="Texture2D" uid="uid://do8auu6na26fo" path="res://assets/shared/classroom/Interiors_free_48x48.png" id="3_axsx8"]
 
@@ -13,6 +13,7 @@ size = Vector2(96, 96)
 [node name="ClueCalendar" type="StaticBody2D" unique_id=1775706234]
 script = ExtResource("1_7uptq")
 ui_scene = ExtResource("2_u3wbv")
+object_id = "astro_calendar"
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=97224628]
 position = Vector2(-4.7683716e-07, -9.536743e-07)
