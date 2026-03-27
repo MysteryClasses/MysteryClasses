@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://drbojb8u4k20e"]
 
-[ext_resource type="Script" uid="uid://c5n6tt0a841am" path="res://scripts/autoload/hud.gd" id="1_0mwgc"]
-[ext_resource type="PackedScene" uid="uid://gwtgklbbqgt3" path="res://scenes/ui/analytics_panel.tscn" id="2_hqnrr"]
+[ext_resource type="Script" uid="uid://d07vthgchml7y" path="res://scripts/autoload/hud.gd" id="1_0mwgc"]
 
 [node name="Hud" type="Node2D" unique_id=1995184322]
 process_mode = 3
@@ -23,21 +22,6 @@ theme_override_constants/margin_right = 10
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="MenuButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=552850907]
-layout_mode = 2
-text = "S"
-
 [node name="MuteButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1460907017]
 layout_mode = 2
 text = "🔊"
-
-[node name="ChallengesButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=186789839]
-layout_mode = 2
-text = "C"
-
-[node name="AnalyticsPanel" parent="." unique_id=1495039442 instance=ExtResource("2_hqnrr")]
-z_index = 10
-offset_left = -1.0
-offset_top = 6.0
-offset_right = 39.0
-offset_bottom = 46.0
