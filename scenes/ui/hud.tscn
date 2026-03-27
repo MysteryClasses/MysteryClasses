@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://drbojb8u4k20e"]
 
-[ext_resource type="Script" uid="uid://d07vthgchml7y" path="res://scripts/autoload/hud.gd" id="1_0mwgc"]
+[ext_resource type="Script" uid="uid://c5n6tt0a841am" path="res://scripts/autoload/hud.gd" id="1_0mwgc"]
+[ext_resource type="Texture2D" uid="uid://dwsodbj8swh1g" path="res://assets/shared/icons/icon_audio_on.png" id="2_hqnrr"]
 
 [node name="Hud" type="Node2D" unique_id=1995184322]
 process_mode = 3
@@ -12,8 +13,8 @@ script = ExtResource("1_0mwgc")
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 101.0
+offset_left = -50.0
+offset_bottom = 150.0
 grow_horizontal = 0
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
@@ -22,6 +23,25 @@ theme_override_constants/margin_right = 10
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="MuteButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1460907017]
+[node name="ExitButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1460907018]
 layout_mode = 2
-text = "🔊"
+text = "Exit"
+
+[node name="MuteButton" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1460907017]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_hqnrr")
+texture_pressed = ExtResource("2_hqnrr")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ExitConfirmDialog" type="ConfirmationDialog" parent="CanvasLayer" unique_id=1460907019]
+title = "Quit Game?"
+size = Vector2i(300, 100)
+dialog_text = "Are you sure you want to quit?"
+
+[node name="SummaryDialog" type="AcceptDialog" parent="CanvasLayer" unique_id=1770490839]
+title = "Game Over"
+size = Vector2i(350, 150)

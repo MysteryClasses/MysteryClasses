@@ -12,6 +12,9 @@ var challenge_collected_items: Dictionary = {}
 # Spawn system: set by teleport before scene change, read by player on _ready()
 var target_spawn_id: String = ""
 
+# Talo analytics: generated once, stays the same for the entire game session
+var talo_player_id: String = ""
+
 
 func has_clue(clue_id: String) -> bool:
 	return clue_id in collected_clues

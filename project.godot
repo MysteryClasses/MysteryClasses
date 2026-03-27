@@ -24,7 +24,7 @@ GameManager="*res://scripts/autoload/game_manager.gd"
 MCPGameBridge="res://addons/godot_mcp/game_bridge/mcp_game_bridge.gd"
 HUD="*uid://drbojb8u4k20e"
 AnalyticsManager="*res://scripts/autoload/AnalyticsManager.gd"
-Talo="*uid://bpmdn8oc34pg7"
+Talo="*uid://bborjuwpnqtjp"
 
 [display]
 

@@ -81,6 +81,7 @@ func _show_object_fragment() -> void:
 		primary_label.text = fragment_success_message
 		if new_progress >= total_steps:
 			_game_manager().solve_challenge(challenge_id)
+			AnalyticsManager.track_event("ChallengeSolved", {"challenge_id": challenge_id})
 			secondary_label.text = "Collected word: %s. Exit unlocked." % _build_collected_word()
 			return
 
