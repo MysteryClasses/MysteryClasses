@@ -55,7 +55,6 @@ collision_thickness = 8.0
 
 [node name="WallTop" type="StaticBody2D" parent="." unique_id=1260034852]
 position = Vector2(640, 120)
-scale = Vector2(1.01, 1)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="WallTop" unique_id=1897471870]
 position = Vector2(-640, -120)

@@ -8,7 +8,7 @@ var interaction_counts := {}
 # Timer that flushes events periodically - important for the browser,
 # since tab-close notifications are unreliable there
 var _flush_timer: Timer
-const FLUSH_INTERVAL_SECONDS := 10.0
+const FLUSH_INTERVAL_SECONDS := 3.0
 
 
 func _ready() -> void:

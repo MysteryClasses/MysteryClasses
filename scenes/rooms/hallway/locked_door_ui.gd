@@ -29,6 +29,10 @@ func _ready() -> void:
 
 func _close() -> void:
 	get_tree().paused = false
+		
+	# Flush all pending analytics events when the player interacts with this door
+	Talo.events.flush()
+	
 	queue_free()
 
 
