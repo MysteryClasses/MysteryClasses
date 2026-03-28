@@ -12,6 +12,7 @@
 [ext_resource type="TileSet" uid="uid://cmt4usbbo3ef3" path="res://scenes/rooms/hidden_objects_room/desk_tileset.tres" id="19_hqaxb"]
 [ext_resource type="Texture2D" uid="uid://dnacf7flfj161" path="res://assets/rooms/hidden_objects_room/CoolSchool_tileset.png" id="19_rhm8f"]
 [ext_resource type="AudioStream" uid="uid://f1wdb7pk15m8" path="res://assets/musics/hidden_room.mp3" id="20_hqaxb"]
+[ext_resource type="Script" uid="uid://nrw6wimvysnw" path="res://scripts/components/wall_frame.gd" id="21_81a30"]
 [ext_resource type="PackedScene" uid="uid://c2d61n0pjodvh" path="res://scenes/rooms/hidden_objects_room/keyboard.tscn" id="21_remote_object"]
 [ext_resource type="Texture2D" uid="uid://c5vp3sknli450" path="res://assets/rooms/hidden_objects_room/coolschool_B.png" id="22_4kiwu"]
 [ext_resource type="PackedScene" uid="uid://d3kah78vj8aw4" path="res://scenes/rooms/hidden_objects_room/usb_drive_object.tscn" id="22_usb_drive_object"]
@@ -20,18 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://eh633jq51psi" path="res://scenes/rooms/hidden_objects_room/scissors.tscn" id="25_scissor_object"]
 [ext_resource type="PackedScene" uid="uid://cr8dy7dw1lgc4" path="res://scenes/rooms/hidden_objects_room/fire_extinguisher_object.tscn" id="26_fire_extinguisher_object"]
 [ext_resource type="PackedScene" uid="uid://bgu2kvunxttte" path="res://scenes/rooms/hidden_objects_room/statue_object.tscn" id="27_statue_object"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_top"]
-size = Vector2(918.25, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_bottom"]
-size = Vector2(926.5, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_left"]
-size = Vector2(32, 483)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_right"]
-size = Vector2(32, 479)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kiwu"]
 size = Vector2(93, 54)
@@ -61,7 +50,7 @@ size = Vector2(29, 135.38464)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1931001968]
 position = Vector2(648, 360)
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(1.4, 1.4)
 limit_left = 180
 limit_top = 70
 limit_right = 1135
@@ -72,42 +61,22 @@ process_mode = 3
 stream = ExtResource("20_hqaxb")
 autoplay = true
 
+[node name="WallFrame" type="Node2D" parent="." unique_id=1027493786]
+z_index = 1
+position = Vector2(646, 356)
+script = ExtResource("21_81a30")
+frame_size = Vector2(873, 497)
+line_thickness = 6.0
+collision_thickness = 8.0
+
 [node name="Floor" type="Sprite2D" parent="." unique_id=882566549]
 position = Vector2(647, 357)
-scale = Vector2(0.7986111, 0.7445653)
+scale = Vector2(0.75, 0.66)
 texture = ExtResource("1_floor")
 
-[node name="BoundaryTop" type="StaticBody2D" parent="." unique_id=2086560179]
-position = Vector2(657, 66)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryTop" unique_id=1081247853]
-position = Vector2(-7.875, 34)
-shape = SubResource("RectangleShape2D_wall_top")
-
-[node name="BoundaryBottom" type="StaticBody2D" parent="." unique_id=412977015]
-position = Vector2(657.5, 736)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryBottom" unique_id=1520872071]
-position = Vector2(-9.75, -120)
-shape = SubResource("RectangleShape2D_wall_bottom")
-
-[node name="BoundaryLeft" type="StaticBody2D" parent="." unique_id=353698260]
-position = Vector2(180, 403)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryLeft" unique_id=635496111]
-position = Vector2(26, -44)
-shape = SubResource("RectangleShape2D_wall_left")
-
-[node name="BoundaryRight" type="StaticBody2D" parent="." unique_id=1418589160]
-position = Vector2(1135, 403)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryRight" unique_id=1928941693]
-position = Vector2(-42, -45.5)
-shape = SubResource("RectangleShape2D_wall_right")
-
 [node name="Backwall" type="Sprite2D" parent="." unique_id=559112007]
-position = Vector2(648, 153.25)
-scale = Vector2(0.8392157, 0.8548386)
+position = Vector2(645.5, 153.25)
+scale = Vector2(0.8441177, 0.8548386)
 texture = ExtResource("2_wall")
 
 [node name="CupboardLeft" type="Sprite2D" parent="Backwall" unique_id=2094015648]

@@ -6,23 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://bbbeuskmnn8li" path="res://assets/rooms/zoology_room/vanity.png" id="4_put5j"]
 [ext_resource type="Texture2D" uid="uid://dme678pjg6q2l" path="res://assets/rooms/zoology_room/carpet.png" id="6_m4rus"]
 [ext_resource type="Texture2D" uid="uid://wf3ys8y0u56x" path="res://assets/rooms/zoology_room/books.png" id="7_qlio5"]
+[ext_resource type="Texture2D" uid="uid://0s7yleorcdj" path="res://assets/rooms/zoology_room/board_temporary.png" id="8_o1boe"]
 [ext_resource type="Texture2D" uid="uid://cqjm4tgktc008" path="res://assets/rooms/zoology_room/board_2.png" id="8_p03gl"]
 [ext_resource type="Texture2D" uid="uid://bhl0y15m8bpej" path="res://assets/rooms/zoology_room/light.png" id="9_g8xsm"]
 [ext_resource type="Texture2D" uid="uid://balaxt2hqkk0q" path="res://assets/rooms/zoology_room/table.png" id="10_vu6ta"]
-[ext_resource type="Texture2D" uid="uid://d1a5cvrhp4ig" path="res://assets/rooms/zoology_room/board.png" id="11_r47d6"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="12_lc4jf"]
 [ext_resource type="PackedScene" uid="uid://cktou377aapdy" path="res://scenes/entities/room_door/door_wood_front_view.tscn" id="12_o1boe"]
 [ext_resource type="TileSet" uid="uid://bkgbvwr3576yw" path="res://scenes/rooms/zoology_room/desk_tileset.tres" id="14_o1boe"]
+[ext_resource type="Script" uid="uid://nrw6wimvysnw" path="res://scripts/components/wall_frame.gd" id="15_fynir"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="17_jgig2"]
-
-[sub_resource type="RectangleShape2D" id="wall_bottom_shape"]
-size = Vector2(620, 10)
-
-[sub_resource type="RectangleShape2D" id="wall_left_shape"]
-size = Vector2(10, 420)
-
-[sub_resource type="RectangleShape2D" id="wall_right_shape"]
-size = Vector2(10, 420)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o1boe"]
 size = Vector2(26, 73.5)
@@ -71,32 +63,27 @@ texture = ExtResource("6_m4rus")
 z_index = 1
 position = Vector2(153, 31)
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=199332052]
+position = Vector2(313, 162)
+zoom = Vector2(1.5, 1.5)
+
 [node name="Teleport" parent="." unique_id=1010616404 instance=ExtResource("17_jgig2")]
 position = Vector2(149, 272)
 scale = Vector2(0.6, 0.6)
 target_scene = "res://scenes/rooms/hallway/hallway.tscn"
 
-[node name="BoundaryBot" type="StaticBody2D" parent="." unique_id=1187647235]
-position = Vector2(318, 349)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryBot" unique_id=2143089896]
-shape = SubResource("wall_bottom_shape")
-
-[node name="BoundaryLeft" type="StaticBody2D" parent="." unique_id=1464402688]
-position = Vector2(18, 149)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryLeft" unique_id=1066057935]
-shape = SubResource("wall_left_shape")
-
-[node name="BoundaryRight" type="StaticBody2D" parent="." unique_id=246213006]
-position = Vector2(618, 149)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryRight" unique_id=805949794]
-shape = SubResource("wall_right_shape")
-
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=281746484]
 process_mode = 3
 autoplay = true
+
+[node name="WallFrame" type="Node2D" parent="." unique_id=1622616477]
+z_index = 3
+position = Vector2(318, 149)
+script = ExtResource("15_fynir")
+frame_size = Vector2(600, 405)
+line_thickness = 8.0
+corner_radius = 2.0
+collision_thickness = 8.0
 
 [node name="FurnitureGrid" type="TileMapLayer" parent="." unique_id=1209712417]
 z_index = 1
@@ -167,15 +154,15 @@ shape = SubResource("RectangleShape2D_4yucn")
 [node name="Board" type="StaticBody2D" parent="WallTop" unique_id=1015170419]
 position = Vector2(0, -6)
 
+[node name="CollisionBoard" type="CollisionShape2D" parent="WallTop/Board" unique_id=1504570543]
+position = Vector2(364, -16.5)
+shape = SubResource("RectangleShape2D_n0hf6")
+
 [node name="SpriteBoard" type="Sprite2D" parent="WallTop/Board" unique_id=174436508]
 texture_filter = 1
 position = Vector2(365, -11.000001)
 scale = Vector2(1.6218175, 1.3846349)
-texture = ExtResource("11_r47d6")
-
-[node name="CollisionBoard" type="CollisionShape2D" parent="WallTop/Board" unique_id=1504570543]
-position = Vector2(364, -16.5)
-shape = SubResource("RectangleShape2D_n0hf6")
+texture = ExtResource("8_o1boe")
 
 [node name="Vanity" type="StaticBody2D" parent="WallTop" unique_id=1860420426]
 
@@ -237,7 +224,3 @@ texture = ExtResource("8_p03gl")
 [node name="CollisionBoardSide" type="CollisionShape2D" parent="BoardSide" unique_id=1427686417]
 position = Vector2(606.5, 213.5)
 shape = SubResource("RectangleShape2D_m4rus")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=199332052]
-position = Vector2(313, 162)
-zoom = Vector2(1.5, 1.5)

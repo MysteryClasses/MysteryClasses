@@ -21,7 +21,6 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 [autoload]
 
 GameManager="*res://scripts/autoload/game_manager.gd"
-MCPGameBridge="res://addons/godot_mcp/game_bridge/mcp_game_bridge.gd"
 HUD="*uid://drbojb8u4k20e"
 AnalyticsManager="*res://scripts/autoload/AnalyticsManager.gd"
 Talo="*uid://bborjuwpnqtjp"
@@ -91,3 +90,4 @@ menu={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.06469653, 0.064696535, 0.0646965, 1)

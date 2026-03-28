@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cqjdxuql2y38k"]
 
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="2_player"]
+[ext_resource type="Script" uid="uid://nrw6wimvysnw" path="res://scripts/components/wall_frame.gd" id="3_bc3x4"]
 [ext_resource type="PackedScene" uid="uid://bvj8kfv2xqmje" path="res://scenes/rooms/astro_room/clue_calendar.tscn" id="3_clue"]
 [ext_resource type="PackedScene" uid="uid://ds2g3b5y2lv73" path="res://scenes/rooms/astro_room/clue_note.tscn" id="3_kdby3"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="5_dbyfq"]
@@ -14,15 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://dkdyo22bw7pg3" path="res://scenes/rooms/astro_room/clue_solarsystem.tscn" id="11_155i6"]
 [ext_resource type="PackedScene" uid="uid://dji3ld6g2sat6" path="res://scenes/rooms/astro_room/clue_book.tscn" id="13_t3p8m"]
 [ext_resource type="Texture2D" uid="uid://do8auu6na26fo" path="res://assets/shared/classroom/Interiors_free_48x48.png" id="14_f6tmt"]
-
-[sub_resource type="RectangleShape2D" id="wall_bottom_shape"]
-size = Vector2(620, 10)
-
-[sub_resource type="RectangleShape2D" id="wall_left_shape"]
-size = Vector2(10, 420)
-
-[sub_resource type="RectangleShape2D" id="wall_right_shape"]
-size = Vector2(10, 420)
 
 [node name="AstroRoom" type="Node2D" unique_id=1218151489]
 scale = Vector2(1.5, 1.5)
@@ -41,6 +33,13 @@ autoplay = true
 position = Vector2(315, 138)
 zoom = Vector2(1.05, 1.05)
 process_callback = 0
+
+[node name="WallFrame" type="Node2D" parent="." unique_id=921186506]
+z_index = 1
+position = Vector2(320, 128)
+script = ExtResource("3_bc3x4")
+frame_size = Vector2(610, 455)
+collision_thickness = 8.0
 
 [node name="Door" parent="." unique_id=1205847696 instance=ExtResource("10_0tvi1")]
 position = Vector2(21.333332, 253.99998)
@@ -74,24 +73,6 @@ target_scene = "res://scenes/rooms/hidden_objects_room/hidden_objects_room.tscn"
 z_index = 1
 position = Vector2(263.33334, -61.333336)
 scale = Vector2(0.5, 0.5)
-
-[node name="WallBottom" type="StaticBody2D" parent="." unique_id=1187647235]
-position = Vector2(318, 349)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom" unique_id=2143089896]
-shape = SubResource("wall_bottom_shape")
-
-[node name="WallLeft" type="StaticBody2D" parent="." unique_id=1464402688]
-position = Vector2(18, 149)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=1066057935]
-shape = SubResource("wall_left_shape")
-
-[node name="WallRight" type="StaticBody2D" parent="." unique_id=246213006]
-position = Vector2(618, 149)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=805949794]
-shape = SubResource("wall_right_shape")
 
 [node name="ClueBookShelf" parent="." unique_id=1348421283 instance=ExtResource("13_t3p8m")]
 position = Vector2(49.333336, -50)
