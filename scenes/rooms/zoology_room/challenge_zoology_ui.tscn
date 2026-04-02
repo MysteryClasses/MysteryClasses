@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dw32wbdvh5v75"]
+[gd_scene format=3 uid="uid://c2wd0i68jykr"]
 
 [ext_resource type="Script" uid="uid://b2ymmotgfoami" path="res://scripts/components/challenge_multi_input.gd" id="1_up1gu"]
 
@@ -11,7 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_up1gu")
-correct_codes = Array[String](["5", "8"])
+correct_codes = Array[String](["Ermine", "Tail"])
 correct_code = "Ermine Tail"
 success_message = "Correct! The riddle was solved successfully!"
 wrong_message = "Wrong! Talk to the animals again."

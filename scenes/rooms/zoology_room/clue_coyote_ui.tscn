@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://nmmpt25jcal6"]
+[gd_scene format=3 uid="uid://dysfy1dwfwx05"]
+
+[ext_resource type="Script" uid="uid://bp88bt4mdj2nm" path="res://scripts/components/clue_ui_base.gd" id="1_qk5hs"]
 
 [node name="Coyote" type="Control" unique_id=1654533692]
 layout_mode = 3
@@ -7,6 +9,7 @@ offset_left = 438.0
 offset_top = 220.0
 offset_right = 438.0
 offset_bottom = 220.0
+script = ExtResource("1_qk5hs")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1052295014]
 layout_mode = 1
@@ -71,6 +74,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer" unique_id=1489756026]
+[node name="CloseButton" type="Button" parent="Panel/VBoxContainer" unique_id=1489756026]
 layout_mode = 2
 text = "Close"

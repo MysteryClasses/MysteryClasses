@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cvppvjgtu3fb6"]
+[gd_scene format=3 uid="uid://ddpncwxtt5xgk"]
+
+[ext_resource type="Script" uid="uid://bp88bt4mdj2nm" path="res://scripts/components/clue_ui_base.gd" id="1_pyo1a"]
 
 [node name="Owl" type="Control" unique_id=1654533692]
 layout_mode = 3
@@ -7,6 +9,7 @@ offset_left = 438.0
 offset_top = 220.0
 offset_right = 438.0
 offset_bottom = 220.0
+script = ExtResource("1_pyo1a")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1052295014]
 layout_mode = 1
@@ -69,6 +72,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer" unique_id=1906135021]
+[node name="CloseButton" type="Button" parent="Panel/VBoxContainer" unique_id=1906135021]
 layout_mode = 2
 text = "Close"

@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" path="res://scenes/rooms/zoology_room/clue_bear.tscn" id="16_rpiyh"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="17_jgig2"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/zoology_room/clue_fox.tscn" id="17_m4rus"]
+[ext_resource type="PackedScene" uid="uid://bl0n0ffwwkruh" path="res://scenes/rooms/zoology_room/npc_guide.tscn" id="18_qlio5"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/zoology_room/clue_owl.tscn" id="19_p03gl"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/zoology_room/clue_coyote.tscn" id="20_g8xsm"]
 
@@ -233,7 +234,10 @@ position = Vector2(282, 282)
 position = Vector2(250, 65)
 
 [node name="Owl" parent="." unique_id=1508376234 instance=ExtResource("19_p03gl")]
-position = Vector2(65, 58)
+position = Vector2(438, 92)
 
 [node name="Coyote" parent="." unique_id=1630038877 instance=ExtResource("20_g8xsm")]
 position = Vector2(452, 242)
+
+[node name="NPCGuide" parent="." unique_id=822720269 instance=ExtResource("18_qlio5")]
+position = Vector2(67, 47)
