@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c23pg6pwbj4i8"]
+
+[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_1btfk"]
+[ext_resource type="PackedScene" uid="uid://dw32wbdvh5v75" path="res://scenes/rooms/zoology_room/challenge_zoology_ui.tscn" id="2_1btfk"]
+[ext_resource type="Texture2D" uid="uid://d1a5cvrhp4ig" path="res://assets/rooms/zoology_room/board.png" id="2_3k1ys"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paper"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
+size = Vector2(96, 96)
+
+[node name="ChallengeBoard" type="StaticBody2D" unique_id=777777777]
+script = ExtResource("1_1btfk")
+ui_scene = ExtResource("2_1btfk")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1337442156]
+position = Vector2(0, 1.9073486e-06)
+scale = Vector2(1.9426229, 1.6636363)
+texture = ExtResource("2_3k1ys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1207598858]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_paper")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=770561484]
+
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=1428238254]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_interaction")
+
+[node name="InteractLabel" type="Label" parent="." unique_id=1549760158]
+visible = false
+modulate = Color(1, 1, 0, 1)
+offset_left = -48.0
+offset_top = -60.0
+offset_right = 48.0
+offset_bottom = -40.0
+text = "Press E to start the challenge"
+horizontal_alignment = 1

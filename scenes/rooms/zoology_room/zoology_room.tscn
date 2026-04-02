@@ -4,17 +4,22 @@
 [ext_resource type="Texture2D" uid="uid://vojf0p4di84h" path="res://assets/rooms/zoology_room/lamp.png" id="2_2eo3b"]
 [ext_resource type="Texture2D" uid="uid://ttp4ofqdv416" path="res://assets/rooms/zoology_room/chairs.png" id="3_y8pam"]
 [ext_resource type="Texture2D" uid="uid://bbbeuskmnn8li" path="res://assets/rooms/zoology_room/vanity.png" id="4_put5j"]
+[ext_resource type="AudioStream" uid="uid://byu5iii8u6bcd" path="res://assets/musics/zoology.wav" id="5_rpiyh"]
 [ext_resource type="Texture2D" uid="uid://dme678pjg6q2l" path="res://assets/rooms/zoology_room/carpet.png" id="6_m4rus"]
 [ext_resource type="Texture2D" uid="uid://wf3ys8y0u56x" path="res://assets/rooms/zoology_room/books.png" id="7_qlio5"]
-[ext_resource type="Texture2D" uid="uid://0s7yleorcdj" path="res://assets/rooms/zoology_room/board_temporary.png" id="8_o1boe"]
 [ext_resource type="Texture2D" uid="uid://cqjm4tgktc008" path="res://assets/rooms/zoology_room/board_2.png" id="8_p03gl"]
 [ext_resource type="Texture2D" uid="uid://bhl0y15m8bpej" path="res://assets/rooms/zoology_room/light.png" id="9_g8xsm"]
 [ext_resource type="Texture2D" uid="uid://balaxt2hqkk0q" path="res://assets/rooms/zoology_room/table.png" id="10_vu6ta"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="12_lc4jf"]
 [ext_resource type="PackedScene" uid="uid://cktou377aapdy" path="res://scenes/entities/room_door/door_wood_front_view.tscn" id="12_o1boe"]
 [ext_resource type="TileSet" uid="uid://bkgbvwr3576yw" path="res://scenes/rooms/zoology_room/desk_tileset.tres" id="14_o1boe"]
-[ext_resource type="Script" uid="uid://nrw6wimvysnw" path="res://scripts/components/wall_frame.gd" id="15_fynir"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/zoology_room/challenge_zoology.tscn" id="14_put5j"]
+[ext_resource type="Script" uid="uid://cxgg4qsrioq0u" path="res://scripts/components/wall_frame.gd" id="15_fynir"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/zoology_room/clue_bear.tscn" id="16_rpiyh"]
 [ext_resource type="PackedScene" uid="uid://sui8fpymdspn" path="res://scenes/entities/teleport/teleport.tscn" id="17_jgig2"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/zoology_room/clue_fox.tscn" id="17_m4rus"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/zoology_room/clue_owl.tscn" id="19_p03gl"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/zoology_room/clue_coyote.tscn" id="20_g8xsm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o1boe"]
 size = Vector2(26, 73.5)
@@ -28,9 +33,6 @@ size = Vector2(22, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4yucn"]
 size = Vector2(609, 51)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0hf6"]
-size = Vector2(90, 47)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2eo3b"]
 size = Vector2(45, 39)
 
@@ -43,6 +45,9 @@ size = Vector2(31, 24)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m4rus"]
 size = Vector2(17, 73)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0hf6"]
+size = Vector2(90, 47)
+
 [node name="ZoologyRoom" type="Node2D" unique_id=1218151489]
 position = Vector2(1, 0)
 
@@ -52,6 +57,7 @@ offset_top = -51.0
 offset_right = 619.0
 offset_bottom = 349.0
 color = Color(0.29459274, 0.10425233, 0.10425233, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Carpet" type="Sprite2D" parent="." unique_id=1618363327]
 texture_filter = 1
@@ -74,6 +80,7 @@ target_scene = "res://scenes/rooms/hallway/hallway.tscn"
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=281746484]
 process_mode = 3
+stream = ExtResource("5_rpiyh")
 autoplay = true
 
 [node name="WallFrame" type="Node2D" parent="." unique_id=1622616477]
@@ -151,19 +158,6 @@ texture = ExtResource("1_n0hf6")
 position = Vector2(317.5, -30.5)
 shape = SubResource("RectangleShape2D_4yucn")
 
-[node name="Board" type="StaticBody2D" parent="WallTop" unique_id=1015170419]
-position = Vector2(0, -6)
-
-[node name="CollisionBoard" type="CollisionShape2D" parent="WallTop/Board" unique_id=1504570543]
-position = Vector2(364, -16.5)
-shape = SubResource("RectangleShape2D_n0hf6")
-
-[node name="SpriteBoard" type="Sprite2D" parent="WallTop/Board" unique_id=174436508]
-texture_filter = 1
-position = Vector2(365, -11.000001)
-scale = Vector2(1.6218175, 1.3846349)
-texture = ExtResource("8_o1boe")
-
 [node name="Vanity" type="StaticBody2D" parent="WallTop" unique_id=1860420426]
 
 [node name="SpriteVanity" type="Sprite2D" parent="WallTop/Vanity" unique_id=625556071]
@@ -213,14 +207,33 @@ texture = ExtResource("9_g8xsm")
 position = Vector2(45, 330)
 shape = SubResource("RectangleShape2D_rpiyh")
 
-[node name="BoardSide" type="StaticBody2D" parent="." unique_id=1583053347]
+[node name="ChallengeBoard" parent="." unique_id=777777777 instance=ExtResource("14_put5j")]
+position = Vector2(354, -15)
 
-[node name="SpriteBoardSide" type="Sprite2D" parent="BoardSide" unique_id=1123161967]
+[node name="SpriteBoardSide" type="Sprite2D" parent="ChallengeBoard" unique_id=1123161967]
 texture_filter = 1
-position = Vector2(601, 199.00002)
+position = Vector2(246, 124.000015)
 scale = Vector2(1.5407238, 1.79823)
 texture = ExtResource("8_p03gl")
 
-[node name="CollisionBoardSide" type="CollisionShape2D" parent="BoardSide" unique_id=1427686417]
-position = Vector2(606.5, 213.5)
+[node name="CollisionBoardSide" type="CollisionShape2D" parent="ChallengeBoard" unique_id=1427686417]
+position = Vector2(251.5, 138.5)
 shape = SubResource("RectangleShape2D_m4rus")
+
+[node name="CollisionBoard" type="CollisionShape2D" parent="ChallengeBoard" unique_id=740701622]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_n0hf6")
+
+[node name="BoardSide" type="StaticBody2D" parent="." unique_id=1583053347]
+
+[node name="Bear" parent="." unique_id=330668551 instance=ExtResource("16_rpiyh")]
+position = Vector2(282, 282)
+
+[node name="Fox" parent="." unique_id=528858135 instance=ExtResource("17_m4rus")]
+position = Vector2(250, 65)
+
+[node name="Owl" parent="." unique_id=1508376234 instance=ExtResource("19_p03gl")]
+position = Vector2(65, 58)
+
+[node name="Coyote" parent="." unique_id=1630038877 instance=ExtResource("20_g8xsm")]
+position = Vector2(452, 242)

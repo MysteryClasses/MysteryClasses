@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dsk5qebm3jmu8"]
+
+[ext_resource type="Script" uid="uid://dl4oneo25yqjy" path="res://scenes/rooms/zoology_room/npc.gd" id="1_x3rk1"]
+[ext_resource type="Texture2D" uid="uid://de72bqkfc055b" path="res://assets/rooms/zoology_room/penguin.png" id="2_3gwof"]
+
+[node name="StartScreen" type="Control" unique_id=235120284]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x3rk1")
+
+[node name="Background" type="ColorRect" parent="." unique_id=761359419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.08, 0.12, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=154788442]
+position = Vector2(1090, 320)
+texture = ExtResource("2_3gwof")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1953991330]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -250.0
+offset_right = 400.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=1452178647]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.65, 0.3, 1)
+theme_override_font_sizes/font_size = 36
+text = "Zoology Room"
+horizontal_alignment = 1
+
+[node name="DescriptionLabel" type="Label" parent="VBoxContainer" unique_id=1301716131]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.78, 0.82, 1)
+theme_override_font_sizes/font_size = 14
+text = "Max... you look lost.
+
+This is the zoology room. The animals here know things.
+
+But not all of them speak the truth.
+
+Find the riddle on the board. Solve it and you may move closer to Jennet.
+
+Look carefully at what is drawn near the riddle. It will tell you who to trust.
+
+Good luck. You will need it.
+
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=945144981]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Start Game"
