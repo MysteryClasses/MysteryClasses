@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b10p5ndhgh0hj"]
+
+[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_3n5q3"]
+[ext_resource type="PackedScene" uid="uid://ljjgoiwvfyfg" path="res://scenes/rooms/zoology_room/clue_fox_ui.tscn" id="2_fyu4q"]
+[ext_resource type="Texture2D" uid="uid://ceuqe1g3e1rfe" path="res://assets/rooms/zoology_room/fox.png" id="2_ikdgx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r48fp"]
+size = Vector2(18, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57rwl"]
+size = Vector2(35, 67.5)
+
+[node name="Fox" type="StaticBody2D" unique_id=528858135]
+script = ExtResource("1_3n5q3")
+ui_scene = ExtResource("2_fyu4q")
+npc_name = "Fox"
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1094150761]
+texture_filter = 1
+position = Vector2(0, -1)
+scale = Vector2(2.3078947, 2.2652438)
+texture = ExtResource("2_ikdgx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=352844107]
+shape = SubResource("RectangleShape2D_r48fp")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=10954705]
+
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=1844409244]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_57rwl")
+
+[node name="InteractLabel" type="Label" parent="." unique_id=496380274]
+visible = false
+offset_left = -56.0
+offset_top = -54.0
+offset_right = 56.0
+offset_bottom = -28.0
+horizontal_alignment = 1

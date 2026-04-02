@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://vk8n1m5aesl1"]
+
+[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_0iiqo"]
+[ext_resource type="PackedScene" uid="uid://nmmpt25jcal6" path="res://scenes/rooms/zoology_room/clue_coyote_ui.tscn" id="2_rd6kp"]
+[ext_resource type="Texture2D" uid="uid://b3dyu64ku7u4a" path="res://assets/rooms/zoology_room/coyote.png" id="3_vyaio"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0iiqo"]
+size = Vector2(18, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rd6kp"]
+size = Vector2(35, 67.5)
+
+[node name="Coyote" type="StaticBody2D" unique_id=1630038877]
+script = ExtResource("1_0iiqo")
+ui_scene = ExtResource("2_rd6kp")
+npc_name = "Coyote"
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1078327488]
+texture = ExtResource("3_vyaio")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=841362006]
+shape = SubResource("RectangleShape2D_0iiqo")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=415249032]
+
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=500931486]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_rd6kp")
+
+[node name="InteractLabel" type="Label" parent="." unique_id=847202016]
+visible = false
+offset_left = -56.0
+offset_top = -54.0
+offset_right = 56.0
+offset_bottom = -28.0
+horizontal_alignment = 1

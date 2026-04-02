@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cro41hlg82b51"]
+
+[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_sm4oq"]
+[ext_resource type="PackedScene" uid="uid://cvppvjgtu3fb6" path="res://scenes/rooms/zoology_room/clue_owl_ui.tscn" id="2_sm4oq"]
+[ext_resource type="Texture2D" uid="uid://dnwqkbvsfdg22" path="res://assets/rooms/zoology_room/owl.png" id="3_pw6q5"]
+
+[sub_resource type="RectangleShape2D" id="1_body_shape"]
+size = Vector2(18, 52)
+
+[sub_resource type="RectangleShape2D" id="2_interact_shape"]
+size = Vector2(35, 67.5)
+
+[node name="Owl" type="StaticBody2D" unique_id=330668551]
+script = ExtResource("1_sm4oq")
+ui_scene = ExtResource("2_sm4oq")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=358346145]
+texture_filter = 1
+position = Vector2(0, -1)
+scale = Vector2(2.3078947, 2.2652438)
+texture = ExtResource("3_pw6q5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1102931511]
+shape = SubResource("1_body_shape")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=38138360]
+
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=62007592]
+position = Vector2(-1, 1)
+shape = SubResource("2_interact_shape")
+
+[node name="InteractLabel" type="Label" parent="." unique_id=1409256354]
+visible = false
+offset_left = -56.0
+offset_top = -54.0
+offset_right = 56.0
+offset_bottom = -28.0
+horizontal_alignment = 1

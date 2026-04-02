@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://ch4fgtmyxwjev"]
+
+[ext_resource type="Script" uid="uid://bp88bt4mdj2nm" path="res://scripts/components/clue_ui_base.gd" id="1_mhvx3"]
+
+[node name="Bear" type="Control" unique_id=1654533692]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 438.0
+offset_top = 220.0
+offset_right = 438.0
+offset_bottom = 220.0
+script = ExtResource("1_mhvx3")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1052295014]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="Panel" type="Panel" parent="." unique_id=1628988447]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -160.0
+offset_right = 280.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=116248995]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1837564576]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Bear Clue"
+horizontal_alignment = 1
+
+[node name="PrimaryLabel" type="Label" parent="Panel/VBoxContainer" unique_id=934523639]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "My tail is short, but it helps me to run through dense underbrush. "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="SecondaryLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1279424271]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="FeedbackLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1845047503]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Panel/VBoxContainer" unique_id=1096710471]
+layout_mode = 2
+text = "Close"
