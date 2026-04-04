@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cro41hlg82b51"]
 
-[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_sm4oq"]
-[ext_resource type="PackedScene" uid="uid://cvppvjgtu3fb6" path="res://scenes/rooms/zoology_room/clue_owl_ui.tscn" id="2_sm4oq"]
+[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_sm4oq"]
+[ext_resource type="PackedScene" uid="uid://ddpncwxtt5xgk" path="res://scenes/rooms/zoology_room/clue_owl_ui.tscn" id="2_sm4oq"]
 [ext_resource type="Texture2D" uid="uid://dnwqkbvsfdg22" path="res://assets/rooms/zoology_room/owl.png" id="3_pw6q5"]
 
 [sub_resource type="RectangleShape2D" id="1_body_shape"]
-size = Vector2(18, 52)
+size = Vector2(31, 3)
 
 [sub_resource type="RectangleShape2D" id="2_interact_shape"]
 size = Vector2(35, 67.5)
@@ -21,6 +21,7 @@ scale = Vector2(2.3078947, 2.2652438)
 texture = ExtResource("3_pw6q5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1102931511]
+position = Vector2(0.5, 0.5)
 shape = SubResource("1_body_shape")
 
 [node name="InteractArea" type="Area2D" parent="." unique_id=38138360]

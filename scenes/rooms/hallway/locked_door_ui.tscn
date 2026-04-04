@@ -10,7 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qwh1k")
-required_challenges = Array[String](["hallway_locker", "hidden_objects_room_desk_sequence"])
+required_challenges = Array[String](["hallway_locker", "hidden_objects_room_desk_sequence", "zoology_room_board_challenge"])
 
 [node name="Background" type="ColorRect" parent="." unique_id=2010548208]
 layout_mode = 0

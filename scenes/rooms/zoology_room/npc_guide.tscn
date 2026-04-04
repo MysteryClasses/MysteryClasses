@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bl0n0ffwwkruh"]
 
-[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_y7xnq"]
+[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_y7xnq"]
 [ext_resource type="PackedScene" uid="uid://dnlpehrweipa5" path="res://scenes/rooms/zoology_room/npc_dialogue_ui.tscn" id="2_yst8k"]
 [ext_resource type="Texture2D" uid="uid://de72bqkfc055b" path="res://assets/rooms/zoology_room/penguin.png" id="3_y7xnq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7xnq"]
-size = Vector2(96.5, 75)
+size = Vector2(35, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yst8k"]
 size = Vector2(121, 107)
@@ -20,7 +20,7 @@ scale = Vector2(0.16714698, 0.16178362)
 texture = ExtResource("3_y7xnq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2034368259]
-position = Vector2(-20.75, -24)
+position = Vector2(-14.5, -28)
 shape = SubResource("RectangleShape2D_y7xnq")
 
 [node name="InteractArea" type="Area2D" parent="." unique_id=496979784]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dsk5qebm3jmu8"]
 
-[ext_resource type="Script" uid="uid://dl4oneo25yqjy" path="res://scenes/rooms/zoology_room/npc.gd" id="1_x3rk1"]
+[ext_resource type="Script" uid="uid://2hodng0nbvbq" path="res://scenes/rooms/zoology_room/npc.gd" id="1_x3rk1"]
 [ext_resource type="Texture2D" uid="uid://de72bqkfc055b" path="res://assets/rooms/zoology_room/penguin.png" id="2_3gwof"]
 
 [node name="StartScreen" type="Control" unique_id=235120284]
@@ -69,4 +69,4 @@ autowrap_mode = 2
 [node name="StartButton" type="Button" parent="VBoxContainer" unique_id=945144981]
 layout_mode = 2
 theme_override_font_sizes/font_size = 22
-text = "Start Game"
+text = "Enter the room"

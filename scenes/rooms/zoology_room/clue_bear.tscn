@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cru4m3hcbviwx"]
 
-[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_ffq5m"]
-[ext_resource type="PackedScene" uid="uid://bh3uhkcauy2i7" path="res://scenes/rooms/zoology_room/clue_bear_ui.tscn" id="2_oxpqw"]
+[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_ffq5m"]
+[ext_resource type="PackedScene" uid="uid://ch4fgtmyxwjev" path="res://scenes/rooms/zoology_room/clue_bear_ui.tscn" id="2_oxpqw"]
 [ext_resource type="Texture2D" uid="uid://cmpmnumxcqf5x" path="res://assets/rooms/zoology_room/bear.png" id="3_pen7v"]
 
 [sub_resource type="RectangleShape2D" id="1_body_shape"]
-size = Vector2(18, 52)
+size = Vector2(28, 10)
 
 [sub_resource type="RectangleShape2D" id="2_interact_shape"]
 size = Vector2(35, 67.5)
@@ -21,6 +21,7 @@ scale = Vector2(2.3078947, 2.2652438)
 texture = ExtResource("3_pen7v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1102931511]
+position = Vector2(0, 1)
 shape = SubResource("1_body_shape")
 
 [node name="InteractArea" type="Area2D" parent="." unique_id=38138360]
