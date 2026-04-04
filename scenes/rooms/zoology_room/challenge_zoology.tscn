@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c23pg6pwbj4i8"]
 
-[ext_resource type="Script" uid="uid://40gjqvnfeo5k" path="res://scripts/components/interactable.gd" id="1_1btfk"]
-[ext_resource type="PackedScene" uid="uid://dw32wbdvh5v75" path="res://scenes/rooms/zoology_room/challenge_zoology_ui.tscn" id="2_1btfk"]
+[ext_resource type="Script" uid="uid://dxjplu1kmc10d" path="res://scripts/components/interactable.gd" id="1_1btfk"]
+[ext_resource type="PackedScene" uid="uid://c2wd0i68jykr" path="res://scenes/rooms/zoology_room/challenge_zoology_ui.tscn" id="2_1btfk"]
 [ext_resource type="Texture2D" uid="uid://d1a5cvrhp4ig" path="res://assets/rooms/zoology_room/board.png" id="2_3k1ys"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_paper"]
@@ -28,13 +28,3 @@ shape = SubResource("RectangleShape2D_paper")
 [node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=1428238254]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_interaction")
-
-[node name="InteractLabel" type="Label" parent="." unique_id=1549760158]
-visible = false
-modulate = Color(1, 1, 0, 1)
-offset_left = -48.0
-offset_top = -60.0
-offset_right = 48.0
-offset_bottom = -40.0
-text = "Press E to start the challenge"
-horizontal_alignment = 1

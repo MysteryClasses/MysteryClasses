@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_up1gu")
 correct_codes = Array[String](["Ermine", "Tail"])
 correct_code = "Ermine Tail"
+challenge_id = "zoology_room_board_challenge"
 success_message = "Correct! The riddle was solved successfully!"
 wrong_message = "Wrong! Talk to the animals again."
 

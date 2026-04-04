@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://bg05614rc70ah"]
 
-[ext_resource type="Script" uid="uid://8bib36hw0q8o" path="res://scenes/rooms/hallway/hallway.gd" id="1_g0cra"]
+[ext_resource type="Script" uid="uid://ca628qv7khj13" path="res://scenes/rooms/hallway/hallway.gd" id="1_g0cra"]
 [ext_resource type="PackedScene" uid="uid://c7fgu65qdysu2" path="res://scenes/entities/player/player.tscn" id="2_oy518"]
 [ext_resource type="PackedScene" uid="uid://b7q6gkhh1mewa" path="res://scenes/rooms/hallway/locker.tscn" id="4_atylr"]
 [ext_resource type="TileSet" uid="uid://bvg5f0oiv4lbt" path="res://scenes/rooms/hallway/wall_tileset.tres" id="5_3plxi"]
 [ext_resource type="AudioStream" uid="uid://mk81o8dqiupq" path="res://assets/musics/horror_music.mp3" id="5_btcgh"]
 [ext_resource type="PackedScene" uid="uid://cn4abvecickd2" path="res://scenes/entities/room_door/door_grey_top_view.tscn" id="6_uvm12"]
 [ext_resource type="TileSet" uid="uid://cq0srft8o5x5l" path="res://scenes/rooms/hallway/hallway_tileset.tres" id="6_w5ien"]
-[ext_resource type="Script" uid="uid://cxgg4qsrioq0u" path="res://scripts/components/wall_frame.gd" id="6_xifva"]
+[ext_resource type="Script" uid="uid://nrw6wimvysnw" path="res://scripts/components/wall_frame.gd" id="6_xifva"]
 [ext_resource type="PackedScene" uid="uid://0urwknjhoghs" path="res://scenes/rooms/hallway/locked_door.tscn" id="7_3plxi"]
 [ext_resource type="Texture2D" uid="uid://do8auu6na26fo" path="res://assets/shared/classroom/Interiors_free_48x48.png" id="7_uvm12"]
 
