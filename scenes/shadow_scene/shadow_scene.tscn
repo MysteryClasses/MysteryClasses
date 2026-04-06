@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://w32eepvdotjf"]
+
+[ext_resource type="Script" uid="uid://grv84xdr7w5l" path="res://scenes/shadow_scene/shadow_scene.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://200cxrqq3ske" path="res://scenes/shadow_scene/chaos002.png" id="2_shadow"]
+[ext_resource type="Texture2D" uid="uid://c5s53qnp7q8fm" path="res://scenes/shadow_scene/DialougeBOXES.png" id="3_x8yqc"]
+[ext_resource type="Texture2D" uid="uid://dxsy6ogb36tug" path="res://assets/shared/player_spritesheet.png" id="4_player"]
+[ext_resource type="AudioStream" uid="uid://mk81o8dqiupq" path="res://assets/musics/horror_music.mp3" id="5_music"]
+
+[sub_resource type="Shader" id="1_spotlight_shader"]
+code = "shader_type canvas_item;
+
+uniform vec2 center = vec2(0.5, 0.78);
+uniform float radius = 0.14;
+uniform float softness = 0.18;
+uniform float darkness = 0.96;
+
+void fragment() {
+	float dist = distance(UV, center);
+	float alpha = smoothstep(radius, radius + softness, dist) * darkness;
+	COLOR = vec4(0.0, 0.0, 0.0, alpha);
+}
+"
+
+[sub_resource type="ShaderMaterial" id="2_spotlight_material"]
+shader = SubResource("1_spotlight_shader")
+shader_parameter/center = Vector2(0.5, 0.78)
+shader_parameter/radius = 1.05
+shader_parameter/softness = 0.18
+shader_parameter/darkness = 0.38
+
+[node name="ShadowScene" type="Control" unique_id=1182124382]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_script")
+next_scene_path = "res://scenes/rooms/hallway/hallway.tscn"
+
+[node name="Background" type="ColorRect" parent="." unique_id=450720006]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0509804, 0.054902, 0.0823529, 1)
+
+[node name="HorrorMusic" type="AudioStreamPlayer" parent="." unique_id=1028827480]
+process_mode = 3
+stream = ExtResource("5_music")
+autoplay = true
+
+[node name="AmbientGlow" type="ColorRect" parent="." unique_id=1687976738]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18, 0.16, 0.12, 0.16)
+
+[node name="DarknessOverlay" type="ColorRect" parent="." unique_id=1166606564]
+material = SubResource("2_spotlight_material")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DialogueLayer" type="CanvasLayer" parent="." unique_id=470394207]
+
+[node name="shadow_talking" type="Sprite2D" parent="." unique_id=1765942325]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(460.99997, 525.99994)
+scale = Vector2(1.9061733, 2.0499997)
+texture = ExtResource("2_shadow")
+region_enabled = true
+region_rect = Rect2(202, 2, 81, 76)
+
+[node name="shadow_side" type="Sprite2D" parent="." unique_id=482751935]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(468, 521.00006)
+scale = Vector2(2.0152175, 2.0933335)
+texture = ExtResource("2_shadow")
+region_enabled = true
+region_rect = Rect2(121, 2, 46, 75)
+
+[node name="max_sprite" type="Sprite2D" parent="." unique_id=51923207]
+position = Vector2(980, 542)
+scale = Vector2(4, 4)
+texture = ExtResource("4_player")
+region_enabled = true
+region_rect = Rect2(12, 18, 12, 18)
+
+[node name="UiLayer" type="CanvasLayer" parent="." unique_id=1318804214]
+
+[node name="ButtonRow" type="HBoxContainer" parent="UiLayer" unique_id=784151843]
+offset_left = 1032.0
+offset_top = 654.0
+offset_right = 1244.0
+offset_bottom = 706.0
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="SkipButton" type="Button" parent="UiLayer/ButtonRow" unique_id=1017844951]
+custom_minimum_size = Vector2(88, 40)
+layout_mode = 2
+text = "Skip"
+
+[node name="NextButton" type="Button" parent="UiLayer/ButtonRow" unique_id=1973371792]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Next"
+
+[node name="dialogue_max" type="Sprite2D" parent="." unique_id=250879256]
+position = Vector2(908, 416)
+scale = Vector2(5, 4.0757575)
+texture = ExtResource("3_x8yqc")
+region_enabled = true
+region_rect = Rect2(72, 81, 62, 66)
+
+[node name="DialogueMaxLabel" type="Label" parent="dialogue_max" unique_id=211082923]
+anchors_preset = -1
+anchor_left = 0.51600003
+anchor_top = 0.43800002
+anchor_right = 0.51600003
+anchor_bottom = 0.43800002
+offset_left = -52.792
+offset_top = -49.026966
+offset_right = -11.392006
+offset_bottom = -10.015823
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_font_sizes/font_size = 4
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="dialogue_shadow" type="Sprite2D" parent="." unique_id=432241559]
+position = Vector2(589, 367.99997)
+scale = Vector2(5.058823, 3.6428568)
+texture = ExtResource("3_x8yqc")
+region_enabled = true
+region_rect = Rect2(138, 80, 68, 70)
+
+[node name="DialogueShadowLabel" type="Label" parent="dialogue_shadow" unique_id=822604412]
+anchors_preset = -1
+anchor_left = 0.45900002
+anchor_top = 0.44000003
+anchor_right = 0.45900002
+anchor_bottom = 0.44000003
+offset_left = -54.14224
+offset_top = -55.36863
+offset_right = -14.212009
+offset_bottom = -16.66276
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_font_sizes/font_size = 4
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true

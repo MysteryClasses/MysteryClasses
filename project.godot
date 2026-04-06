@@ -23,7 +23,7 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 GameManager="*res://scripts/autoload/game_manager.gd"
 HUD="*uid://drbojb8u4k20e"
 AnalyticsManager="*res://scripts/autoload/AnalyticsManager.gd"
-Talo="*uid://bborjuwpnqtjp"
+Talo="*res://addons/talo/talo_manager.gd"
 
 [display]
 

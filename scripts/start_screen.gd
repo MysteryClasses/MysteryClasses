@@ -7,5 +7,5 @@ func _ready() -> void:
 	$VBoxContainer/StartButton.pressed.connect(_on_start_pressed)
 
 func _on_start_pressed() -> void:
-	# Wechselt zur Hallway-Szene (Spielstart)
-	get_tree().change_scene_to_file("res://scenes/rooms/hallway/hallway.tscn")
+	# Starts with the Shadow intro before entering the hallway
+	get_tree().change_scene_to_file("res://scenes/shadow_scene/shadow_scene.tscn")
