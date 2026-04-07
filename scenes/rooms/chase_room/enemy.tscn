@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://ccu3epxsusbjs"]
+
+[ext_resource type="Script" uid="uid://b0hndyqod3sn3" path="res://scenes/rooms/chase_room/enemy.gd" id="1_d37v5"]
+[ext_resource type="Texture2D" uid="uid://dqr57278cbxvx" path="res://scenes/rooms/chase_room/slime-blue.png" id="1_iy80i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8o82k"]
+atlas = ExtResource("1_iy80i")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwhff"]
+atlas = ExtResource("1_iy80i")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4vyh"]
+atlas = ExtResource("1_iy80i")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihcpn"]
+atlas = ExtResource("1_iy80i")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7cfm2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8o82k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwhff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4vyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihcpn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ayb50"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d37v5"]
+radius = 10.049875
+
+[node name="Enemy" type="CharacterBody2D" unique_id=322874432]
+collision_layer = 2
+collision_mask = 7
+motion_mode = 1
+wall_min_slide_angle = 0.0
+platform_wall_layers = 1
+script = ExtResource("1_d37v5")
+
+[node name="Graphic" type="Node2D" parent="." unique_id=1396530433]
+position = Vector2(0, -6)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Graphic" unique_id=548827731]
+sprite_frames = SubResource("SpriteFrames_7cfm2")
+animation = &"idle"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.227748
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=221386911]
+shape = SubResource("CircleShape2D_ayb50")
+
+[node name="Navigation" type="Node2D" parent="." unique_id=755305598]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Navigation" unique_id=1914592230]
+avoidance_enabled = true
+radius = 5.0
+max_speed = 50.0
+debug_enabled = true
+
+[node name="Timer" type="Timer" parent="Navigation" unique_id=1263117525]
+wait_time = 0.1
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1087804050]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1327445874]
+shape = SubResource("CircleShape2D_d37v5")
+
+[connection signal="velocity_computed" from="Navigation/NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
+[connection signal="timeout" from="Navigation/Timer" to="." method="_on_timer_timeout"]
