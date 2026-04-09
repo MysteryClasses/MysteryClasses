@@ -15,6 +15,9 @@ var target_spawn_id: String = ""
 # Talo analytics: generated once, stays the same for the entire game session
 var talo_player_id: String = ""
 
+# Chase Room: true after the player survived the chase, resets on game over
+var chase_room_survived: bool = false
+
 
 func has_clue(clue_id: String) -> bool:
 	return clue_id in collected_clues
@@ -76,6 +79,15 @@ func reset_challenge_sequence(challenge_id: String) -> void:
 	reset_challenge_progress(challenge_id)
 	challenge_collected_tokens.erase(challenge_id)
 	challenge_collected_items.erase(challenge_id)
+
+
+# Wipes ALL challenge progress — called when the player fails the chase room
+func reset_all_challenges() -> void:
+	solved_challenges.clear()
+	challenge_progress.clear()
+	challenge_collected_tokens.clear()
+	challenge_collected_items.clear()
+	chase_room_survived = false
 
 
 func _get_challenge_items(challenge_id: String) -> Array[String]:
