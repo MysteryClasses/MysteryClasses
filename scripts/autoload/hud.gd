@@ -9,7 +9,7 @@ var _tex_on: Texture2D
 var _tex_off: Texture2D
 
 # All challenge IDs in the game - update this list when new challenges are added
-const ALL_CHALLENGES: Array[String] = ["hallway_locker", "hidden_objects_room_desk_sequence"]
+const ALL_CHALLENGES: Array[String] = ["hallway_locker", "hidden_objects_room_desk_sequence", "zoology_room"]
 const ITCH_URL := "https://hendrik287.itch.io/mysteryclasses"
 # Default volume at game start (0.0 = silent, 1.0 = 100%, 0.5 = 50%)
 const DEFAULT_VOLUME := 0.5

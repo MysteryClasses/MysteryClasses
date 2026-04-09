@@ -36,8 +36,9 @@ var _shadow_revealed: bool = false
 @onready var max_sprite: Sprite2D = $max_sprite
 @onready var dialogue_max: Sprite2D = $dialogue_max
 @onready var dialogue_shadow: Sprite2D = $dialogue_shadow
-@onready var dialogue_max_label: Label = $dialogue_max/DialogueMaxLabel
-@onready var dialogue_shadow_label: Label = $dialogue_shadow/DialogueShadowLabel
+# Labels sind jetzt im DialogueLayer (CanvasLayer), unabhängig vom Sprite-Transform
+@onready var dialogue_max_label: Label = $DialogueLayer/DialogueMaxLabel
+@onready var dialogue_shadow_label: Label = $DialogueLayer/DialogueShadowLabel
 @onready var darkness_overlay: ColorRect = $DarknessOverlay
 @onready var spotlight_material: ShaderMaterial = darkness_overlay.material as ShaderMaterial
 @onready var ambient_glow: ColorRect = $AmbientGlow

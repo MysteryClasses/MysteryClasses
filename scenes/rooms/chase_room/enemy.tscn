@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ccu3epxsusbjs"]
 
-[ext_resource type="Script" uid="uid://b0hndyqod3sn3" path="res://scenes/rooms/chase_room/enemy.gd" id="1_d37v5"]
+[ext_resource type="Script" uid="uid://cule6ab5gv2kg" path="res://scenes/rooms/chase_room/enemy.gd" id="1_d37v5"]
 [ext_resource type="Texture2D" uid="uid://dqr57278cbxvx" path="res://scenes/rooms/chase_room/slime-blue.png" id="1_iy80i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8o82k"]
@@ -55,6 +55,7 @@ script = ExtResource("1_d37v5")
 
 [node name="Graphic" type="Node2D" parent="." unique_id=1396530433]
 position = Vector2(0, -6)
+scale = Vector2(2.2, 2.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Graphic" unique_id=548827731]
 sprite_frames = SubResource("SpriteFrames_7cfm2")
